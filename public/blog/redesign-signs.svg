@@ -1,25 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
   <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(188)">
-      <stop offset="0%" stop-color="#0b1023" />
-      <stop offset="100%" stop-color="#050816" />
-    </linearGradient>
-    <radialGradient id="glow1_4" cx="20%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+    <radialGradient id="glow4" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="glow2_4" cx="85%" cy="80%" r="55%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
-    </radialGradient>
-    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148,163,184,0.08)" stroke-width="1"/>
+    <pattern id="grid4" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.14)" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="1200" height="800" fill="url(#bg4)" />
+  <rect width="1200" height="800" fill="#17100F" />
   <rect width="1200" height="800" fill="url(#grid4)" />
-  <rect width="1200" height="800" fill="url(#glow1_4)" />
-  <rect width="1200" height="800" fill="url(#glow2_4)" />
-  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(255,255,255,0.08)" />
+  <rect width="1200" height="800" fill="url(#glow4)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
   
+  <g transform="translate(430,380)" opacity="0.55">
+    <rect x="-160" y="-110" width="320" height="220" rx="10" fill="#221918" stroke="rgba(237,227,221,0.14)" stroke-width="2"/>
+    <rect x="-160" y="-110" width="320" height="34" rx="10" fill="#7A2229" />
+    <line x1="-130" y1="-50" x2="60" y2="-50" stroke="#EDE3DD" stroke-width="8" opacity="0.4" />
+    <line x1="-130" y1="-10" x2="100" y2="-10" stroke="#EDE3DD" stroke-width="8" opacity="0.3" />
+    <line x1="-130" y1="30" x2="40" y2="30" stroke="#EDE3DD" stroke-width="8" opacity="0.3" />
+  </g>
+  <path d="M 250 380 L 340 380" stroke="#D4A24E" stroke-width="4" marker-end="url(#arrow)" />
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#D4A24E" />
+    </marker>
+  </defs>
+  <g transform="translate(790,380)">
+    <rect x="-170" y="-130" width="340" height="240" rx="16" fill="#221918" stroke="#E63946" stroke-width="3"/>
+    <rect x="-170" y="-130" width="340" height="40" rx="16" fill="#E63946" />
+    <rect x="-130" y="-56" width="140" height="16" rx="8" fill="#EDE3DD" />
+    <rect x="-130" y="-24" width="260" height="10" rx="5" fill="#EDE3DD" opacity="0.5" />
+    <rect x="-130" y="2" width="220" height="10" rx="5" fill="#EDE3DD" opacity="0.5" />
+    <rect x="-130" y="40" width="110" height="34" rx="17" fill="#D4A24E" />
+  </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#EDE3DD" opacity="0.55">WEB DEVELOPMENT</text>
 </svg>

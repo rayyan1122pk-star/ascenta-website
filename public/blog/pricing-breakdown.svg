@@ -1,25 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
   <defs>
-    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(282)">
-      <stop offset="0%" stop-color="#0b1023" />
-      <stop offset="100%" stop-color="#050816" />
-    </linearGradient>
-    <radialGradient id="glow1_6" cx="20%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+    <radialGradient id="glow6" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="glow2_6" cx="85%" cy="80%" r="55%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.4" />
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
-    </radialGradient>
-    <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148,163,184,0.08)" stroke-width="1"/>
+    <pattern id="grid6" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.14)" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="1200" height="800" fill="url(#bg6)" />
+  <rect width="1200" height="800" fill="#17100F" />
   <rect width="1200" height="800" fill="url(#grid6)" />
-  <rect width="1200" height="800" fill="url(#glow1_6)" />
-  <rect width="1200" height="800" fill="url(#glow2_6)" />
-  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(255,255,255,0.08)" />
+  <rect width="1200" height="800" fill="url(#glow6)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
   
+  <g transform="translate(520,380)">
+    <rect x="-150" y="-160" width="260" height="320" rx="12" fill="#221918" stroke="rgba(237,227,221,0.14)" stroke-width="2" />
+    <rect x="-118" y="-120" width="160" height="14" rx="7" fill="#EDE3DD" opacity="0.7" />
+    <line x1="-118" y1="-80" x2="80" y2="-80" stroke="#EDE3DD" stroke-width="6" opacity="0.3" />
+    <line x1="-118" y1="-48" x2="80" y2="-48" stroke="#EDE3DD" stroke-width="6" opacity="0.3" />
+    <line x1="-118" y1="-16" x2="80" y2="-16" stroke="#EDE3DD" stroke-width="6" opacity="0.3" />
+    <rect x="-118" y="90" width="196" height="40" rx="20" fill="#E63946" />
+  </g>
+  <g transform="translate(830,420)">
+    <ellipse cx="0" cy="40" rx="80" ry="24" fill="#7A2229" />
+    <ellipse cx="0" cy="10" rx="80" ry="24" fill="#D4A24E" />
+    <ellipse cx="0" cy="-20" rx="80" ry="24" fill="#D4A24E" opacity="0.85" />
+    <text x="0" y="-14" text-anchor="middle" font-family="Arial" font-weight="700" font-size="26" fill="#17100F">$</text>
+  </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#EDE3DD" opacity="0.55">BUSINESS</text>
 </svg>

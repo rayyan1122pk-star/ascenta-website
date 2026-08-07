@@ -38,6 +38,10 @@ export default function PricingPage() {
             <PricingCard key={tier.name} tier={tier} delay={i * 0.08} />
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
+          Prices above cover the initial build. Ongoing updates, content changes, or support after launch are billed
+          separately — either per update or as a monthly maintenance plan, depending on what you need.
+        </p>
       </Section>
 
       <Section>

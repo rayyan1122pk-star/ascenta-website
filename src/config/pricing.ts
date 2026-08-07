@@ -13,8 +13,8 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Starter",
     description: "Perfect for small businesses that need a professional online presence.",
-    price: "$799",
-    priceNote: "starting price",
+    price: "$110 – $180",
+    priceNote: "one-time",
     cta: "Get Started",
     ctaHref: "/contact",
     features: [
@@ -30,8 +30,8 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Professional",
     description: "The most popular package for growing businesses that want a premium experience.",
-    price: "$1,799",
-    priceNote: "starting price",
+    price: "$270 – $360",
+    priceNote: "one-time",
     highlighted: true,
     cta: "Get Started",
     ctaHref: "/contact",
@@ -40,6 +40,7 @@ export const pricingTiers: PricingTier[] = [
       "Up to 10 pages",
       "Custom design system",
       "Advanced scroll animations",
+      "AI agent integration",
       "Full SEO optimization",
       "CMS-ready content structure",
       "Analytics integration",
@@ -50,8 +51,8 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Premium",
     description: "For businesses that need custom systems beyond a standard website.",
-    price: "Custom",
-    priceNote: "tailored quote",
+    price: "$540+",
+    priceNote: "starting price",
     cta: "Request a Quote",
     ctaHref: "/contact",
     features: [

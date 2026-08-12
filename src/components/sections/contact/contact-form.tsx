@@ -71,7 +71,7 @@ export function ContactForm() {
         <CheckCircle2 size={40} className="text-success" />
         <h3 className="mt-4 text-lg font-semibold text-white">Message Sent</h3>
         <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-          Thanks for reaching out — I&apos;ll review your project details and get back to you within 24 hours.
+          Thanks for reaching out — we&apos;ll review your project details and get back to you within 24 hours.
         </p>
         <Button variant="outline" size="lg" className="mt-6 rounded-full" onClick={() => setStatus("idle")}>
           Send Another Message
@@ -178,7 +178,7 @@ export function ContactForm() {
         <Textarea
           id="message"
           rows={5}
-          placeholder="Tell me about your project, goals, and anything else that would help me understand what you need..."
+          placeholder="Tell us about your project, goals, and anything else that would help us understand what you need..."
           {...register("message")}
         />
         {errors.message && <p className="text-xs text-destructive">{errors.message.message}</p>}

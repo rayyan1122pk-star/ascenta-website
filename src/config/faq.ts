@@ -21,31 +21,31 @@ export const faqs: FaqItem[] = [
     category: "Services",
     question: "Do you redesign existing websites?",
     answer:
-      "Yes. I regularly rebuild outdated websites into modern, fast, conversion-focused experiences — while carefully preserving your existing SEO rankings through proper redirects and migration.",
+      "Yes. We regularly rebuild outdated websites into modern, fast, conversion-focused experiences — while carefully preserving your existing SEO rankings through proper redirects and migration.",
   },
   {
     category: "Services",
     question: "Do you provide hosting?",
     answer:
-      "I deploy every project on Vercel, which offers world-class performance and reliability. I handle the initial setup and can manage hosting on your behalf, or hand over full ownership to your team — your choice.",
+      "We deploy every project on Vercel, which offers world-class performance and reliability. We handle the initial setup and can manage hosting on your behalf, or hand over full ownership to your team — your choice.",
   },
   {
     category: "Services",
     question: "Do you provide ongoing support after launch?",
     answer:
-      "Yes. Every project includes a support window after launch, and I offer ongoing monthly maintenance plans for updates, monitoring, and small improvements after that.",
+      "Yes. Every project includes a support window after launch, and we offer ongoing monthly maintenance plans for updates, monitoring, and small improvements after that.",
   },
   {
     category: "Services",
     question: "Can you build custom systems like dashboards or CRMs?",
     answer:
-      "Yes, this is one of my core specialties. I build custom dashboards, CRMs, booking systems, and AI-powered tools tailored to your exact workflow — not generic off-the-shelf software.",
+      "Yes, this is one of our core specialties. We build custom dashboards, CRMs, booking systems, and AI-powered tools tailored to your exact workflow — not generic off-the-shelf software.",
   },
   {
     category: "Pricing",
     question: "How is pricing determined?",
     answer:
-      "Pricing depends on scope, number of pages, and custom functionality required. The Pricing page outlines starting prices for each package, and I provide a fixed quote after understanding your specific requirements.",
+      "Pricing depends on scope, number of pages, and custom functionality required. The Pricing page outlines starting prices for each package, and we provide a fixed quote after understanding your specific requirements.",
   },
   {
     category: "Pricing",
@@ -57,7 +57,7 @@ export const faqs: FaqItem[] = [
     category: "Technical",
     question: "What technology do you build with?",
     answer:
-      "I build primarily with Next.js, React, and TypeScript on the frontend, and Supabase/PostgreSQL on the backend — a modern, fast, and scalable stack used by top technology companies.",
+      "We build primarily with Next.js, React, and TypeScript on the frontend, and Supabase/PostgreSQL on the backend — a modern, fast, and scalable stack used by top technology companies.",
   },
   {
     category: "Technical",

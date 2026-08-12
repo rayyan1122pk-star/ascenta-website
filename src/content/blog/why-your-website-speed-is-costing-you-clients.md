@@ -3,7 +3,7 @@ title: "Why Your Website's Speed Is Quietly Costing You Clients"
 excerpt: "A slow website isn't just an inconvenience — it's actively costing you leads, sales, and search rankings. Here's the real math behind page speed."
 date: "2026-01-14"
 category: "Performance"
-author: "Muhammad Rayyan"
+author: "Ascenta"
 coverImage: "/blog/website-speed.svg"
 ---
 

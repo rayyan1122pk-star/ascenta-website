@@ -79,7 +79,7 @@ export default function PricingPage() {
 
       <FinalCta
         title="Not Sure Which Package Fits?"
-        description="Tell me about your project and I'll recommend the right option — no obligation, no pressure."
+        description="Tell us about your project and we'll recommend the right option — no obligation, no pressure."
       />
     </>
   );

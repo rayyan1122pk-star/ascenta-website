@@ -12,6 +12,10 @@ import {
   Bot,
   Workflow,
   Wrench,
+  MessageCircle,
+  MessageSquare,
+  Phone,
+  ClipboardList,
 } from "lucide-react";
 
 export interface Service {
@@ -35,7 +39,7 @@ export const services: Service[] = [
     title: "Business Websites",
     shortDescription: "Modern, responsive websites for businesses.",
     overview:
-      "A professional, conversion-focused website built to represent your business the way it deserves — fast, credible, and built to turn visitors into customers. I design and develop every page around your brand and your goals, not a recycled template.",
+      "A professional, conversion-focused website built to represent your business the way it deserves — fast, credible, and built to turn visitors into customers. We design and develop every page around your brand and your goals, not a recycled template.",
     benefits: [
       "Establish instant credibility with a modern, professional design",
       "Turn more visitors into leads with clear calls-to-action",
@@ -53,17 +57,17 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase"],
     timeline: "2 – 4 weeks",
-    startingPrice: "$799",
+    startingPrice: "$145",
     faqs: [
       {
         question: "Will my website work well on mobile?",
         answer:
-          "Yes. Every site I build is designed mobile-first and tested across real devices before launch.",
+          "Yes. Every site we build is designed mobile-first and tested across real devices before launch.",
       },
       {
         question: "Can I update the content myself later?",
         answer:
-          "Yes, I structure content so it's easy to update, and can add a lightweight CMS if you'd like full editorial control.",
+          "Yes, we structure content so it's easy to update, and can add a lightweight CMS if you'd like full editorial control.",
       },
     ],
   },
@@ -90,12 +94,12 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     timeline: "3 – 7 days",
-    startingPrice: "$349",
+    startingPrice: "$65",
     faqs: [
       {
         question: "Can you write the copy too?",
         answer:
-          "Yes, I write conversion-focused copy for every landing page, based on your product and offer.",
+          "Yes, we write conversion-focused copy for every landing page, based on your product and offer.",
       },
     ],
   },
@@ -120,11 +124,11 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     timeline: "1 – 2 weeks",
-    startingPrice: "$449",
+    startingPrice: "$85",
     faqs: [
       {
         question: "Can this double as a personal brand site?",
-        answer: "Yes, most portfolio sites I build double as a personal brand hub with blog and contact.",
+        answer: "Yes, most portfolio sites we build double as a personal brand hub with blog and contact.",
       },
     ],
   },
@@ -150,11 +154,11 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "TypeScript", "Supabase", "Stripe", "Tailwind CSS"],
     timeline: "4 – 8 weeks",
-    startingPrice: "$1,999",
+    startingPrice: "$360",
     faqs: [
       {
         question: "Which payment providers do you support?",
-        answer: "Stripe is the default, and I can integrate regional providers on request.",
+        answer: "Stripe is the default, and we can integrate regional providers on request.",
       },
     ],
   },
@@ -164,7 +168,7 @@ export const services: Service[] = [
     title: "Website Redesign",
     shortDescription: "Transform outdated websites into modern experiences.",
     overview:
-      "If your current website is slow, outdated, or simply not converting, I rebuild it from the ground up — keeping what works for your brand and modernizing everything else.",
+      "If your current website is slow, outdated, or simply not converting, we rebuild it from the ground up — keeping what works for your brand and modernizing everything else.",
     benefits: [
       "Modern design that matches today's expectations",
       "Improved page speed and Core Web Vitals",
@@ -179,12 +183,12 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     timeline: "2 – 5 weeks",
-    startingPrice: "$999",
+    startingPrice: "$180",
     faqs: [
       {
         question: "Will I lose my current SEO rankings?",
         answer:
-          "No, I handle redirects and technical SEO carefully during migration to protect and improve existing rankings.",
+          "No, we handle redirects and technical SEO carefully during migration to protect and improve existing rankings.",
       },
     ],
   },
@@ -209,7 +213,7 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js Metadata API", "JSON-LD", "Google Search Console"],
     timeline: "1 – 3 weeks",
-    startingPrice: "$399",
+    startingPrice: "$75",
     faqs: [
       {
         question: "How long until I see results?",
@@ -237,11 +241,11 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "Vercel", "Lighthouse"],
     timeline: "1 – 2 weeks",
-    startingPrice: "$349",
+    startingPrice: "$65",
     faqs: [
       {
         question: "Do you work on non-Next.js sites?",
-        answer: "Yes, I can optimize most modern JavaScript frameworks and static sites.",
+        answer: "Yes, we can optimize most modern JavaScript frameworks and static sites.",
       },
     ],
   },
@@ -265,11 +269,11 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript"],
     timeline: "4 – 10 weeks",
-    startingPrice: "$2,499",
+    startingPrice: "$450",
     faqs: [
       {
         question: "Can it integrate with tools we already use?",
-        answer: "Yes, I regularly integrate dashboards with existing APIs, spreadsheets, and third-party tools.",
+        answer: "Yes, we regularly integrate dashboards with existing APIs, spreadsheets, and third-party tools.",
       },
     ],
   },
@@ -293,7 +297,7 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "Supabase", "PostgreSQL", "Resend"],
     timeline: "5 – 10 weeks",
-    startingPrice: "$2,999",
+    startingPrice: "$540",
     faqs: [
       {
         question: "Can you migrate our existing CRM data?",
@@ -321,11 +325,134 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "OpenAI / Claude API", "Supabase"],
     timeline: "2 – 4 weeks",
-    startingPrice: "$899",
+    startingPrice: "$165",
     faqs: [
       {
         question: "Which AI model do you use?",
-        answer: "I build primarily on Claude and OpenAI models, choosing based on your use case and budget.",
+        answer: "We build primarily on Claude and OpenAI models, choosing based on your use case and budget.",
+      },
+    ],
+  },
+  {
+    slug: "whatsapp-agent",
+    icon: MessageCircle,
+    title: "WhatsApp Agent",
+    shortDescription: "AI agent that handles WhatsApp leads and bookings automatically.",
+    overview:
+      "A custom AI agent that lives inside your business WhatsApp — replying to customer messages instantly, qualifying leads, and booking calls, so no inquiry sits unanswered.",
+    benefits: [
+      "Never miss a lead because no one saw the message in time",
+      "Instant replies, any time of day, in your business's tone",
+      "Automatically book calls and appointments straight from chat",
+      "Free your team from repetitive back-and-forth conversations",
+    ],
+    features: [
+      "Automatic replies to incoming WhatsApp messages",
+      "Lead qualification and information capture",
+      "Call and appointment booking directly in chat",
+      "Human handoff for conversations that need a real person",
+      "Full conversation logging and lead history",
+    ],
+    techStack: ["n8n", "WhatsApp Business API", "OpenAI / Claude API", "Supabase"],
+    timeline: "1 – 3 weeks",
+    startingPrice: "$220",
+    faqs: [
+      {
+        question: "Does this work with our existing WhatsApp Business number?",
+        answer: "Yes, we connect directly to your existing WhatsApp Business number through the official API.",
+      },
+      {
+        question: "Can it actually book appointments, not just chat?",
+        answer: "Yes — the agent can check availability and book calls or appointments directly into your calendar.",
+      },
+    ],
+  },
+  {
+    slug: "instagram-crm",
+    icon: MessageSquare,
+    title: "Instagram CRM & Lead Automation",
+    shortDescription: "Auto-handle Instagram DMs, comments, and lead follow-ups.",
+    overview:
+      "An automation system that turns your Instagram DMs and comments into a real lead pipeline — auto-replying to inquiries, capturing leads into a CRM, and following up automatically so nothing falls through the cracks.",
+    benefits: [
+      "Respond to every DM and comment instantly, even at scale",
+      "Turn Instagram engagement into a tracked, organized lead list",
+      "Automated follow-ups that bring cold leads back",
+      "Book calls directly from a DM conversation",
+    ],
+    features: [
+      "Automated replies to DMs and comments",
+      "Lead capture into a connected CRM",
+      "Automated follow-up sequences for unresponsive leads",
+      "Call and appointment booking from chat",
+      "Lead tagging and pipeline tracking",
+    ],
+    techStack: ["n8n", "Instagram Graph API", "Supabase", "OpenAI / Claude API"],
+    timeline: "2 – 4 weeks",
+    startingPrice: "$260",
+    faqs: [
+      {
+        question: "Does this replace our CRM or work with it?",
+        answer: "We can build a lightweight CRM as part of this, or connect to a CRM you already use.",
+      },
+    ],
+  },
+  {
+    slug: "voice-calling-agent",
+    icon: Phone,
+    title: "Voice Calling Agent",
+    shortDescription: "AI voice agent for inbound and outbound calls.",
+    overview:
+      "An AI voice agent that answers inbound calls or makes outbound calls on your behalf — qualifying leads, answering common questions, and booking appointments, in a natural-sounding conversation.",
+    benefits: [
+      "Never miss an inbound call, even outside business hours",
+      "Qualify and book leads automatically over the phone",
+      "Run outbound follow-up calls at scale without hiring staff",
+      "Consistent, on-brand conversation every time",
+    ],
+    features: [
+      "Natural-sounding AI voice conversations",
+      "Inbound call answering and lead qualification",
+      "Outbound follow-up and reminder calls",
+      "Appointment booking directly into your calendar",
+      "Call transcripts and recordings for every conversation",
+    ],
+    techStack: ["n8n", "Voice AI API", "Twilio", "OpenAI / Claude API"],
+    timeline: "2 – 4 weeks",
+    startingPrice: "$360",
+    faqs: [
+      {
+        question: "Does it sound robotic?",
+        answer: "No — we use modern voice AI models built for natural, conversational phone calls.",
+      },
+    ],
+  },
+  {
+    slug: "form-automation",
+    icon: ClipboardList,
+    title: "Custom Form Automation",
+    shortDescription: "Automate form submissions, routing, and follow-ups.",
+    overview:
+      "Custom automation for any form on your website or business — auto-filling systems, routing submissions to the right person, and triggering instant follow-ups the moment someone submits.",
+    benefits: [
+      "Eliminate manual data entry between forms and your systems",
+      "Instant lead routing to the right team member",
+      "Automatic follow-up the moment a form is submitted",
+      "Fewer dropped leads from manual handling delays",
+    ],
+    features: [
+      "Automated form-to-system data entry",
+      "Smart lead routing based on submission data",
+      "Instant email, WhatsApp, or SMS follow-up triggers",
+      "Integration with CRMs, spreadsheets, and internal tools",
+    ],
+    techStack: ["n8n", "Webhooks", "Supabase", "Zapier-compatible integrations"],
+    timeline: "1 – 2 weeks",
+    startingPrice: "$150",
+    faqs: [
+      {
+        question: "Can this connect to forms we already have?",
+        answer: "Yes, we can automate almost any existing form, or build a new one designed for the automation.",
       },
     ],
   },
@@ -333,7 +460,7 @@ export const services: Service[] = [
     slug: "ai-automation",
     icon: Workflow,
     title: "AI Automation",
-    shortDescription: "Workflow automation for your business.",
+    shortDescription: "Custom workflow automation for your business.",
     overview:
       "Custom automation that connects your tools and removes repetitive manual work — from lead routing to report generation to internal notifications.",
     benefits: [
@@ -347,9 +474,9 @@ export const services: Service[] = [
       "AI-powered data processing and summarization",
       "Monitoring and error alerts",
     ],
-    techStack: ["Next.js", "Supabase", "OpenAI / Claude API", "Webhooks"],
+    techStack: ["n8n", "Next.js", "Supabase", "OpenAI / Claude API", "Webhooks"],
     timeline: "2 – 6 weeks",
-    startingPrice: "$1,199",
+    startingPrice: "$220",
     faqs: [
       {
         question: "What tools can you automate between?",
@@ -363,11 +490,11 @@ export const services: Service[] = [
     title: "Maintenance",
     shortDescription: "Ongoing monthly support and improvements.",
     overview:
-      "Ongoing care for your website — updates, monitoring, backups, and small improvements, so you never have to think about the technical side again.",
+      "Ongoing care for your website or automation systems — updates, monitoring, backups, and small improvements, so you never have to think about the technical side again.",
     benefits: [
       "Peace of mind with proactive monitoring",
       "Faster turnaround on small changes and fixes",
-      "A website that keeps improving after launch",
+      "A system that keeps improving after launch",
     ],
     features: [
       "Uptime and performance monitoring",
@@ -375,9 +502,9 @@ export const services: Service[] = [
       "Content updates and small feature requests",
       "Priority support response times",
     ],
-    techStack: ["Vercel", "Supabase", "GitHub"],
+    techStack: ["Vercel", "Supabase", "GitHub", "n8n"],
     timeline: "Ongoing",
-    startingPrice: "$149/mo",
+    startingPrice: "$30/mo",
     faqs: [
       {
         question: "What counts as a 'small change'?",

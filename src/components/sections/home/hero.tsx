@@ -113,7 +113,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm"
           >
             <Sparkles size={13} className="text-accent" />
-            Hi, I&apos;m Muhammad Rayyan
+            We&apos;re Ascenta
           </motion.span>
 
           <motion.h1
@@ -133,7 +133,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-6 max-w-md text-balance text-base text-muted-foreground sm:text-lg"
           >
-            I design and build premium, high-performance websites and AI-powered solutions
+            We design and build premium, high-performance websites and AI-powered solutions
             that increase credibility, generate more leads, and grow your business.
           </motion.p>
         </div>
@@ -155,7 +155,7 @@ export function Hero() {
               </Magnetic>
               <Magnetic>
                 <Button variant="glass" size="xl" className="rounded-full" render={<Link href="/services" />}>
-                  View My Services
+                  View Our Services
                 </Button>
               </Magnetic>
             </motion.div>

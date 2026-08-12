@@ -20,7 +20,7 @@ export default function TermsConditionsPage() {
         <div className="prose prose-invert prose-headings:font-semibold prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-white mt-10 max-w-none">
           <p>
             These Terms &amp; Conditions govern your use of {siteConfig.url} (the &quot;Site&quot;) and any
-            services provided by {siteConfig.name}. By using this Site or engaging my services, you agree
+            services provided by {siteConfig.name}. By using this Site or engaging our services, you agree
             to these terms.
           </p>
 
@@ -61,7 +61,7 @@ export default function TermsConditionsPage() {
 
           <h2>Third-Party Links</h2>
           <p>
-            This Site may contain links to third-party websites, including client project demos. I am not
+            This Site may contain links to third-party websites, including client project demos. We are not
             responsible for the content or practices of any linked external sites.
           </p>
 

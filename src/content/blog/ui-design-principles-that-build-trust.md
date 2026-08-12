@@ -3,7 +3,7 @@ title: "The UI Design Principles That Quietly Build Trust"
 excerpt: "Great design isn't about looking flashy — it's about making visitors feel like they're in good hands. Here's what that actually looks like in practice."
 date: "2025-11-10"
 category: "UI Design"
-author: "Muhammad Rayyan"
+author: "Ascenta"
 coverImage: "/blog/ui-trust.svg"
 ---
 

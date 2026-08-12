@@ -65,7 +65,7 @@ export async function submitContactForm(values: ContactFormValues): Promise<Cont
     console.error("Contact form submission failed:", error);
     return {
       success: false,
-      error: "Something went wrong on our end. Please email me directly or try again shortly.",
+      error: "Something went wrong on our end. Please email us directly or try again shortly.",
     };
   }
 }

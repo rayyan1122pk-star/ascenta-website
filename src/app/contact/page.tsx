@@ -22,7 +22,7 @@ export default function ContactPage() {
             Let&apos;s Build Something Great Together
           </h1>
           <p className="mt-5 max-w-xl text-balance text-muted-foreground sm:text-lg">
-            Tell me about your project and I&apos;ll get back to you within 24 hours with next steps.
+            Tell us about your project and we&apos;ll get back to you within 24 hours with next steps.
           </p>
         </Container>
       </Section>
@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="rounded-2xl border border-primary/15 bg-primary/[0.04] p-6">
               <h3 className="text-sm font-semibold text-white">Response Time</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                I personally respond to every inquiry within 24 hours, usually much sooner.
+                Our team personally responds to every inquiry within 24 hours, usually much sooner.
               </p>
             </div>
           </div>

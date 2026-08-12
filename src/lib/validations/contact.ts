@@ -6,10 +6,10 @@ export const contactFormSchema = z.object({
   phone: z.string().trim().max(30).optional().or(z.literal("")),
   company: z.string().trim().max(120).optional().or(z.literal("")),
   budget: z.enum([
-    "under-1000",
-    "1000-3000",
-    "3000-10000",
-    "10000-plus",
+    "under-150",
+    "150-300",
+    "300-600",
+    "600-plus",
     "not-sure",
   ]),
   timeline: z.enum(["asap", "1-month", "1-3-months", "flexible"]),
@@ -20,10 +20,10 @@ export const contactFormSchema = z.object({
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const budgetOptions: { value: ContactFormValues["budget"]; label: string }[] = [
-  { value: "under-1000", label: "Under $1,000" },
-  { value: "1000-3000", label: "$1,000 – $3,000" },
-  { value: "3000-10000", label: "$3,000 – $10,000" },
-  { value: "10000-plus", label: "$10,000+" },
+  { value: "under-150", label: "Under $150" },
+  { value: "150-300", label: "$150 – $300" },
+  { value: "300-600", label: "$300 – $600" },
+  { value: "600-plus", label: "$600+" },
   { value: "not-sure", label: "Not sure yet" },
 ];
 

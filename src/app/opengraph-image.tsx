@@ -20,39 +20,13 @@ export default async function Image() {
             "radial-gradient(circle at 20% 20%, rgba(230,57,70,0.4), transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,122,89,0.3), transparent 50%)",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
-            gap: 8,
-            width: 96,
-            height: 96,
-            marginBottom: 32,
-            position: "relative",
-          }}
-        >
-          <div style={{ width: 20, height: 42, borderRadius: 5, background: "#7A2229" }} />
-          <div style={{ width: 20, height: 68, borderRadius: 5, background: "#C22F3D" }} />
-          <div
-            style={{
-              width: 20,
-              height: 96,
-              borderRadius: 5,
-              backgroundImage: "linear-gradient(0deg, #E63946, #D4A24E)",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: 4,
-              right: 8,
-              width: 11,
-              height: 11,
-              borderRadius: 6,
-              background: "#D4A24E",
-            }}
-          />
+        <div style={{ display: "flex", marginBottom: 32 }}>
+          <svg width="96" height="96" viewBox="0 0 64 64">
+            <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(45 32 32)" />
+            <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(135 32 32)" />
+            <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(225 32 32)" />
+            <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(315 32 32)" />
+          </svg>
         </div>
         <div style={{ display: "flex", color: "#fff", fontSize: 60, fontWeight: 700 }}>
           {siteConfig.name}

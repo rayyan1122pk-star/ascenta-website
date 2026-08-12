@@ -11,34 +11,17 @@ export default async function AppleIcon() {
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "flex-end",
+          alignItems: "center",
           justifyContent: "center",
-          gap: 10,
           background: "#17100F",
-          position: "relative",
         }}
       >
-        <div style={{ width: 26, height: 56, borderRadius: 6, background: "#7A2229" }} />
-        <div style={{ width: 26, height: 90, borderRadius: 6, background: "#C22F3D" }} />
-        <div
-          style={{
-            width: 26,
-            height: 128,
-            borderRadius: 6,
-            backgroundImage: "linear-gradient(0deg, #E63946, #D4A24E)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            top: 20,
-            right: 39,
-            width: 14,
-            height: 14,
-            borderRadius: 7,
-            background: "#D4A24E",
-          }}
-        />
+        <svg width="120" height="120" viewBox="0 0 64 64">
+          <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(45 32 32)" />
+          <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(135 32 32)" />
+          <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(225 32 32)" />
+          <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" fill="#ffffff" transform="rotate(315 32 32)" />
+        </svg>
       </div>
     ),
     { ...size }

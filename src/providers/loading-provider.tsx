@@ -80,16 +80,12 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <svg viewBox="0 0 64 64" className="h-9 w-9" aria-hidden="true">
-            <defs>
-              <linearGradient id="loading-g" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stopColor="#E63946" />
-                <stop offset="100%" stopColor="#D4A24E" />
-              </linearGradient>
-            </defs>
-            <rect x="15" y="34" width="9" height="19" rx="2" fill="#7A2229" />
-            <rect x="28" y="24" width="9" height="29" rx="2" fill="#C22F3D" />
-            <rect x="41" y="13" width="9" height="40" rx="2" fill="url(#loading-g)" />
-            <circle cx="45.5" cy="10" r="2.4" fill="#D4A24E" />
+            <g fill="#ffffff">
+              <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" transform="rotate(45 32 32)" />
+              <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" transform="rotate(135 32 32)" />
+              <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" transform="rotate(225 32 32)" />
+              <path d="M 36,32 L 44,22 A 10,10 0 0 1 44,42 Z" transform="rotate(315 32 32)" />
+            </g>
           </svg>
           <motion.svg
             viewBox="0 0 80 80"

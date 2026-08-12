@@ -10,7 +10,7 @@ export function ServicesPreview() {
   return (
     <Section>
       <SectionHeading
-        badge="What I Do"
+        badge="What We Do"
         title="Services Built to Grow Your Business"
         description="From marketing sites to full custom systems — everything is built with the same standard of quality."
       />

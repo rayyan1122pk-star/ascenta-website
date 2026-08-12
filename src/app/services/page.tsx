@@ -15,7 +15,7 @@ export default function ServicesPage() {
     <>
       <Section className="pb-8 pt-6 sm:pt-10">
         <SectionHeading
-          badge="What I Do"
+          badge="What We Do"
           title="Services Built to Grow Your Business"
           description="From marketing websites to fully custom systems — every service is built around one goal: measurable results for your business."
         />

@@ -41,9 +41,9 @@ export function WhyChooseMe() {
   return (
     <Section tint>
       <SectionHeading
-        badge="Why Work With Me"
+        badge="Why Work With Us"
         title="Everything You Need, Built In"
-        description="Every project is built with the same standard — the one I'd want if I were the client."
+        description="Every project is built with the same standard — the one we'd want if we were the client."
       />
 
       <div className="mt-14 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">

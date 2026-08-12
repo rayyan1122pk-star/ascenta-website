@@ -25,7 +25,7 @@ export function TechStackGrid() {
     <Section tint>
       <SectionHeading
         badge="Tools of the Trade"
-        title="The Technology I Build With"
+        title="The Technology We Build With"
         description="A modern, battle-tested stack chosen for performance, reliability, and long-term maintainability."
       />
 

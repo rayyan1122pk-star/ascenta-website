@@ -11,7 +11,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Learn about ${siteConfig.name} — a full stack web developer and AI automation developer focused on building premium websites that grow businesses.`,
+  description: `Learn about ${siteConfig.name} — a web development and AI automation agency focused on building premium websites that grow businesses.`,
 };
 
 export default function AboutPage() {
@@ -20,15 +20,15 @@ export default function AboutPage() {
       <Section className="pb-8 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium text-muted-foreground">
-            About Me
+            About Us
           </span>
           <AnimatedHeading
             as="h1"
             className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl"
-            lines={[<span key="1">Hi, I&apos;m Muhammad Rayyan.</span>]}
+            lines={[<span key="1">We&apos;re Ascenta.</span>]}
           />
           <p className="mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg">
-            I design and develop premium websites and AI-powered solutions that help businesses build
+            We design and develop premium websites and AI-powered solutions that help businesses build
             trust, generate more leads, and grow online.
           </p>
         </Container>
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading badge="My Story" title="How I Got Here" align="left" />
+        <SectionHeading badge="Our Story" title="How We Got Here" align="left" />
         <div className="mt-8 flex max-w-3xl flex-col gap-5">
           {aboutContent.story.map((paragraph, i) => (
             <RevealText key={i} delay={i * 0.1}>
@@ -59,7 +59,7 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading badge="My Philosophy" title="What I Believe About Building Websites" />
+        <SectionHeading badge="Our Philosophy" title="What We Believe About Building Websites" />
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {aboutContent.philosophy.map((item, i) => (
             <GlassCard key={item.title} delay={(i % 2) * 0.08}>
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading badge="My Journey" title="Timeline" />
+        <SectionHeading badge="Our Journey" title="Timeline" />
         <div className="mx-auto mt-14 max-w-2xl">
           <div className="relative flex flex-col gap-8 border-l border-white/10 pl-8">
             {aboutContent.timeline.map((item, i) => (
@@ -102,7 +102,7 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading badge="Skills" title="What I Work With" />
+        <SectionHeading badge="Skills" title="What We Work With" />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {Object.entries(aboutContent.skills).map(([category, skills], i) => (
             <GlassCard key={category} delay={(i % 3) * 0.08}>
@@ -120,7 +120,7 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading badge="Looking Ahead" title="Where I'm Headed" />
+        <SectionHeading badge="Looking Ahead" title="Where We're Headed" />
         <div className="mx-auto mt-10 max-w-2xl">
           <ul className="flex flex-col gap-4">
             {aboutContent.futureGoals.map((goal) => (

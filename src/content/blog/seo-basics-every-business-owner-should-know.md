@@ -3,7 +3,7 @@ title: "SEO Basics Every Business Owner Should Actually Understand"
 excerpt: "You don't need to become an SEO expert — but understanding these fundamentals will help you make better decisions about your website."
 date: "2026-01-02"
 category: "SEO"
-author: "Muhammad Rayyan"
+author: "Ascenta"
 coverImage: "/blog/seo-basics.svg"
 ---
 

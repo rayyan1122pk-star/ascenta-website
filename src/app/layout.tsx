@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${siteConfig.name} — ${siteConfig.title}`,
     description: siteConfig.description,
-    creator: "@muhammadrayyan",
+    creator: "@ascenta",
   },
   robots: {
     index: true,

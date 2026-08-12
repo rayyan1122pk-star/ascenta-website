@@ -30,14 +30,14 @@ export const processSteps: ProcessStep[] = [
     title: "Research",
     icon: Microscope,
     description:
-      "I research your industry, competitors, and target audience to identify what will actually move the needle for your brand.",
+      "We research your industry, competitors, and target audience to identify what will actually move the needle for your brand.",
   },
   {
     step: 3,
     title: "Strategy",
     icon: Target,
     description:
-      "I map out sitemap, content structure, and conversion strategy — the blueprint that guides every design decision.",
+      "We map out sitemap, content structure, and conversion strategy — the blueprint that guides every design decision.",
   },
   {
     step: 4,

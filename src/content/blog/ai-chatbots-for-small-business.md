@@ -3,7 +3,7 @@ title: "Do Small Businesses Actually Need an AI Chatbot?"
 excerpt: "AI chatbots are everywhere right now. Here's an honest breakdown of when they genuinely help a small business — and when they're overkill."
 date: "2025-12-18"
 category: "AI"
-author: "Muhammad Rayyan"
+author: "Ascenta"
 coverImage: "/blog/ai-chatbots.svg"
 ---
 

@@ -17,8 +17,8 @@ export function ProcessTimeline() {
   return (
     <Section>
       <SectionHeading
-        badge="How I Work"
-        title="My Process"
+        badge="How We Work"
+        title="Our Process"
         description="A clear, structured process from first call to launch — and beyond."
       />
 

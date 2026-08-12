@@ -46,7 +46,7 @@ export function WhyModernWebsites() {
           viewport={viewportOnce}
           className="rounded-3xl border border-success/20 bg-success/[0.04] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_20px_40px_-24px_rgba(0,0,0,0.6)] sm:p-8"
         >
-          <h3 className="text-lg font-semibold text-white">How I Solve Them</h3>
+          <h3 className="text-lg font-semibold text-white">How We Solve Them</h3>
           <div className="mt-6 flex flex-col gap-4">
             {whyModernWebsites.solutions.map((item) => (
               <motion.div key={item.title} variants={fadeUp} className="flex items-start gap-3">

@@ -3,11 +3,11 @@ title: "What a Website Project Actually Costs (And Why)"
 excerpt: "Website pricing feels opaque from the outside. Here's a transparent breakdown of what drives cost, so you can budget with confidence."
 date: "2025-10-22"
 category: "Business"
-author: "Muhammad Rayyan"
+author: "Ascenta"
 coverImage: "/blog/pricing-breakdown.svg"
 ---
 
-One of the most common questions I get is some version of: "why do websites cost so differently depending on who you ask?" The honest answer is that price reflects scope, and scope varies enormously. Here's how to think about it.
+One of the most common questions we get is some version of: "why do websites cost so differently depending on who you ask?" The honest answer is that price reflects scope, and scope varies enormously. Here's how to think about it.
 
 ## The main cost drivers
 
@@ -29,4 +29,4 @@ For most small-to-mid-sized businesses, a genuinely custom, professional website
 
 ## How to budget realistically
 
-Rather than asking "what does a website cost," a more useful question is: "what is a new customer worth to my business, and how many additional customers would justify this investment?" Framed that way, a well-built website is rarely the most expensive part of growing a business — it's usually one of the highest-leverage investments available.
+Rather than asking "what does a website cost," a more useful question is: "what is a new customer worth to your business, and how many additional customers would justify this investment?" Framed that way, a well-built website is rarely the most expensive part of growing a business — it's usually one of the highest-leverage investments available.

@@ -33,9 +33,9 @@ export function Capabilities() {
   return (
     <Section>
       <SectionHeading
-        badge="What I Build"
-        title="The Kind of Work I Take On"
-        description="I'm early in building out a public case-study library, so here's a straightforward list of what I actually build — no filler, no placeholder demos."
+        badge="What We Build"
+        title="The Kind of Work We Take On"
+        description="We're early in building out a public case-study library, so here's a straightforward list of what we actually build — no filler, no placeholder demos."
       />
 
       <motion.div

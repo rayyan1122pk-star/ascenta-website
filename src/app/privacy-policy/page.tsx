@@ -19,30 +19,30 @@ export default function PrivacyPolicyPage() {
 
         <div className="prose prose-invert prose-headings:font-semibold prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-white mt-10 max-w-none">
           <p>
-            This Privacy Policy explains how {siteConfig.name} (&quot;I&quot;, &quot;me&quot;, or &quot;my&quot;)
+            This Privacy Policy explains how {siteConfig.name} (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;)
             collects, uses, and protects information when you visit {siteConfig.url} (the &quot;Site&quot;).
           </p>
 
-          <h2>Information I Collect</h2>
-          <p>When you use the contact form on this Site, I collect the information you voluntarily provide, including:</p>
+          <h2>Information We Collect</h2>
+          <p>When you use the contact form on this Site, we collect the information you voluntarily provide, including:</p>
           <ul>
             <li>Your name and email address</li>
             <li>Your phone number and company name, if provided</li>
             <li>Details about your project, budget, and timeline</li>
           </ul>
           <p>
-            I also use analytics tools (such as Google Analytics and Microsoft Clarity) that may collect
+            We also use analytics tools (such as Google Analytics and Microsoft Clarity) that may collect
             standard technical information such as your browser type, device type, and pages visited, in
             order to understand how visitors use the Site.
           </p>
 
-          <h2>How I Use Your Information</h2>
+          <h2>How We Use Your Information</h2>
           <ul>
             <li>To respond to your inquiries and discuss potential projects</li>
             <li>To send you information you have requested, such as newsletter updates</li>
             <li>To improve the Site&apos;s content, design, and performance</li>
           </ul>
-          <p>I do not sell, rent, or trade your personal information to third parties.</p>
+          <p>We do not sell, rent, or trade your personal information to third parties.</p>
 
           <h2>Data Storage</h2>
           <p>
@@ -59,8 +59,8 @@ export default function PrivacyPolicyPage() {
 
           <h2>Your Rights</h2>
           <p>
-            You may request access to, correction of, or deletion of any personal information I hold about
-            you by contacting me at{" "}
+            You may request access to, correction of, or deletion of any personal information we hold about
+            you by contacting us at{" "}
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
           </p>
 
@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
 
           <h2>Contact</h2>
           <p>
-            If you have questions about this Privacy Policy, please contact me at{" "}
+            If you have questions about this Privacy Policy, please contact us at{" "}
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
           </p>
         </div>

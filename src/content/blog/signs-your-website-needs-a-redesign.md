@@ -3,7 +3,7 @@ title: "7 Clear Signs Your Website Needs a Redesign"
 excerpt: "Not sure if your website needs a refresh or a full rebuild? These are the signals that consistently mean it's time."
 date: "2025-11-30"
 category: "Web Development"
-author: "Muhammad Rayyan"
+author: "Ascenta"
 coverImage: "/blog/redesign-signs.svg"
 ---
 

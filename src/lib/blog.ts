@@ -42,7 +42,7 @@ export function getAllBlogPosts(): BlogPostMeta[] {
       excerpt: data.excerpt as string,
       date: data.date as string,
       category: data.category as string,
-      author: (data.author as string) ?? "Muhammad Rayyan",
+      author: (data.author as string) ?? "Ascenta",
       coverImage: (data.coverImage as string) ?? "/blog/default-cover.svg",
       readingTime: readingTime(content).text,
     };
@@ -65,7 +65,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     excerpt: data.excerpt as string,
     date: data.date as string,
     category: data.category as string,
-    author: (data.author as string) ?? "Muhammad Rayyan",
+    author: (data.author as string) ?? "Ascenta",
     coverImage: (data.coverImage as string) ?? "/blog/default-cover.svg",
     readingTime: readingTime(content).text,
     contentHtml: processed.toString(),

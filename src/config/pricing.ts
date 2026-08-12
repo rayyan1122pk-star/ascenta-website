@@ -68,6 +68,31 @@ export const pricingTiers: PricingTier[] = [
   },
 ];
 
+export interface Bundle {
+  name: string;
+  description: string;
+  price: string;
+  priceNote: string;
+  includes: string[];
+}
+
+export const bundles: Bundle[] = [
+  {
+    name: "Website + WhatsApp Agent",
+    description: "A complete business website with an AI agent handling WhatsApp leads and bookings automatically.",
+    price: "$320",
+    priceNote: "starting price, bundled",
+    includes: ["Starter website package", "WhatsApp AI agent", "Automated lead capture & call booking"],
+  },
+  {
+    name: "Website + Automation Suite",
+    description: "A professional website plus a full automation stack across WhatsApp, Instagram, and forms.",
+    price: "$650",
+    priceNote: "starting price, bundled",
+    includes: ["Professional website package", "WhatsApp + Instagram automation", "Custom form automation"],
+  },
+];
+
 export interface ComparisonRow {
   feature: string;
   starter: string | boolean;

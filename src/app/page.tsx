@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/home/hero";
 import { TrustMarquee } from "@/components/sections/home/trust-marquee";
 import { WhyModernWebsites } from "@/components/sections/home/why-modern-websites";
+import { AutomationShowcase } from "@/components/sections/home/automation-showcase";
 import { WhyChooseMe } from "@/components/sections/home/why-choose-me";
 import { ServicesPreview } from "@/components/sections/home/services-preview";
 import { Capabilities } from "@/components/sections/home/capabilities";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <TrustMarquee />
       <WhyModernWebsites />
+      <AutomationShowcase />
       <WhyChooseMe />
       <ServicesPreview />
       <Capabilities />

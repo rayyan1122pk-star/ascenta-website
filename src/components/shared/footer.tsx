@@ -17,11 +17,14 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative mt-20 border-t border-white/10">
-      <Container className="py-14 sm:py-16">
+    <footer className="relative mt-32 border-t border-white/10">
+      <Container className="py-16 sm:py-24">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-6">
           <div className="col-span-2 flex flex-col gap-4 sm:col-span-3 lg:col-span-2">
             <Logo />
+            <p className="text-xs font-medium uppercase tracking-[0.14em] text-primary/70">
+              Web Development <span className="text-white/30">×</span> AI Automation
+            </p>
             <p className="max-w-xs text-sm text-muted-foreground">{siteConfig.mission}</p>
             <div className="flex items-center gap-2 pt-1">
               {socialLinks.map((s) => (

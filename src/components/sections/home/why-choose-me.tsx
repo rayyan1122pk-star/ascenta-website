@@ -14,9 +14,10 @@ import {
   Infinity as InfinityIcon,
   LifeBuoy,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import { Section, SectionHeading } from "@/components/shared/section";
-import { GlassCard } from "@/components/shared/glass-card";
 import { whyChooseMe } from "@/config/stats";
+import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const icons = [
@@ -34,48 +35,47 @@ const icons = [
   LifeBuoy,
 ];
 
-// Indices that get the larger "featured" treatment in the bento grid.
-const featured = new Set([0, 4, 8]);
+// Vertical offset per column position, so panels feel like they're floating at different depths.
+const depthOffset = ["sm:mt-0", "sm:mt-8", "sm:mt-3"];
 
 export function WhyChooseMe() {
   return (
     <Section tint>
       <SectionHeading
         badge="Why Work With Us"
-        title="Everything You Need, Built In"
+        title="Built to Perform"
         description="Every project is built with the same standard — the one we'd want if we were the client."
       />
 
-      <div className="mt-14 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        variants={staggerContainer(0.05)}
+        initial="hidden"
+        whileInView="show"
+        viewport={viewportOnce}
+        className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      >
         {whyChooseMe.map((item, i) => {
           const Icon = icons[i % icons.length];
-          const isFeatured = featured.has(i);
           return (
-            <GlassCard
+            <motion.div
               key={item.title}
-              delay={(i % 3) * 0.06}
-              className={cn("flex flex-col", isFeatured && "lg:col-span-2 lg:flex-row lg:items-start lg:gap-6")}
+              variants={fadeUp}
+              className={cn(depthOffset[i % 3])}
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <div
-                className={cn(
-                  "flex shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary",
-                  isFeatured ? "h-14 w-14" : "h-11 w-11"
-                )}
-              >
-                <Icon size={isFeatured ? 26 : 20} />
+              <div className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_16px_32px_-20px_rgba(0,0,0,0.7)] transition-colors duration-300 hover:border-primary/25 hover:bg-white/[0.04]">
+                <span className="pointer-events-none absolute inset-y-0 left-0 w-0.5 origin-top scale-y-0 bg-primary transition-transform duration-300 group-hover:scale-y-100" />
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                  <Icon size={20} />
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-white">{item.title}</h3>
+                <p className="mt-1.5 text-sm text-muted-foreground">{item.description}</p>
               </div>
-              <div className={isFeatured ? "mt-5 lg:mt-0" : "mt-4"}>
-                <h3 className={cn("font-semibold text-white", isFeatured ? "text-lg" : "text-base")}>
-                  {item.title}
-                </h3>
-                <p className={cn("mt-1.5 text-muted-foreground", isFeatured ? "text-base" : "text-sm")}>
-                  {item.description}
-                </p>
-              </div>
-            </GlassCard>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </Section>
   );
 }

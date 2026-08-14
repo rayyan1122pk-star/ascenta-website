@@ -9,7 +9,14 @@ export function FaqPreview() {
   const featured = faqs.slice(0, 5);
   return (
     <Section>
-      <SectionHeading badge="Got Questions?" title="Frequently Asked Questions" />
+      <SectionHeading
+        badge="Got Questions?"
+        title={
+          <>
+            Questions? Let&apos;s <span className="font-serif italic text-primary">clear them up.</span>
+          </>
+        }
+      />
       <div className="mx-auto mt-14 max-w-2xl">
         <FaqAccordion items={featured} />
         <div className="mt-10 flex justify-center">

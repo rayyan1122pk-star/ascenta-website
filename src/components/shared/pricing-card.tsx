@@ -19,7 +19,7 @@ export function PricingCard({ tier, delay = 0 }: { tier: PricingTier; delay?: nu
       className={cn(
         "relative flex flex-col rounded-3xl border p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] sm:p-8",
         tier.highlighted
-          ? "border-primary/40 bg-primary/[0.05] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_16px_32px_-20px_rgba(0,0,0,0.7)]"
+          ? "border-primary/40 bg-primary/[0.05] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_0_50px_-16px_rgba(230,57,70,0.45),0_16px_32px_-20px_rgba(0,0,0,0.7)] lg:-translate-y-3"
           : "border-white/[0.08] bg-white/[0.02]"
       )}
     >

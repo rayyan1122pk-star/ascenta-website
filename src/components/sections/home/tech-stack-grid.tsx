@@ -5,54 +5,48 @@ import { Section, SectionHeading } from "@/components/shared/section";
 import { techStack } from "@/config/techstack";
 import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
 
-const categoryOrder = [
-  "Frontend",
-  "Backend",
-  "Database",
-  "Hosting",
-  "Design",
-  "Animation",
-  "AI",
-  "Tools",
-] as const;
-
 export function TechStackGrid() {
-  const grouped = categoryOrder
-    .map((category) => ({ category, items: techStack.filter((t) => t.category === category) }))
-    .filter((g) => g.items.length > 0);
-
   return (
-    <Section tint>
+    <Section tint className="overflow-hidden">
       <SectionHeading
         badge="Tools of the Trade"
         title="The Technology We Build With"
         description="A modern, battle-tested stack chosen for performance, reliability, and long-term maintainability."
       />
 
-      <motion.div
-        variants={staggerContainer(0.06)}
-        initial="hidden"
-        whileInView="show"
-        viewport={viewportOnce}
-        className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.08] sm:grid-cols-2 lg:grid-cols-4"
-      >
-        {grouped.map((group) => (
-          <motion.div
-            key={group.category}
-            variants={fadeUp}
-            className="flex flex-col gap-3 bg-background p-6 transition-colors duration-300 hover:bg-white/[0.02]"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary/80">{group.category}</p>
-            <ul className="flex flex-col gap-2">
-              {group.items.map((tech) => (
-                <li key={tech.name} className="text-sm text-muted-foreground transition-colors hover:text-white">
+      <div className="mt-16 flex flex-col items-center">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="rounded-full border border-primary/25 bg-primary/[0.06] px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-[0_0_40px_-12px_rgba(230,57,70,0.5)]"
+        >
+          Ascenta Tech Stack
+        </motion.div>
+
+        <div className="h-10 w-px bg-gradient-to-b from-primary/50 to-white/10" />
+        <div className="h-px w-full max-w-4xl bg-white/10" />
+
+        <motion.div
+          variants={staggerContainer(0.03)}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="mt-0 flex max-w-4xl flex-wrap items-start justify-center gap-x-4 gap-y-8"
+        >
+          {techStack.map((tech) => (
+            <motion.div key={tech.name} variants={fadeUp} className="flex flex-col items-center">
+              <div className="h-6 w-px bg-white/10" />
+              <div className="group rounded-xl border border-white/[0.08] bg-white/[0.02] px-4 py-2.5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-primary/[0.06]">
+                <span className="text-sm font-medium text-muted-foreground transition-colors duration-300 group-hover:text-white">
                   {tech.name}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
-      </motion.div>
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </Section>
   );
 }

@@ -22,10 +22,14 @@ export function TestimonialsSlider() {
   const testimonial = testimonials[index];
 
   return (
-    <Section tint>
+    <Section className="relative overflow-hidden">
       <SectionHeading
         badge="Client Testimonials"
-        title="Trusted by Businesses That Value Results"
+        title={
+          <>
+            Built for <span className="font-serif italic text-primary">results.</span>
+          </>
+        }
       />
 
       <div
@@ -33,29 +37,30 @@ export function TestimonialsSlider() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="relative min-h-[280px] rounded-3xl border border-white/[0.08] bg-white/[0.03] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_24px_48px_-24px_rgba(0,0,0,0.7)] backdrop-blur-sm sm:p-10">
-          <Quote className="absolute right-8 top-8 text-white/10" size={48} />
+        <Quote className="pointer-events-none absolute -left-6 -top-10 text-primary/10 sm:-left-10" size={140} strokeWidth={1} />
+
+        <div className="relative min-h-[300px] px-2 text-center sm:px-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={testimonial.name}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="flex gap-1">
+              <div className="flex justify-center gap-1">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star key={i} size={15} className="fill-warning text-warning" />
                 ))}
               </div>
-              <p className="mt-5 text-balance text-lg text-white sm:text-xl">
+              <p className="mx-auto mt-6 max-w-2xl text-balance font-serif text-2xl italic leading-snug text-white sm:text-3xl md:text-4xl">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
-              <div className="mt-7 flex items-center gap-3">
+              <div className="mt-8 flex items-center justify-center gap-3">
                 <div className="relative h-12 w-12 overflow-hidden rounded-full border border-white/10">
                   <Image src={testimonial.avatar} alt={testimonial.name} fill sizes="48px" className="object-cover" />
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="text-sm font-semibold text-white">{testimonial.name}</p>
                   <p className="text-xs text-muted-foreground">
                     {testimonial.role}, {testimonial.company}
@@ -66,7 +71,7 @@ export function TestimonialsSlider() {
           </AnimatePresence>
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-4">
+        <div className="mt-10 flex items-center justify-center gap-4">
           <button
             aria-label="Previous testimonial"
             onClick={() => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length)}
@@ -81,7 +86,7 @@ export function TestimonialsSlider() {
                 aria-label={`Go to testimonial ${i + 1}`}
                 onClick={() => setIndex(i)}
                 className={`h-1.5 rounded-full transition-all ${
-                  i === index ? "w-6 bg-white" : "w-1.5 bg-white/20"
+                  i === index ? "w-6 bg-primary" : "w-1.5 bg-white/20"
                 }`}
               />
             ))}

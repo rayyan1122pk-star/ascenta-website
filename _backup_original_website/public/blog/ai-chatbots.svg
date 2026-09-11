@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="glow3" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid3" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.14)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#17100F" />
+  <rect width="1200" height="800" fill="url(#grid3)" />
+  <rect width="1200" height="800" fill="url(#glow3)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
+  
+  <g transform="translate(600,380)">
+    <rect x="-190" y="-120" width="380" height="220" rx="28" fill="#221918" stroke="rgba(237,227,221,0.14)" stroke-width="2" />
+    <path d="M -60 100 L -60 150 L -10 100 Z" fill="#221918" />
+    <circle cx="-90" cy="-10" r="14" fill="#E63946" />
+    <circle cx="0" cy="-10" r="14" fill="#D4A24E" />
+    <circle cx="90" cy="-10" r="14" fill="#EDE3DD" opacity="0.7" />
+    <g transform="translate(210,-190)">
+      <path d="M0 -34 L10 -10 L34 0 L10 10 L0 34 L-10 10 L-34 0 L-10 -10 Z" fill="#D4A24E" />
+    </g>
+  </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#EDE3DD" opacity="0.55">AI</text>
+</svg>

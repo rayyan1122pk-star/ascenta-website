@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="glow2" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid2" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.14)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#17100F" />
+  <rect width="1200" height="800" fill="url(#grid2)" />
+  <rect width="1200" height="800" fill="url(#glow2)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
+  
+  <g transform="translate(560,420)">
+    <rect x="-160" y="-40" width="46" height="140" rx="6" fill="#7A2229" />
+    <rect x="-96" y="-100" width="46" height="200" rx="6" fill="#E63946" opacity="0.85" />
+    <rect x="-32" y="-160" width="46" height="260" rx="6" fill="#D4A24E" />
+    <g transform="translate(110,-90)">
+      <circle r="70" fill="none" stroke="#EDE3DD" stroke-width="10" />
+      <line x1="50" y1="50" x2="110" y2="110" stroke="#EDE3DD" stroke-width="14" stroke-linecap="round" />
+    </g>
+  </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#EDE3DD" opacity="0.55">SEO</text>
+</svg>

@@ -1,139 +1,144 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
-import { Section, SectionHeading } from "@/components/shared/section";
+import { CheckCircle2, Terminal } from "lucide-react";
+import { Section } from "@/components/shared/section";
 import { Container } from "@/components/shared/container";
-import { AnimatedHeading, RevealText } from "@/components/shared/animated-heading";
-import { GlassCard } from "@/components/shared/glass-card";
-import { Counter } from "@/components/shared/counter";
-import { FinalCta } from "@/components/shared/final-cta";
-import { aboutContent } from "@/config/about";
-import { siteConfig } from "@/config/site";
+import { LearningCredentials } from "@/components/sections/portfolio/learning-credentials";
+import { JourneyTimeline } from "@/components/sections/portfolio/journey-timeline";
+import { ProblemCta } from "@/components/sections/portfolio/problem-cta";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: `Learn about ${siteConfig.name} — a web development and AI automation agency focused on building premium websites that grow businesses.`,
+  title: "About Muhammad Rayyan · Builder & AI Solutions Engineer",
+  description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta) — building full-stack web platforms, AI agents, and resilient automations.`,
 };
 
 export default function AboutPage() {
   return (
     <>
+      {/* Hero / Intro Header */}
       <Section className="pb-8 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-medium text-muted-foreground">
-            About Us
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.06] px-4 py-1.5 font-mono text-xs font-medium text-primary">
+            <Terminal size={13} />
+            Muhammad Rayyan · The Builder
           </span>
-          <AnimatedHeading
-            as="h1"
-            className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl"
-            lines={[<span key="1">We&apos;re Ascenta.</span>]}
-          />
+          <h1 className="mt-6 text-balance font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+            I Don&apos;t Just Provide Services.{" "}
+            <span className="italic text-primary">I Build Technology.</span>
+          </h1>
           <p className="mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg">
-            We design and develop premium websites and AI-powered solutions that help businesses build
-            trust, generate more leads, and grow online.
+            A technology builder and problem solver focused on full-stack web platforms, autonomous AI
+            agents, n8n workflow automations, and custom operational hubs.
           </p>
         </Container>
       </Section>
 
+      {/* Verified Metric Highlights */}
       <Section className="pt-0">
-        <div className="mx-auto grid max-w-4xl gap-4 rounded-3xl border border-white/10 bg-white/[0.02] p-6 sm:grid-cols-4 sm:p-8">
-          {aboutContent.achievements.map((item) => (
-            <div key={item.label} className="text-center">
-              <p className="text-2xl font-semibold text-white sm:text-3xl">
-                {/^\d+$/.test(item.value) ? <Counter value={Number(item.value)} /> : item.value}
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <SectionHeading badge="Our Story" title="How We Got Here" align="left" />
-        <div className="mt-8 flex max-w-3xl flex-col gap-5">
-          {aboutContent.story.map((paragraph, i) => (
-            <RevealText key={i} delay={i * 0.1}>
-              <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">{paragraph}</p>
-            </RevealText>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <SectionHeading badge="Our Philosophy" title="What We Believe About Building Websites" />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
-          {aboutContent.philosophy.map((item, i) => (
-            <GlassCard key={item.title} delay={(i % 2) * 0.08}>
-              <h3 className="text-base font-semibold text-white">{item.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
-            </GlassCard>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <SectionHeading badge="Core Values" title="What Guides Every Project" />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {aboutContent.values.map((item, i) => (
-            <GlassCard key={item.title} delay={(i % 3) * 0.08}>
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-success/15 text-success">
-                <Check size={18} />
-              </div>
-              <h3 className="mt-4 text-base font-semibold text-white">{item.title}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground">{item.description}</p>
-            </GlassCard>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <SectionHeading badge="Our Journey" title="Timeline" />
-        <div className="mx-auto mt-14 max-w-2xl">
-          <div className="relative flex flex-col gap-8 border-l border-white/10 pl-8">
-            {aboutContent.timeline.map((item, i) => (
-              <RevealText key={item.year} delay={i * 0.06} className="relative">
-                <span className="absolute -left-[2.35rem] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-background bg-primary" />
-                <span className="text-xs font-semibold text-accent">{item.year}</span>
-                <h3 className="mt-1 text-base font-semibold text-white">{item.title}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{item.description}</p>
-              </RevealText>
-            ))}
+        <div className="mx-auto grid max-w-4xl gap-4 rounded-3xl border border-white/10 bg-[#1D1413] p-6 sm:grid-cols-4 sm:p-8 shadow-xl">
+          <div className="text-center">
+            <p className="font-mono text-3xl font-bold text-white">40+</p>
+            <p className="mt-1 text-xs text-muted-foreground">Delivered Projects</p>
+          </div>
+          <div className="text-center">
+            <p className="font-mono text-3xl font-bold text-white">15+</p>
+            <p className="mt-1 text-xs text-muted-foreground">AI Workflows & Agents</p>
+          </div>
+          <div className="text-center">
+            <p className="font-mono text-3xl font-bold text-white">&lt;800ms</p>
+            <p className="mt-1 text-xs text-muted-foreground">Voice Latency Benchmark</p>
+          </div>
+          <div className="text-center">
+            <p className="font-mono text-3xl font-bold text-white">100%</p>
+            <p className="mt-1 text-xs text-muted-foreground">Client Satisfaction</p>
           </div>
         </div>
       </Section>
 
+      {/* Deep Story & Ethos */}
       <Section>
-        <SectionHeading badge="Skills" title="What We Work With" />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {Object.entries(aboutContent.skills).map(([category, skills], i) => (
-            <GlassCard key={category} delay={(i % 3) * 0.08}>
-              <h3 className="text-base font-semibold text-white">{category}</h3>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span key={skill} className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted-foreground">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </GlassCard>
-          ))}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-6 flex flex-col gap-6">
+            <span className="font-mono text-xs uppercase tracking-widest text-accent">
+              Origins & Approach
+            </span>
+            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+              Why I Build Systems, Not Just Pages.
+            </h2>
+            <div className="flex flex-col gap-4 text-sm leading-relaxed text-[#F5EFE6]/90 sm:text-base">
+              <p>
+                When I started web development, I quickly noticed that most clients didn&apos;t just
+                have a &ldquo;website problem&rdquo; — they had an operational problem. Their leads were
+                waiting hours for a reply, their customer data was trapped in personal WhatsApp chats,
+                and their team was wasting 20+ hours a week manually copy-pasting spreadsheet records.
+              </p>
+              <p>
+                A beautiful website alone couldn&apos;t fix that. What they actually needed was an
+                end-to-end digital engine: a sub-second Next.js web application connected directly to
+                intelligent AI agents that qualify incoming inquiries 24/7, sync data seamlessly with
+                Google Sheets or custom CRMs, and alert human reps when a deal is ready to close.
+              </p>
+              <p>
+                That realization transformed how I work. Today, I approach every project as an integrated
+                engineering challenge. I care deeply about the craft: strict TypeScript types, 100/100
+                Core Web Vitals, schema-enforced AI tool calling, and resilient automation pipelines.
+              </p>
+            </div>
+          </div>
+
+          <div className="lg:col-span-6 flex flex-col gap-4">
+            <div className="rounded-3xl border border-white/10 bg-[#1D1413] p-6 sm:p-8">
+              <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-primary">
+                What I Focus On
+              </h3>
+              <ul className="mt-4 flex flex-col gap-4 text-xs sm:text-sm text-white/90">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+                  <div>
+                    <strong className="text-white">High-Performance Web Platforms:</strong> Next.js 16,
+                    React 19, Tailwind CSS v4, and semantic architectures engineered for conversions.
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+                  <div>
+                    <strong className="text-white">Autonomous AI Agents:</strong> 24/7 WhatsApp &
+                    Instagram agents with schema-enforced tool execution, memory, and Hinglish NLP.
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+                  <div>
+                    <strong className="text-white">Low-Latency Voice AI:</strong> Sub-800ms conversational
+                    phone assistants with bidirectional WebSocket audio and neural TTS.
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+                  <div>
+                    <strong className="text-white">n8n Automation Clusters:</strong> Fault-tolerant
+                    API orchestration with dead-letter retry queues and instant webhook routing.
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+                  <div>
+                    <strong className="text-white">Custom Internal Hubs:</strong> Centralized dashboards
+                    and lightweight CRMs eliminating expensive monthly per-seat licensing.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Section>
 
-      <Section>
-        <SectionHeading badge="Looking Ahead" title="Where We're Headed" />
-        <div className="mx-auto mt-10 max-w-2xl">
-          <ul className="flex flex-col gap-4">
-            {aboutContent.futureGoals.map((goal) => (
-              <li key={goal} className="flex items-start gap-3 text-muted-foreground">
-                <Check size={18} className="mt-0.5 shrink-0 text-success" />
-                <span>{goal}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
+      {/* Where I Learned -> How I Applied It (Credentials) */}
+      <LearningCredentials />
 
-      <FinalCta />
+      {/* The Evolution Timeline (Journey) */}
+      <JourneyTimeline />
+
+      <ProblemCta />
     </>
   );
 }

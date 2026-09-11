@@ -10,6 +10,7 @@ import { TestimonialsRedesigned } from "@/components/sections/portfolio/testimon
 import { LearningCredentials } from "@/components/sections/portfolio/learning-credentials";
 import { JourneyTimeline } from "@/components/sections/portfolio/journey-timeline";
 import { AboutBuilderPreview } from "@/components/sections/portfolio/about-builder-preview";
+import { FounderEditorial } from "@/components/sections/portfolio/founder-editorial";
 import { ProblemCta } from "@/components/sections/portfolio/problem-cta";
 
 export default function Home() {
@@ -27,7 +28,10 @@ export default function Home() {
       {/* 03 — Featured Work */}
       <FeaturedWork />
 
-      {/* 04 — AI & Automation Lab */}
+      {/* 04 — The Founder & Builder */}
+      <FounderEditorial />
+
+      {/* 05 — AI & Automation Lab */}
       <AiAutomationLab />
 
       {/* 05 — Solutions / Problems I've Solved */}

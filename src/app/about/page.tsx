@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { CheckCircle2, Terminal } from "lucide-react";
 import { Section } from "@/components/shared/section";
 import { Container } from "@/components/shared/container";
@@ -54,10 +55,40 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Deep Story & Ethos */}
+      {/* Deep Story & Ethos with Founder Portrait */}
       <Section>
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-6 flex flex-col gap-6">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          {/* Portrait Column */}
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/15 bg-[#17100F] shadow-2xl">
+              <Image
+                src="/founder/muhammad-rayyan.jpg"
+                alt="Muhammad Rayyan — Founder & Builder at Ascenta"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 480px"
+                className="object-cover object-center"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#120B0A] via-transparent to-transparent opacity-80"
+              />
+              <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/15 bg-[#17100F]/90 p-4 backdrop-blur-md">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-mono text-[10px] uppercase text-[#D4A24E]">Founder & Builder</p>
+                    <p className="text-sm font-bold text-white">Muhammad Rayyan</p>
+                  </div>
+                  <span className="rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-primary">
+                    Ascenta
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Story Column */}
+          <div className="lg:col-span-7 flex flex-col gap-6">
             <span className="font-mono text-xs uppercase tracking-widest text-accent">
               Origins & Approach
             </span>
@@ -84,51 +115,57 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
+        </div>
 
-          <div className="lg:col-span-6 flex flex-col gap-4">
-            <div className="rounded-3xl border border-white/10 bg-[#1D1413] p-6 sm:p-8">
-              <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-primary">
-                What I Focus On
-              </h3>
-              <ul className="mt-4 flex flex-col gap-4 text-xs sm:text-sm text-white/90">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
-                  <div>
-                    <strong className="text-white">High-Performance Web Platforms:</strong> Next.js 16,
-                    React 19, Tailwind CSS v4, and semantic architectures engineered for conversions.
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
-                  <div>
-                    <strong className="text-white">Autonomous AI Agents:</strong> 24/7 WhatsApp &
-                    Instagram agents with schema-enforced tool execution, memory, and Hinglish NLP.
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
-                  <div>
-                    <strong className="text-white">Low-Latency Voice AI:</strong> Sub-800ms conversational
-                    phone assistants with bidirectional WebSocket audio and neural TTS.
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
-                  <div>
-                    <strong className="text-white">n8n Automation Clusters:</strong> Fault-tolerant
-                    API orchestration with dead-letter retry queues and instant webhook routing.
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
-                  <div>
-                    <strong className="text-white">Custom Internal Hubs:</strong> Centralized dashboards
-                    and lightweight CRMs eliminating expensive monthly per-seat licensing.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        {/* What I Focus On */}
+        <div className="mt-14 rounded-3xl border border-white/10 bg-[#1D1413] p-6 sm:p-8 shadow-xl">
+          <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-primary">
+            What I Focus On
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 text-xs sm:text-sm text-white/90">
+            <li className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+              <div>
+                <strong className="text-white block mb-1">High-Performance Web Platforms:</strong> Next.js 16,
+                React 19, Tailwind CSS v4, and semantic architectures engineered for conversions.
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+              <div>
+                <strong className="text-white block mb-1">Autonomous AI Agents:</strong> 24/7 WhatsApp &
+                Instagram agents with schema-enforced tool execution, memory, and Hinglish NLP.
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+              <div>
+                <strong className="text-white block mb-1">Low-Latency Voice AI:</strong> Sub-800ms conversational
+                phone assistants with bidirectional WebSocket audio and neural TTS.
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+              <div>
+                <strong className="text-white block mb-1">n8n Automation Clusters:</strong> Fault-tolerant
+                API orchestration with dead-letter retry queues and instant webhook routing.
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+              <div>
+                <strong className="text-white block mb-1">Custom Internal Hubs:</strong> Centralized dashboards
+                and lightweight CRMs eliminating expensive monthly per-seat licensing.
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4">
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+              <div>
+                <strong className="text-white block mb-1">Practical Learning by Building:</strong> Grounded in
+                shipping working systems and verifiable results rather than abstract theory.
+              </div>
+            </li>
+          </ul>
         </div>
       </Section>
 

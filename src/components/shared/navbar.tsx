@@ -78,7 +78,7 @@ export function Navbar() {
             className="rounded-full"
             render={<Link href="/contact" />}
           >
-            Book a Free Consultation
+            Discuss a Project
             <ArrowUpRight data-icon="inline-end" />
           </Button>
         </div>
@@ -126,7 +126,7 @@ export function Navbar() {
               className="mt-3 w-full rounded-xl"
               render={<Link href="/contact" />}
             >
-              Book a Free Consultation
+              Discuss a Project
             </Button>
           </motion.div>
         )}

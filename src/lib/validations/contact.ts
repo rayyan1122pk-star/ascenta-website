@@ -20,22 +20,22 @@ export const contactFormSchema = z.object({
 export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const budgetOptions: { value: ContactFormValues["budget"]; label: string }[] = [
-  { value: "under-150", label: "Under $150" },
-  { value: "150-300", label: "$150 – $300" },
-  { value: "300-600", label: "$300 – $600" },
-  { value: "600-plus", label: "$600+" },
-  { value: "not-sure", label: "Not sure yet" },
+  { value: "not-sure", label: "Flexible / Let's Scope the Project Together" },
+  { value: "under-150", label: "Focused Automation / Script / Single Feature" },
+  { value: "150-300", label: "Workflow Pipeline / AI Agent Integration" },
+  { value: "300-600", label: "Comprehensive AI Agent or Custom Dashboard" },
+  { value: "600-plus", label: "Full-Scale Web Platform or Multi-System Build" },
 ];
 
 export const timelineOptions: { value: ContactFormValues["timeline"]; label: string }[] = [
-  { value: "asap", label: "As soon as possible" },
+  { value: "asap", label: "Urgent — As soon as possible" },
   { value: "1-month", label: "Within 1 month" },
   { value: "1-3-months", label: "1 – 3 months" },
-  { value: "flexible", label: "Flexible" },
+  { value: "flexible", label: "Flexible / Planning Phase" },
 ];
 
 export const preferredContactOptions: { value: ContactFormValues["preferredContact"]; label: string }[] = [
+  { value: "whatsapp", label: "WhatsApp (Fastest)" },
   { value: "email", label: "Email" },
-  { value: "phone", label: "Phone" },
-  { value: "whatsapp", label: "WhatsApp" },
+  { value: "phone", label: "Phone Call" },
 ];

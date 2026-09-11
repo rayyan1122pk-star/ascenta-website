@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Zap, Workflow, Cpu, Layers } from "lucide-react";
 import { Container } from "@/components/shared/container";
 import { Counter } from "@/components/shared/counter";
-import { fadeUp, staggerContainer, viewportOnce } from "@/lib/motion";
+import { fadeUp, staggerContainer } from "@/lib/motion";
 
 const metrics = [
   {
@@ -58,7 +58,7 @@ export function ProofStats() {
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          viewport={viewportOnce}
+          viewport={{ once: true, margin: "0px 0px -30px 0px" }}
           className="mx-auto max-w-3xl text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.06] px-3.5 py-1 text-xs font-medium uppercase tracking-[0.18em] text-primary">
@@ -80,7 +80,7 @@ export function ProofStats() {
           variants={staggerContainer(0.08)}
           initial="hidden"
           whileInView="show"
-          viewport={viewportOnce}
+          viewport={{ once: true, margin: "0px 0px -30px 0px" }}
           className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
         >
           {metrics.map((item) => {
@@ -115,7 +115,7 @@ export function ProofStats() {
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
-          viewport={viewportOnce}
+          viewport={{ once: true, margin: "0px 0px -30px 0px" }}
           className="mt-10 flex flex-wrap items-center justify-center gap-2 border-t border-white/[0.06] pt-8"
         >
           <span className="mr-2 text-xs font-mono uppercase tracking-wider text-muted-foreground/70">

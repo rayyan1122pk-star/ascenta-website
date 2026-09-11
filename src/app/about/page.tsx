@@ -67,7 +67,7 @@ export default function AboutPage() {
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 480px"
-                className="object-cover object-center"
+                className="object-cover object-[50%_35%] scale-[1.22] transition-transform duration-700 hover:scale-[1.26]"
               />
               <div
                 aria-hidden="true"

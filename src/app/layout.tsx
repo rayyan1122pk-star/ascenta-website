@@ -12,6 +12,7 @@ import { BackgroundEffects } from "@/components/shared/background-effects";
 import { CustomCursor } from "@/components/shared/custom-cursor";
 import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { Toaster } from "@/components/ui/sonner";
+import { ChatWidget } from "@/components/shared/chatbot/chat-widget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,6 +98,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <main className="flex-1 pt-24">{children}</main>
               <Footer />
               <Toaster />
+              <ChatWidget />
             </LenisProvider>
           </LoadingProvider>
         </TooltipProvider>

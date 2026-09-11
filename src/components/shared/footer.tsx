@@ -91,7 +91,7 @@ function FooterCol({ title, links }: { title: string; links: readonly { label: s
       <h4 className="text-sm font-semibold text-white">{title}</h4>
       <ul className="mt-3 flex flex-col gap-2.5">
         {links.map((l) => (
-          <li key={l.href}>
+          <li key={l.label}>
             <Link href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-white">
               {l.label}
             </Link>

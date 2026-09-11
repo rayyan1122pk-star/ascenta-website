@@ -33,11 +33,24 @@ export async function POST(req: Request) {
       );
     }
 
-    const apiKey = process.env.OMNIROUTE_API_KEY;
-    const rawApiUrl = process.env.OMNIROUTE_API_URL || "https://api.omniroute.ai/v1";
-    const model = process.env.OMNIROUTE_MODEL || "gpt-4o-mini";
+    const apiKey =
+      process.env.OPENROUTER_API_KEY ||
+      process.env.OMNIROUTE_API_KEY;
 
-    // If no API key is configured yet, provide seamless local fallback
+    // Detect if this is OpenRouter (either key format sk-or-* or provider config)
+    const isOpenRouter =
+      !!process.env.OPENROUTER_API_KEY ||
+      Boolean(apiKey && apiKey.startsWith("sk-or-"));
+
+    const rawApiUrl = isOpenRouter
+      ? (process.env.OPENROUTER_API_URL || "https://openrouter.ai/api/v1")
+      : (process.env.OMNIROUTE_API_URL || "https://api.omniroute.ai/v1");
+
+    const model = isOpenRouter
+      ? (process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini")
+      : (process.env.OMNIROUTE_MODEL || "gpt-4o-mini");
+
+    // If no API key is configured, provide seamless grounded local fallback
     if (!apiKey) {
       const fallbackReply = getFallbackResponse(lastUserMessage.content);
       return NextResponse.json({
@@ -47,7 +60,7 @@ export async function POST(req: Request) {
       });
     }
 
-    // Normalize endpoint URL
+    // Normalize endpoint URL to /chat/completions
     const endpoint = rawApiUrl.endsWith("/chat/completions")
       ? rawApiUrl
       : `${rawApiUrl.replace(/\/+$/, "")}/chat/completions`;
@@ -65,16 +78,23 @@ export async function POST(req: Request) {
       max_tokens: 450,
     };
 
+    const headers: Record<string, string> = {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    };
+
+    if (isOpenRouter || endpoint.includes("openrouter.ai")) {
+      headers["HTTP-Referer"] = "https://ascenta.dev";
+      headers["X-Title"] = "Ascenta Portfolio";
+    }
+
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 20000);
 
     try {
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
-        },
+        headers,
         body: JSON.stringify(payload),
         signal: controller.signal,
       });
@@ -83,9 +103,9 @@ export async function POST(req: Request) {
 
       if (!response.ok) {
         const errorText = await response.text().catch(() => "");
-        console.error("OmniRoute API responded with error:", response.status, errorText);
+        console.error("AI Gateway responded with error status:", response.status, errorText);
 
-        // Graceful fallback on API error
+        // Graceful fallback on API key error (e.g. 401, quota exceeded, etc.)
         const fallbackReply = getFallbackResponse(lastUserMessage.content);
         return NextResponse.json({
           reply: fallbackReply,
@@ -98,7 +118,7 @@ export async function POST(req: Request) {
       const reply = data?.choices?.[0]?.message?.content;
 
       if (!reply || typeof reply !== "string") {
-        console.error("Malformed OmniRoute response payload:", data);
+        console.error("Malformed AI response payload:", data);
         const fallbackReply = getFallbackResponse(lastUserMessage.content);
         return NextResponse.json({
           reply: fallbackReply,
@@ -109,12 +129,12 @@ export async function POST(req: Request) {
 
       return NextResponse.json({
         reply: reply.trim(),
-        source: "omniroute",
+        source: isOpenRouter ? "openrouter" : "omniroute",
         model,
       });
     } catch (fetchErr: unknown) {
       clearTimeout(timeoutId);
-      console.error("Error communicating with OmniRoute API:", fetchErr);
+      console.error("Error communicating with AI Gateway:", fetchErr);
 
       // Graceful fallback on network timeout/failure
       const fallbackReply = getFallbackResponse(lastUserMessage.content);
@@ -129,10 +149,10 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         reply:
-          "I encountered an unexpected issue. You can reach Muhammad Rayyan directly on [WhatsApp](https://wa.me/923328444557) or via the [Contact](/contact) page!",
+          "I encountered a temporary delay. You can reach Muhammad Rayyan directly on [WhatsApp](https://wa.me/923328444557) or via the [Contact](/contact) page!",
         source: "server-error-fallback",
       },
-      { status: 200 } // Keep 200 with polite reply so UI doesn't crash
+      { status: 200 }
     );
   }
 }

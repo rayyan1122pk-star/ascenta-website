@@ -67,7 +67,7 @@ export function AboutBuilderPreview() {
               rel="noopener noreferrer"
               className="font-mono text-xs text-muted-foreground transition-colors hover:text-white"
             >
-              GitHub / muhammadrayyan →
+              GitHub / rayyan1122pk-star →
             </a>
           </div>
         </div>

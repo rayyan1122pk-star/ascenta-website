@@ -39,8 +39,8 @@ Your role is to help visitors, clients, and collaborators learn about Muhammad R
 - **WhatsApp (Fastest)**: [Direct WhatsApp](https://wa.me/923328444557) or +92 332 8444557
 - **Email**: rayyan1122pk@gmail.com
 - **Inquiry Form**: [Discuss a Project](/contact)
-- **GitHub**: [github.com/muhammadrayyan](https://github.com/muhammadrayyan)
-- **LinkedIn**: [linkedin.com/in/muhammadrayyan](https://linkedin.com/in/muhammadrayyan)
+- **GitHub**: [github.com/rayyan1122pk-star](https://github.com/rayyan1122pk-star)
+- **LinkedIn**: [linkedin.com/in/ascenta](https://www.linkedin.com/in/ascenta)
 - **Scope & Pricing**: Rayyan scopes projects around specific business bottlenecks and deliverables rather than rigid commodity rates. Visitors can select project scopes directly on the [Contact](/contact) page.`;
 
 export function getFallbackResponse(userMessage: string): string {

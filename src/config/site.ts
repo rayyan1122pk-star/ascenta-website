@@ -28,8 +28,8 @@ export const siteConfig = {
     "Full-Stack Web Engineering",
   ],
   social: {
-    github: "https://github.com/muhammadrayyan",
-    linkedin: "https://linkedin.com/in/muhammadrayyan",
+    github: "https://github.com/rayyan1122pk-star",
+    linkedin: "https://www.linkedin.com/in/ascenta",
     twitter: "https://twitter.com/ascenta",
     instagram: "https://instagram.com/ascenta",
   },

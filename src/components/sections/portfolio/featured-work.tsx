@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowUpRight,
@@ -101,6 +102,33 @@ export function FeaturedWork() {
                   <span className="font-mono text-xs text-muted-foreground">{project.context}</span>
                 </div>
 
+                {/* Hero Section Screenshot (if present) */}
+                {project.image && (
+                  <div className="relative mt-4 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B]">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} Hero Section`}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1D1413]/80 via-transparent to-black/30" />
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-[11px] font-mono font-medium text-white shadow-lg backdrop-blur-md transition-all duration-200 hover:border-primary/60 hover:bg-primary hover:text-white"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span>Live Preview</span>
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                  </div>
+                )}
+
                 {/* Title & Subtitle */}
                 <h3 className="mt-4 text-xl font-bold text-white transition-colors group-hover:text-primary sm:text-2xl">
                   {project.title}
@@ -191,13 +219,26 @@ export function FeaturedWork() {
                   />
                 </button>
 
-                <Link
-                  href={`/work#${project.id}`}
-                  className="inline-flex items-center gap-1 text-xs font-medium text-white transition-colors hover:text-primary"
-                >
-                  Full Case Study
-                  <ArrowUpRight size={14} />
-                </Link>
+                <div className="flex items-center gap-3">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-mono text-accent transition-colors hover:text-white"
+                    >
+                      Visit Live
+                      <ArrowUpRight size={13} />
+                    </a>
+                  )}
+                  <Link
+                    href={`/work#${project.id}`}
+                    className="inline-flex items-center gap-1 text-xs font-medium text-white transition-colors hover:text-primary"
+                  >
+                    Full Case Study
+                    <ArrowUpRight size={14} />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           );

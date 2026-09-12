@@ -12,16 +12,71 @@ export interface Project {
   architecture?: string;
   context: string;
   featured?: boolean;
+  image?: string;
+  liveUrl?: string;
 }
 
 export const projects: Project[] = [
   {
+    id: "cleandata-ai-saas",
+    title: "CleanData AI — Autonomous Data Specialist SaaS",
+    subtitle: "AI spreadsheet cleaner, PII redaction, embedded SQLite hub & RAG vector sync infrastructure",
+    category: "AI Automation",
+    categoryBadge: "AI SaaS Platform",
+    context: "B2B SaaS & Autonomous Agent Knowledge Infrastructure",
+    problem:
+      "Businesses and AI teams waste hundreds of manual hours wrestling with messy spreadsheets, unstandardized phone/date formats, PII leaks, and inconsistent schemas before data can be queried by AI agents or stored in SQL.",
+    solution:
+      "Engineered an autonomous AI Data Specialist platform operating across 10 specialized modes. Ingests messy spreadsheets or continuous narrative prose, standardizes phone numbers (E.164) and dates (ISO 8601), masks PII (SSN, credit cards), builds entity relationship graphs, persists data into an embedded SQLite engine with an in-browser query explorer, and generates semantic vector embeddings for Pinecone, Qdrant, ChromaDB, and Supabase pgvector.",
+    stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "SQLite (Node Native)", "Vector Embeddings", "RAG Pipeline", "Vercel"],
+    value:
+      "95% reduction in data preparation time; 100% automated PII protection; live browser SQL studio and sub-second context delivery for autonomous LLM agents.",
+    highlights: [
+      "10 autonomous operating modes (Data Analyst, Cleaner, Guardian, RAG Engineer, Validator)",
+      "Unstructured paragraph and continuous prose ingestion into typed tabular schemas",
+      "Embedded SQLite relational hub with interactive in-browser SQL query explorer",
+      "Vectorization pipeline syncing to Pinecone, ChromaDB, Qdrant & Supabase pgvector",
+      "Production Agent Context Delivery API (POST /api/v1/agent/context)",
+    ],
+    architecture:
+      "Raw Spreadsheet / Prose → Entity Extractor & PII Masker → Normalizer → Embedded SQLite Hub ↔ Semantic Vectorizer → Agent Context API",
+    featured: true,
+    image: "/projects/cleandata-hero.png",
+    liveUrl: "https://cleandata-ruddy.vercel.app",
+  },
+  {
+    id: "misaal-foundation-web",
+    title: "Misaal Foundation — Non-Profit Web Platform",
+    subtitle: "Modern editorial digital portal for poverty alleviation, community drives & donor transparency",
+    category: "Web Development",
+    categoryBadge: "Full-Stack Web",
+    context: "Social Impact & Non-Profit Digital Experience",
+    problem:
+      "Legacy non-profit websites often suffer from 4+ second load times, fragmented campaign information, and opaque donation journeys, leading to high drop-offs and diminished donor trust.",
+    solution:
+      "Engineered a bespoke, high-performance web platform for Misaal Foundation (misaalfoundation.online) built with Next.js 16, React 19, Tailwind CSS v4, and Supabase. Features cinematic editorial typography, interactive community drive showcases (Ramadan ration, education, clean water), real-time volunteer intake, and transparent programmatic impact metrics.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Supabase", "Framer Motion", "Vercel"],
+    value:
+      "Sub-second load times worldwide; 100/100 Core Web Vitals; multi-thousand visitor capacity with elevated donor engagement and direct volunteer onboarding.",
+    highlights: [
+      "Cinematic editorial hero with video modal storytelling",
+      "Dynamic community drive modules (Ramadan Ration, Education, Clean Water)",
+      "Real-time volunteer registration and community impact showcase",
+      "Supabase backend integration with sub-second Edge CDN delivery",
+    ],
+    architecture:
+      "Next.js 16 App Router → Supabase Client → Tailwind v4 Design Tokens → Edge CDN Delivery",
+    featured: true,
+    image: "/projects/misaal-foundation-hero.png",
+    liveUrl: "https://www.misaalfoundation.online",
+  },
+  {
     id: "ngo-crm-dashboard",
-    title: "NGO Operations & Beneficiary CRM",
-    subtitle: "Unified Google Forms & Sheets ingestion with real-time operational dashboard",
+    title: "Misaal Foundation — Beneficiary & Operations CRM",
+    subtitle: "Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard",
     category: "CRM & Internal Tools",
     categoryBadge: "CRM & Ops",
-    context: "Non-Profit & Social Impact Operations",
+    context: "Non-Profit Internal Operations & Field Logistics",
     problem:
       "Field teams relied on disconnected paper logs and messy spreadsheets. Volunteer dispatches were delayed, beneficiary records were prone to duplication, and preparing monthly donor impact reports took days of manual collation.",
     solution:

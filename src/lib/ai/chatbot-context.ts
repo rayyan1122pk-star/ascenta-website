@@ -23,12 +23,14 @@ Your role is to help visitors, clients, and collaborators learn about Muhammad R
 5. **Custom CRM & Operational Hubs**: Centralized dashboards unifying Google Forms, Sheets, databases, and APIs to replace expensive recurring SaaS subscriptions.
 
 ### Real Featured Projects:
-1. **NGO Operations & Beneficiary CRM**: Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard; sub-second record searching across 3,000+ beneficiaries; eliminated paper record loss.
-2. **WhatsApp AI Conversational CRM**: 24/7 Meta Cloud API agent with multi-turn qualification, intent scoring, automated CRM pipeline progression, and instant human takeover.
-3. **Real Estate AI Matchmaker**: Omnichannel Instagram & WhatsApp agent supporting colloquial Hinglish/English/Hindi queries, querying Google Sheets inventory in real time, and routing high-intent buyers to designated brokers.
-4. **Low-Latency AI Voice Calling Engine**: Sub-800ms conversational phone agent using bidirectional WebSockets, Deepgram Nova-2, and Cartesia streaming audio.
-5. **Enterprise n8n Workflow Automation Suite**: Multi-API orchestration saving 20+ hours weekly with dead-letter retry queues and Slack failure alerts.
-6. **Ascenta High-Performance Web Platform**: Next.js 16, React 19, strict TypeScript, and editorial typography achieving 100/100 Core Web Vitals.
+1. **CleanData AI — Autonomous Data Specialist SaaS** (https://cleandata-ruddy.vercel.app): Full-stack AI data preparation and agent knowledge infrastructure platform. Ingests messy spreadsheets and unstructured prose, standardizes E.164 phones & ISO dates, masks PII, builds entity relationship graphs, stores in embedded SQLite with an in-browser SQL query explorer, and syncs semantic vectors to Pinecone, ChromaDB, Qdrant, and Supabase pgvector with an authenticated agent context delivery API.
+2. **Misaal Foundation — Non-Profit Web Platform** (https://www.misaalfoundation.online): High-performance digital portal for generational poverty alleviation and welfare drives across Pakistan. Engineered with Next.js 16, React 19, Tailwind CSS v4, and Supabase with cinematic video storytelling, live community drive showcases, and volunteer onboarding.
+3. **Misaal Foundation — Beneficiary & Operations CRM**: Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard; sub-second record searching across 3,000+ beneficiaries; eliminated paper record loss.
+4. **WhatsApp AI Conversational CRM**: 24/7 Meta Cloud API agent with multi-turn qualification, intent scoring, automated CRM pipeline progression, and instant human takeover.
+5. **Real Estate AI Matchmaker**: Omnichannel Instagram & WhatsApp agent supporting colloquial Hinglish/English/Hindi queries, querying Google Sheets inventory in real time, and routing high-intent buyers to designated brokers.
+6. **Low-Latency AI Voice Calling Engine**: Sub-800ms conversational phone agent using bidirectional WebSockets, Deepgram Nova-2, and Cartesia streaming audio.
+7. **Enterprise n8n Workflow Automation Suite**: Multi-API orchestration saving 20+ hours weekly with dead-letter retry queues and Slack failure alerts.
+8. **Ascenta High-Performance Web Platform**: Next.js 16, React 19, strict TypeScript, and editorial typography achieving 100/100 Core Web Vitals.
 
 ### Verified Credentials & Training:
 - **Aghaaz.ai**: Advanced AI agent workflows, prompt topology, and multi-agent coordination.

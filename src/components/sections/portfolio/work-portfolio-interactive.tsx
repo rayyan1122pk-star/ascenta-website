@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -99,7 +100,7 @@ export function WorkPortfolioInteractive() {
               className={cn(
                 "rounded-full px-3.5 py-1.5 text-xs font-medium transition-all duration-200",
                 activeCategory === cat
-                  ? "bg-primary text-white shadow-[0_0_16px_rgba(230,57,70,0.35)]"
+                  ? "bg-primary text-white shadow-[0_0_16px_rgba(230,57,70,0.4)]"
                   : "border border-white/[0.08] bg-white/[0.02] text-muted-foreground hover:border-white/20 hover:text-white"
               )}
             >
@@ -112,8 +113,8 @@ export function WorkPortfolioInteractive() {
       {/* Projects List */}
       <div className="flex flex-col gap-10">
         {filteredProjects.length === 0 ? (
-          <div className="rounded-3xl border border-white/10 bg-[#1D1413] p-12 text-center">
-            <p className="text-sm text-muted-foreground">No projects matched your search criteria.</p>
+          <div className="flex flex-col items-center justify-center rounded-3xl border border-white/10 bg-[#1D1413] py-20 text-center">
+            <p className="font-mono text-sm text-muted-foreground">No projects match the search filter.</p>
             <Button
               variant="outline"
               size="sm"
@@ -153,6 +154,44 @@ export function WorkPortfolioInteractive() {
                     Case Study 0{index + 1}
                   </span>
                 </div>
+
+                {/* Hero Screenshot Frame (if present) */}
+                {project.image && (
+                  <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B] shadow-2xl">
+                    <div className="flex items-center justify-between border-b border-white/[0.08] bg-white/[0.03] px-4 py-2.5">
+                      <div className="flex items-center gap-1.5">
+                        <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+                      </div>
+                      <span className="font-mono text-[11px] text-muted-foreground truncate max-w-[220px] sm:max-w-md">
+                        {project.liveUrl ? project.liveUrl.replace(/^https?:\/\//, "") : project.id}
+                      </span>
+                      {project.liveUrl ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-xs font-mono text-white transition-all hover:border-primary/50 hover:bg-primary/20 hover:text-white"
+                        >
+                          <span>Visit Live</span>
+                          <ArrowUpRight size={12} />
+                        </a>
+                      ) : (
+                        <span className="text-[10px] font-mono text-muted-foreground uppercase">Internal System</span>
+                      )}
+                    </div>
+                    <div className="relative aspect-[16/10] w-full">
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} Hero Section`}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, 1200px"
+                      />
+                    </div>
+                  </div>
+                )}
 
                 {/* Problem & Solution Grid */}
                 <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -298,6 +337,29 @@ export function WorkPortfolioInteractive() {
               </div>
 
               <div className="mt-6 flex flex-col gap-6">
+                {activeModalProject.image && (
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B]">
+                    <Image
+                      src={activeModalProject.image}
+                      alt={activeModalProject.title}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 800px"
+                    />
+                    {activeModalProject.liveUrl && (
+                      <a
+                        href={activeModalProject.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-[11px] font-mono text-white shadow-lg backdrop-blur-md transition-colors hover:border-primary/50 hover:bg-primary"
+                      >
+                        <span>Open Live App</span>
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                  </div>
+                )}
+
                 <div>
                   <p className="font-mono text-xs uppercase tracking-wider text-primary font-bold">
                     Problem & Engineering Mandate:

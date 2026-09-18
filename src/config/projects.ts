@@ -13,6 +13,8 @@ export interface Project {
   context: string;
   featured?: boolean;
   image?: string;
+  secondaryImage?: string;
+  secondaryImageTitle?: string;
   liveUrl?: string;
 }
 
@@ -43,6 +45,35 @@ export const projects: Project[] = [
     featured: true,
     image: "/projects/cleandata-hero.png",
     liveUrl: "https://cleandata-ruddy.vercel.app",
+  },
+  {
+    id: "instagram-ai-crm",
+    title: "Instagram Multimodal AI Agent & CRM System",
+    subtitle: "Autonomous Instagram DM & comment engine with voice transcription, vision AI, real-time typing/seen indicators & dedicated Next.js CRM",
+    category: "AI Agents",
+    categoryBadge: "Multimodal AI & CRM",
+    context: "Instagram Social Commerce & Inbound Lead Management",
+    problem:
+      "Brands and creators lose up to 70% of inbound social media leads due to slow DM responses, inability to parse voice notes or product screenshots, disconnected comment-to-DM funnels, and lack of real-time CRM tracking.",
+    solution:
+      "Architected an end-to-end CRM-centric Instagram AI automation platform integrating Meta Graph API, n8n orchestration, Groq Whisper (voice transcription), Vision LLM (image understanding), and a dedicated Next.js 15 / Prisma CRM. Features automated seen status, live typing indicators, comment-to-DM triggers, 0-100 lead scoring, real-time message syncing, and one-click human takeover.",
+    stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS v4", "Prisma ORM", "n8n", "Meta Graph API", "Groq Whisper", "Vision LLM", "SQLite / PostgreSQL"],
+    value:
+      "< 3-second response latency 24/7; 100% multimodal coverage across text, voice notes & images; automated comment-to-DM funnels; zero lead leakage with real-time CRM synchronization and instant human handoff.",
+    highlights: [
+      "Multimodal message intake: text, voice note transcription (Whisper), and image analysis (Vision LLM)",
+      "Real-time human-like UX: automatic seen/read receipt dispatch and typing indicators during AI reasoning",
+      "Viral comment automation: auto-reply to post comments with instant DM trigger sequences",
+      "Dedicated Next.js 15 & Prisma CRM with contact timelines, lead scoring (0-100), and stage tracking",
+      "One-click human takeover toggle to pause AI and resume manual operator conversations seamlessly",
+      "Persistent multi-turn conversation memory retaining lead context across DMs and comments",
+    ],
+    architecture:
+      "Instagram Ingest (DM / Voice / Image / Comment) → Meta Webhook → n8n Orchestrator [Whisper Audio Transcribe / Vision LLM / Multi-turn Prompt] → Instagram Graph API (Seen + Typing + Outbound) ↔ CRM Webhook API → Prisma ORM → Live Next.js Operator Dashboard",
+    featured: true,
+    image: "/projects/instagram-crm-dashboard.png",
+    secondaryImage: "/projects/instagram-crm-workflow.png",
+    secondaryImageTitle: "n8n Workflow Automation Architecture",
   },
   {
     id: "misaal-foundation-web",

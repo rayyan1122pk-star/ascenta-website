@@ -24,6 +24,7 @@ const categories = ["All", "AI Agents", "AI Automation", "Voice AI", "CRM & Inte
 export function FeaturedWork() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [cardImageTabs, setCardImageTabs] = useState<Record<string, "primary" | "secondary">>({});
 
   const filteredProjects =
     activeCategory === "All"
@@ -103,31 +104,78 @@ export function FeaturedWork() {
                 </div>
 
                 {/* Hero Section Screenshot (if present) */}
-                {project.image && (
-                  <div className="relative mt-4 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B]">
-                    <Image
-                      src={project.image}
-                      alt={`${project.title} Hero Section`}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                    />
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1D1413]/80 via-transparent to-black/30" />
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-[11px] font-mono font-medium text-white shadow-lg backdrop-blur-md transition-all duration-200 hover:border-primary/60 hover:bg-primary hover:text-white"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        <span>Live Preview</span>
-                        <ArrowUpRight size={12} />
-                      </a>
-                    )}
-                  </div>
-                )}
+                {project.image && (() => {
+                  const currentTab = cardImageTabs[project.id] ?? "primary";
+                  const displayImage =
+                    currentTab === "secondary" && project.secondaryImage
+                      ? project.secondaryImage
+                      : project.image;
+                  const displayAlt =
+                    currentTab === "secondary" && project.secondaryImageTitle
+                      ? project.secondaryImageTitle
+                      : `${project.title} Hero Section`;
+
+                  return (
+                    <div className="relative mt-4 aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B]">
+                      {project.secondaryImage && (
+                        <div className="absolute left-3 top-3 z-10 flex items-center rounded-lg border border-white/20 bg-black/80 p-0.5 text-[11px] font-mono backdrop-blur-md">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setCardImageTabs((prev) => ({ ...prev, [project.id]: "primary" }));
+                            }}
+                            className={cn(
+                              "rounded px-2.5 py-0.5 transition-colors",
+                              currentTab === "primary"
+                                ? "bg-primary text-white font-medium shadow-sm"
+                                : "text-muted-foreground hover:text-white"
+                            )}
+                          >
+                            CRM Dashboard
+                          </button>
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setCardImageTabs((prev) => ({ ...prev, [project.id]: "secondary" }));
+                            }}
+                            className={cn(
+                              "rounded px-2.5 py-0.5 transition-colors",
+                              currentTab === "secondary"
+                                ? "bg-primary text-white font-medium shadow-sm"
+                                : "text-muted-foreground hover:text-white"
+                            )}
+                          >
+                            n8n Architecture
+                          </button>
+                        </div>
+                      )}
+
+                      <Image
+                        src={displayImage}
+                        alt={displayAlt}
+                        fill
+                        className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1D1413]/80 via-transparent to-black/30" />
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-[11px] font-mono font-medium text-white shadow-lg backdrop-blur-md transition-all duration-200 hover:border-primary/60 hover:bg-primary hover:text-white"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                          <span>Live Preview</span>
+                          <ArrowUpRight size={12} />
+                        </a>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 {/* Title & Subtitle */}
                 <h3 className="mt-4 text-xl font-bold text-white transition-colors group-hover:text-primary sm:text-2xl">

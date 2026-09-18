@@ -39,6 +39,80 @@ interface LabWorkflow {
 
 const labWorkflows: LabWorkflow[] = [
   {
+    id: "instagram-ai-crm",
+    name: "Instagram Multimodal AI Agent + CRM",
+    badge: "Meta API · n8n · Next.js CRM",
+    description:
+      "Full CRM-centric Instagram AI automation. Ingests DMs, voice notes, and images via Meta Graph API, transcribes audio with Whisper, analyzes photos with Vision LLM, marks seen, sends typing indicators, syncs contacts to Next.js CRM, and supports 1-click human takeover.",
+    nodes: [
+      {
+        id: "meta-webhook",
+        label: "Instagram Webhook Ingest",
+        type: "trigger",
+        icon: MessageCircle,
+        system: "Meta Graph API (DMs, Voice, Images, Comments)",
+        details: {
+          input: '{"object": "instagram", "entry": [{"messaging": [{"sender": {"id": "ig_usr_9921"}, "message": {"attachments": [{"type": "audio", "payload": {"url": "https://cdn.fb.com/voice_memo.aac"}}]}}]}]}',
+          processing: "Webhook listener verifies X-Hub-Signature-256 HMAC; routes payload based on message type (text, audio, image, post comment).",
+          modelOrTool: "Meta Cloud Webhook Gateway",
+          output: "Verified event with Instagram User ID, media attachment URL, timestamp & conversation thread ID.",
+        },
+      },
+      {
+        id: "multimodal-ai",
+        label: "Whisper & Vision Perception",
+        type: "ai",
+        icon: Bot,
+        system: "Groq Whisper + Vision LLM",
+        details: {
+          input: "Raw voice memo audio stream (.aac) or attached product image URL.",
+          processing: "Groq Whisper transcribes speech in <300ms; Vision LLM extracts visual product attributes, style, and question intent.",
+          modelOrTool: "Groq Whisper Large-v3 + Vision LLM",
+          output: '{"transcription": "Hey! Do you have this oversized hoodie in size M available for delivery this weekend?", "visualTags": ["oversized_hoodie", "black"]}',
+        },
+      },
+      {
+        id: "agent-reasoning",
+        label: "AI Reasoning & Lead Scorer",
+        type: "logic",
+        icon: Workflow,
+        system: "n8n AI Agent + Prompt Memory",
+        details: {
+          input: "Transcript/Image context + Conversation history + CRM Contact Profile.",
+          processing: "Dispatches 'mark_seen' and starts 'typing_on' indicator; evaluates intent and calculates lead score (0-100); crafts personalized sales response.",
+          modelOrTool: "Claude 3.5 Sonnet / n8n AI Agent Node",
+          output: '{"reply": "Yes! We have 4 units of the Black Oversized Hoodie in Size M. I can reserve one for delivery by Friday.", "leadScore": 88, "stage": "Qualified"}',
+        },
+      },
+      {
+        id: "crm-persistence",
+        label: "CRM Sync & Human Handoff",
+        type: "database",
+        icon: Database,
+        system: "Next.js 15 CRM & Prisma ORM",
+        details: {
+          input: "Lead score: 88, updated conversation timeline, customer profile @sarah_designs.",
+          processing: "Upserts Contact record, logs interaction history, and advances pipeline stage; checks human_takeover flag before sending outbound DM.",
+          modelOrTool: "Prisma ORM + PostgreSQL / SQLite Hub",
+          output: "Contact updated in CRM pipeline; one-click operator takeover available in live Next.js dashboard.",
+        },
+      },
+      {
+        id: "meta-outbound",
+        label: "Meta Outbound Dispatch",
+        type: "output",
+        icon: MessageCircle,
+        system: "Instagram Graph API Outbound",
+        details: {
+          input: "Final AI response payload + recipient IGID.",
+          processing: "Turns off typing indicator; dispatches message through Instagram Send API with idempotency token.",
+          modelOrTool: "Instagram Send API Endpoint",
+          output: "Customer receives reply in <3s; typing indicator clears; CRM logs message delivered.",
+        },
+      },
+    ],
+  },
+  {
     id: "real-estate-ai",
     name: "Real Estate AI Matchmaker (Omnichannel)",
     badge: "Multilingual AI Agent",
@@ -224,7 +298,7 @@ const labWorkflows: LabWorkflow[] = [
 ];
 
 export function AiAutomationLab() {
-  const [selectedWorkflowId, setSelectedWorkflowId] = useState("real-estate-ai");
+  const [selectedWorkflowId, setSelectedWorkflowId] = useState("instagram-ai-crm");
   const [selectedNodeIndex, setSelectedNodeIndex] = useState(0);
 
   const activeWorkflow = labWorkflows.find((w) => w.id === selectedWorkflowId) ?? labWorkflows[0];

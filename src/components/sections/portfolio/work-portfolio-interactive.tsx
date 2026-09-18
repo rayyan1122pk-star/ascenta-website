@@ -26,6 +26,8 @@ export function WorkPortfolioInteractive() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
+  const [cardImageTabs, setCardImageTabs] = useState<Record<string, "primary" | "secondary">>({});
+  const [modalImageTab, setModalImageTab] = useState<"primary" | "secondary">("primary");
 
   const filteredProjects = useMemo(() => {
     return projects.filter((p) => {
@@ -156,42 +158,81 @@ export function WorkPortfolioInteractive() {
                 </div>
 
                 {/* Hero Screenshot Frame (if present) */}
-                {project.image && (
-                  <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B] shadow-2xl">
-                    <div className="flex items-center justify-between border-b border-white/[0.08] bg-white/[0.03] px-4 py-2.5">
-                      <div className="flex items-center gap-1.5">
-                        <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+                {project.image && (() => {
+                  const currentTab = cardImageTabs[project.id] ?? "primary";
+                  const displayImage = currentTab === "secondary" && project.secondaryImage ? project.secondaryImage : project.image;
+                  const displayAlt = currentTab === "secondary" && project.secondaryImageTitle ? project.secondaryImageTitle : `${project.title} Hero Section`;
+
+                  return (
+                    <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B] shadow-2xl">
+                      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08] bg-white/[0.03] px-4 py-2.5">
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-1.5">
+                            <span className="h-2.5 w-2.5 rounded-full bg-rose-500/80" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80" />
+                          </div>
+
+                          {project.secondaryImage && (
+                            <div className="flex items-center rounded-lg border border-white/10 bg-white/[0.04] p-0.5 font-mono text-[11px]">
+                              <button
+                                type="button"
+                                onClick={() => setCardImageTabs((prev) => ({ ...prev, [project.id]: "primary" }))}
+                                className={cn(
+                                  "rounded px-2.5 py-0.5 transition-colors",
+                                  currentTab === "primary"
+                                    ? "bg-primary text-white font-medium shadow-sm"
+                                    : "text-muted-foreground hover:text-white"
+                                )}
+                              >
+                                CRM Dashboard
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => setCardImageTabs((prev) => ({ ...prev, [project.id]: "secondary" }))}
+                                className={cn(
+                                  "rounded px-2.5 py-0.5 transition-colors",
+                                  currentTab === "secondary"
+                                    ? "bg-primary text-white font-medium shadow-sm"
+                                    : "text-muted-foreground hover:text-white"
+                                )}
+                              >
+                                {project.secondaryImageTitle ?? "Workflow Blueprint"}
+                              </button>
+                            </div>
+                          )}
+                        </div>
+
+                        <span className="font-mono text-[11px] text-muted-foreground truncate max-w-[220px] sm:max-w-md">
+                          {project.liveUrl ? project.liveUrl.replace(/^https?:\/\//, "") : project.id}
+                        </span>
+
+                        {project.liveUrl ? (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-xs font-mono text-white transition-all hover:border-primary/50 hover:bg-primary/20 hover:text-white"
+                          >
+                            <span>Visit Live</span>
+                            <ArrowUpRight size={12} />
+                          </a>
+                        ) : (
+                          <span className="text-[10px] font-mono text-muted-foreground uppercase">Internal System</span>
+                        )}
                       </div>
-                      <span className="font-mono text-[11px] text-muted-foreground truncate max-w-[220px] sm:max-w-md">
-                        {project.liveUrl ? project.liveUrl.replace(/^https?:\/\//, "") : project.id}
-                      </span>
-                      {project.liveUrl ? (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.05] px-3 py-1 text-xs font-mono text-white transition-all hover:border-primary/50 hover:bg-primary/20 hover:text-white"
-                        >
-                          <span>Visit Live</span>
-                          <ArrowUpRight size={12} />
-                        </a>
-                      ) : (
-                        <span className="text-[10px] font-mono text-muted-foreground uppercase">Internal System</span>
-                      )}
+                      <div className="relative aspect-[16/10] w-full">
+                        <Image
+                          src={displayImage}
+                          alt={displayAlt}
+                          fill
+                          className="object-cover object-top"
+                          sizes="(max-width: 768px) 100vw, 1200px"
+                        />
+                      </div>
                     </div>
-                    <div className="relative aspect-[16/10] w-full">
-                      <Image
-                        src={project.image}
-                        alt={`${project.title} Hero Section`}
-                        fill
-                        className="object-cover object-top"
-                        sizes="(max-width: 768px) 100vw, 1200px"
-                      />
-                    </div>
-                  </div>
-                )}
+                  );
+                })()}
 
                 {/* Problem & Solution Grid */}
                 <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -276,7 +317,10 @@ export function WorkPortfolioInteractive() {
                   <div className="flex items-center gap-3">
                     <button
                       type="button"
-                      onClick={() => setActiveModalProject(project)}
+                      onClick={() => {
+                        setActiveModalProject(project);
+                        setModalImageTab("primary");
+                      }}
                       className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 font-mono text-xs text-white transition-colors hover:border-primary/40 hover:text-primary"
                     >
                       <Terminal size={13} />
@@ -337,28 +381,68 @@ export function WorkPortfolioInteractive() {
               </div>
 
               <div className="mt-6 flex flex-col gap-6">
-                {activeModalProject.image && (
-                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B]">
-                    <Image
-                      src={activeModalProject.image}
-                      alt={activeModalProject.title}
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 768px) 100vw, 800px"
-                    />
-                    {activeModalProject.liveUrl && (
-                      <a
-                        href={activeModalProject.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-[11px] font-mono text-white shadow-lg backdrop-blur-md transition-colors hover:border-primary/50 hover:bg-primary"
-                      >
-                        <span>Open Live App</span>
-                        <ArrowUpRight size={12} />
-                      </a>
-                    )}
-                  </div>
-                )}
+                {activeModalProject.image && (() => {
+                  const displayImage =
+                    modalImageTab === "secondary" && activeModalProject.secondaryImage
+                      ? activeModalProject.secondaryImage
+                      : activeModalProject.image;
+                  const displayAlt =
+                    modalImageTab === "secondary" && activeModalProject.secondaryImageTitle
+                      ? activeModalProject.secondaryImageTitle
+                      : activeModalProject.title;
+
+                  return (
+                    <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#120B0B]">
+                      {activeModalProject.secondaryImage && (
+                        <div className="absolute left-3 top-3 z-10 flex items-center rounded-lg border border-white/20 bg-black/85 p-0.5 text-xs font-mono backdrop-blur-md">
+                          <button
+                            type="button"
+                            onClick={() => setModalImageTab("primary")}
+                            className={cn(
+                              "rounded px-3 py-1 transition-colors",
+                              modalImageTab === "primary"
+                                ? "bg-primary text-white font-medium shadow-sm"
+                                : "text-muted-foreground hover:text-white"
+                            )}
+                          >
+                            CRM Dashboard UI
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setModalImageTab("secondary")}
+                            className={cn(
+                              "rounded px-3 py-1 transition-colors",
+                              modalImageTab === "secondary"
+                                ? "bg-primary text-white font-medium shadow-sm"
+                                : "text-muted-foreground hover:text-white"
+                            )}
+                          >
+                            {activeModalProject.secondaryImageTitle ?? "n8n Workflow Blueprint"}
+                          </button>
+                        </div>
+                      )}
+
+                      <Image
+                        src={displayImage}
+                        alt={displayAlt}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 768px) 100vw, 800px"
+                      />
+                      {activeModalProject.liveUrl && (
+                        <a
+                          href={activeModalProject.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/75 px-3 py-1 text-[11px] font-mono text-white shadow-lg backdrop-blur-md transition-colors hover:border-primary/50 hover:bg-primary"
+                        >
+                          <span>Open Live App</span>
+                          <ArrowUpRight size={12} />
+                        </a>
+                      )}
+                    </div>
+                  );
+                })()}
 
                 <div>
                   <p className="font-mono text-xs uppercase tracking-wider text-primary font-bold">

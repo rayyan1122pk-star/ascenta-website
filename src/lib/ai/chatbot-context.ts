@@ -24,13 +24,14 @@ Your role is to help visitors, clients, and collaborators learn about Muhammad R
 
 ### Real Featured Projects:
 1. **CleanData AI — Autonomous Data Specialist SaaS** (https://cleandata-ruddy.vercel.app): Full-stack AI data preparation and agent knowledge infrastructure platform. Ingests messy spreadsheets and unstructured prose, standardizes E.164 phones & ISO dates, masks PII, builds entity relationship graphs, stores in embedded SQLite with an in-browser SQL query explorer, and syncs semantic vectors to Pinecone, ChromaDB, Qdrant, and Supabase pgvector with an authenticated agent context delivery API.
-2. **Misaal Foundation — Non-Profit Web Platform** (https://www.misaalfoundation.online): High-performance digital portal for generational poverty alleviation and welfare drives across Pakistan. Engineered with Next.js 16, React 19, Tailwind CSS v4, and Supabase with cinematic video storytelling, live community drive showcases, and volunteer onboarding.
-3. **Misaal Foundation — Beneficiary & Operations CRM**: Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard; sub-second record searching across 3,000+ beneficiaries; eliminated paper record loss.
-4. **WhatsApp AI Conversational CRM**: 24/7 Meta Cloud API agent with multi-turn qualification, intent scoring, automated CRM pipeline progression, and instant human takeover.
-5. **Real Estate AI Matchmaker**: Omnichannel Instagram & WhatsApp agent supporting colloquial Hinglish/English/Hindi queries, querying Google Sheets inventory in real time, and routing high-intent buyers to designated brokers.
-6. **Low-Latency AI Voice Calling Engine**: Sub-800ms conversational phone agent using bidirectional WebSockets, Deepgram Nova-2, and Cartesia streaming audio.
-7. **Enterprise n8n Workflow Automation Suite**: Multi-API orchestration saving 20+ hours weekly with dead-letter retry queues and Slack failure alerts.
-8. **Ascenta High-Performance Web Platform**: Next.js 16, React 19, strict TypeScript, and editorial typography achieving 100/100 Core Web Vitals.
+2. **Instagram Multimodal AI Agent & CRM System**: CRM-centric Instagram AI automation platform integrating Meta Graph API, n8n orchestration, Groq Whisper (voice memo transcription), Vision LLM (image understanding), and a dedicated Next.js 15 / Prisma CRM. Features automated seen status, live typing indicators, comment-to-DM triggers, 0-100 lead scoring, real-time message syncing, and one-click human takeover.
+3. **Misaal Foundation — Non-Profit Web Platform** (https://www.misaalfoundation.online): High-performance digital portal for generational poverty alleviation and welfare drives across Pakistan. Engineered with Next.js 16, React 19, Tailwind CSS v4, and Supabase with cinematic video storytelling, live community drive showcases, and volunteer onboarding.
+4. **Misaal Foundation — Beneficiary & Operations CRM**: Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard; sub-second record searching across 3,000+ beneficiaries; eliminated paper record loss.
+5. **WhatsApp AI Conversational CRM**: 24/7 Meta Cloud API agent with multi-turn qualification, intent scoring, automated CRM pipeline progression, and instant human takeover.
+6. **Real Estate AI Matchmaker**: Omnichannel Instagram & WhatsApp agent supporting colloquial Hinglish/English/Hindi queries, querying Google Sheets inventory in real time, and routing high-intent buyers to designated brokers.
+7. **Low-Latency AI Voice Calling Engine**: Sub-800ms conversational phone agent using bidirectional WebSockets, Deepgram Nova-2, and Cartesia streaming audio.
+8. **Enterprise n8n Workflow Automation Suite**: Multi-API orchestration saving 20+ hours weekly with dead-letter retry queues and Slack failure alerts.
+9. **Ascenta High-Performance Web Platform**: Next.js 16, React 19, strict TypeScript, and editorial typography achieving 100/100 Core Web Vitals.
 
 ### Verified Credentials & Training:
 - **Aghaaz.ai**: Advanced AI agent workflows, prompt topology, and multi-agent coordination.
@@ -128,14 +129,15 @@ Check out the full technical architecture on the [Work & Case Studies](/work) pa
     q.includes("leads") ||
     q.includes("qualification")
   ) {
-    return `Rayyan builds **24/7 autonomous conversational AI agents** for WhatsApp and Instagram:
+    return `Rayyan builds **24/7 autonomous conversational AI agents & CRMs** for WhatsApp and Instagram:
 
-* **Official Meta Cloud API**: Direct, verified integration with no fragile third-party wrapper accounts.
-* **Schema Tool Execution**: Structured tool calling with Zod validation so the agent queries real inventory and logs clean database records.
-* **Instant Human Takeover**: Notifies sales reps with conversation summaries when high-intent prospects are ready to buy.
-* **Hinglish & Multilingual Support**: Interprets colloquial English, Hindi, and Hinglish natively.
+* **Multimodal Perception**: Transcribes incoming voice notes via Groq Whisper and analyzes image attachments with Vision LLMs.
+* **Human-Like Chat UX**: Automatically marks incoming messages as seen and fires real-time typing indicators while the AI reasons.
+* **Growth & Comment Funnels**: Auto-replies to Instagram comments and triggers personalized DM sequences.
+* **Dedicated Next.js 15 & Prisma CRM**: Centralized dashboard logging contact history, 0–100 lead scores, and pipeline stages with instant 1-click human takeover.
+* **Official Meta Cloud API**: Direct, verified integration with no fragile browser scrapers or unapproved wrappers.
 
-See the real-estate agent in the [Featured Work](/work) section or [schedule a quick demo](/contact)!`;
+See the live workflow in the [AI Automation Lab](/#automation-lab) or [discuss building an agent](/contact)!`;
   }
 
   // 6. n8n / Workflow Automations / Webhooks / Zapier replacement
@@ -191,11 +193,12 @@ Take a look at his projects in the [Work](/work) section or [discuss building yo
   ) {
     return `Muhammad Rayyan has delivered **40+ projects** and **15+ production AI workflows**. Top case studies include:
 
-1. **NGO Beneficiary CRM**: Standardized Google Forms & Sheets ingestion with real-time Next.js analytics for 3,000+ records.
-2. **WhatsApp AI CRM**: 24/7 Meta Cloud API conversational funnel with multi-turn qualification & human takeover.
-3. **Hinglish Real Estate Matchmaker**: Omnichannel broker router querying live Google Sheets inventory in real time.
-4. **Low-Latency Voice Engine**: Sub-800ms bidirectional WebSocket telephony assistant.
-5. **Enterprise n8n Suite**: Multi-API orchestration saving teams 20+ hours weekly.
+1. **CleanData AI**: Autonomous data preparation SaaS with embedded SQLite studio & semantic vector pipelines.
+2. **Instagram Multimodal AI Agent & CRM**: Full-stack Instagram automation with Whisper voice transcription, Vision AI, and Next.js CRM.
+3. **Misaal Foundation Web Platform**: High-speed digital portal and operations CRM for poverty alleviation drives.
+4. **WhatsApp AI Conversational CRM**: 24/7 Meta Cloud API conversational funnel with multi-turn qualification & human takeover.
+5. **Hinglish Real Estate Matchmaker**: Omnichannel broker router querying live Google Sheets inventory in real time.
+6. **Low-Latency Voice Engine**: Sub-800ms bidirectional WebSocket telephony assistant.
 
 Check out the interactive diagrams on the [Work & Case Studies](/work) page!`;
   }

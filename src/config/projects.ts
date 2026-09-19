@@ -76,6 +76,45 @@ export const projects: Project[] = [
     secondaryImageTitle: "n8n Workflow Automation Architecture",
   },
   {
+    id: "leadpulse-ai-crm",
+    title: "LeadPulse CRM — B2B Lead Engine & Automated Outreach",
+    subtitle: "Full-stack lead generation CRM with Serper Places discovery, contact enrichment, GPT-4o-mini pitch generator & WhatsApp/Gmail outreach",
+    category: "CRM & Internal Tools",
+    categoryBadge: "B2B Lead Engine & CRM",
+    context: "B2B Outbound Prospecting & Sales Automation",
+    problem:
+      "Agencies and B2B sales teams spend 15+ hours weekly manually scraping business directories, verifying phone numbers and emails on slow browser extensions, deduplicating records in messy spreadsheets, and drafting generic cold outreach that gets ignored.",
+    solution:
+      "Architected LeadPulse CRM — an autonomous B2B lead generation engine and operational dashboard built with Next.js 15, React 19, Supabase PostgreSQL, and Railway-hosted n8n workflows. Features Serper Places API multi-location discovery, 4-tier deduplication (Place ID, E.164 phone, root domain, name+city), automated contact enrichment (direct email & social URLs), website SSL/presence audit, explainable 0–100+ lead scoring, OpenRouter/GPT-4o-mini hyper-personalized cold pitch generation, and a 1-click WhatsApp & Gmail outreach hub.",
+    stack: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase (PostgreSQL)",
+      "n8n (Railway)",
+      "Serper Places API",
+      "OpenRouter (GPT-4o-mini)",
+      "Recharts",
+    ],
+    value:
+      "90% reduction in lead sourcing time; 100% verified phone and email coverage; 0 duplicate leads across millions of queries; 1-click WhatsApp & Gmail direct outreach with zero spreadsheet dependency.",
+    highlights: [
+      "Combinatorial search matrix: queries keyword + location batches across Google Places graph without browser scrapers",
+      "Strict 4-tier deduplication across Place ID, E.164 phone, root domain, and normalized business name + city",
+      "Automated contact & digital enrichment: extracts direct company emails, phone numbers, and social links",
+      "Website opportunity audit: detects missing websites, broken SSL, and conversion vulnerabilities",
+      "Deterministic lead scoring (0–100+): evaluates review volume, ratings, and digital readiness for qualification",
+      "AI Outreach Generator (OpenRouter / GPT-4o-mini): creates anti-spam, hyper-personalized cold outreach pitches",
+      "1-Click Multi-Channel Outreach Hub: direct dispatch to WhatsApp & Gmail with pre-populated message copy",
+      "Supabase / PostgreSQL Realtime backend: zero Google Sheets dependency with instant live sync",
+    ],
+    architecture:
+      "CRM Campaign Launch → n8n Webhook Gateway (Immediate 202) → Serper Places Matrix → 4-Tier Deduplication Engine → Contact & Web Enrichment → Deterministic Scoring (0-100+) → GPT-4o-mini Outreach Pitch → Supabase PostgreSQL Hub → Live Next.js CRM Dashboard & 1-Click WhatsApp/Gmail Outreach",
+    featured: true,
+    image: "/projects/leadpulse-crm-dashboard.png",
+  },
+  {
     id: "misaal-foundation-web",
     title: "Misaal Foundation — Non-Profit Web Platform",
     subtitle: "Modern editorial digital portal for poverty alleviation, community drives & donor transparency",

@@ -325,7 +325,7 @@ export const services: Service[] = [
     ],
     techStack: ["Next.js", "OpenAI / Claude API", "Supabase"],
     timeline: "2 – 4 weeks",
-    startingPrice: "$165",
+    startingPrice: "Custom Scope",
     faqs: [
       {
         question: "Which AI model do you use?",
@@ -355,7 +355,7 @@ export const services: Service[] = [
     ],
     techStack: ["n8n", "WhatsApp Business API", "OpenAI / Claude API", "Supabase"],
     timeline: "1 – 3 weeks",
-    startingPrice: "$220",
+    startingPrice: "Custom Scope",
     faqs: [
       {
         question: "Does this work with our existing WhatsApp Business number?",
@@ -389,7 +389,7 @@ export const services: Service[] = [
     ],
     techStack: ["n8n", "Instagram Graph API", "Supabase", "OpenAI / Claude API"],
     timeline: "2 – 4 weeks",
-    startingPrice: "$260",
+    startingPrice: "Custom Scope",
     faqs: [
       {
         question: "Does this replace our CRM or work with it?",
@@ -419,7 +419,7 @@ export const services: Service[] = [
     ],
     techStack: ["n8n", "Voice AI API", "Twilio", "OpenAI / Claude API"],
     timeline: "2 – 4 weeks",
-    startingPrice: "$360",
+    startingPrice: "Custom Scope",
     faqs: [
       {
         question: "Does it sound robotic?",
@@ -448,7 +448,7 @@ export const services: Service[] = [
     ],
     techStack: ["n8n", "Webhooks", "Supabase", "Zapier-compatible integrations"],
     timeline: "1 – 2 weeks",
-    startingPrice: "$150",
+    startingPrice: "Custom Scope",
     faqs: [
       {
         question: "Can this connect to forms we already have?",
@@ -476,7 +476,7 @@ export const services: Service[] = [
     ],
     techStack: ["n8n", "Next.js", "Supabase", "OpenAI / Claude API", "Webhooks"],
     timeline: "2 – 6 weeks",
-    startingPrice: "$220",
+    startingPrice: "Custom Scope",
     faqs: [
       {
         question: "What tools can you automate between?",

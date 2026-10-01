@@ -1,1 +1,11 @@
-export const blogCategories = ["Web Development", "SEO", "Performance", "UI Design", "AI", "Business"] as const;
+export const blogCategories = [
+  "Web Development",
+  "AI Agents",
+  "AI Automation",
+  "Voice AI",
+  "CRM & Operations",
+  "SEO & AEO",
+  "Performance",
+  "UI Design",
+  "Business & Strategy",
+] as const;

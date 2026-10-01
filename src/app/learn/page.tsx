@@ -5,15 +5,33 @@ import { Container } from "@/components/shared/container";
 import { siteConfig } from "@/config/site";
 import { LearnInteractive } from "@/components/sections/portfolio/learn-interactive";
 import { ProblemCta } from "@/components/sections/portfolio/problem-cta";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Knowledge Library & Technical Learnings",
+  title: "Knowledge Library & Technical Learnings · Ascenta",
   description: `Educational engineering guides, architectural patterns, and practical insights by ${siteConfig.name} (Muhammad Rayyan) across Next.js, AI Agents, Voice Latency, and n8n.`,
+  alternates: {
+    canonical: `${siteConfig.url}/learn`,
+  },
+  openGraph: {
+    title: "Knowledge Library & Technical Learnings | Ascenta",
+    description: `Educational engineering guides, architectural patterns, and practical insights by ${siteConfig.name} across Next.js, AI Agents, and n8n.`,
+    url: `${siteConfig.url}/learn`,
+  },
 };
 
 export default function LearnPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "Learn", url: `${siteConfig.url}/learn` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <Section className="pb-8 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">

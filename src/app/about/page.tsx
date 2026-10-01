@@ -6,15 +6,34 @@ import { Container } from "@/components/shared/container";
 import { LearningCredentials } from "@/components/sections/portfolio/learning-credentials";
 import { JourneyTimeline } from "@/components/sections/portfolio/journey-timeline";
 import { ProblemCta } from "@/components/sections/portfolio/problem-cta";
+import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Muhammad Rayyan · Builder & AI Solutions Engineer",
   description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta) — building full-stack web platforms, AI agents, and resilient automations.`,
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
+  },
+  openGraph: {
+    title: "About Muhammad Rayyan | Ascenta",
+    description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta) — building full-stack web platforms, AI agents, and resilient automations.`,
+    url: `${siteConfig.url}/about`,
+  },
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "About", url: `${siteConfig.url}/about` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero / Intro Header */}
       <Section className="pb-8 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">

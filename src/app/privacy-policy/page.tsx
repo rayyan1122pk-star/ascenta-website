@@ -6,6 +6,9 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: `Privacy Policy for ${siteConfig.name}'s website.`,
+  alternates: {
+    canonical: `${siteConfig.url}/privacy-policy`,
+  },
 };
 
 const lastUpdated = "January 1, 2026";

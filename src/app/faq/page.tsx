@@ -4,17 +4,38 @@ import { FaqAccordion } from "@/components/shared/faq-accordion";
 import { FinalCta } from "@/components/shared/final-cta";
 import { faqs } from "@/config/faq";
 import { siteConfig } from "@/config/site";
+import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "FAQ",
-  description: `Answers to common questions about working with ${siteConfig.name} — process, pricing, timelines, and support.`,
+  title: "Frequently Asked Questions · Web & AI Systems",
+  description: `Clear, direct answers about working with ${siteConfig.name} (Muhammad Rayyan) — engineering timelines, tech stack, AI agent architecture, pricing, and process.`,
+  alternates: {
+    canonical: `${siteConfig.url}/faq`,
+  },
+  openGraph: {
+    title: "Frequently Asked Questions | Ascenta",
+    description: `Clear, direct answers about working with ${siteConfig.name} — engineering timelines, tech stack, AI agent architecture, pricing, and process.`,
+    url: `${siteConfig.url}/faq`,
+  },
 };
 
 const categories = Array.from(new Set(faqs.map((f) => f.category).filter(Boolean))) as string[];
 
 export default function FaqPage() {
+  const faqSchema = generateFAQSchema(faqs);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "FAQ", url: `${siteConfig.url}/faq` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([faqSchema, breadcrumbSchema]),
+        }}
+      />
       <Section className="pb-8 pt-6 sm:pt-10">
         <SectionHeading
           badge="FAQ"

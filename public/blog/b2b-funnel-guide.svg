@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="glow_b2b_funn" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid_b2b_funn" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#17100F" />
+  <rect width="1200" height="800" fill="url(#grid_b2b_funn)" />
+  <rect width="1200" height="800" fill="url(#glow_b2b_funn)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
+  
+    <g transform="translate(600,380)">
+      <rect x="-180" y="-120" width="360" height="50" rx="8" fill="#221918" stroke="rgba(237,227,221,0.18)" stroke-width="2" />
+      <rect x="-130" y="-50" width="260" height="50" rx="8" fill="#7A2229" stroke="#E63946" stroke-width="2" />
+      <rect x="-80" y="20" width="160" height="50" rx="8" fill="#E63946" />
+      <rect x="-40" y="90" width="80" height="50" rx="8" fill="#D4A24E" />
+    </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#EDE3DD" opacity="0.6">B2B STRATEGY</text>
+</svg>

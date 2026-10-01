@@ -6,6 +6,9 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: `Terms & Conditions for ${siteConfig.name}'s website and services.`,
+  alternates: {
+    canonical: `${siteConfig.url}/terms-conditions`,
+  },
 };
 
 const lastUpdated = "January 1, 2026";

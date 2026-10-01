@@ -4,7 +4,7 @@ export const siteConfig = {
   initials: "A",
   title: "Technology Builder & AI Solutions Engineer",
   shortTitle: "Builder · AI Systems · Web Engineering",
-  url: "https://ascenta.dev",
+  url: "https://ascenta-agency.vercel.app",
   ogImage: "/og-image.png",
   description:
     "Personal technology portfolio of Muhammad Rayyan (Ascenta) — building high-performance web applications, intelligent AI agents, n8n automations, low-latency voice AI systems, and custom operational hubs.",
@@ -37,6 +37,7 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
   { label: "Work", href: "/work" },
   { label: "Solutions", href: "/solutions" },
   { label: "Learn", href: "/learn" },
@@ -54,18 +55,19 @@ export const footerLinks = {
     { label: "Contact / Inquiry", href: "/contact" },
   ],
   services: [
-    { label: "Full-Stack Web Dev", href: "/work" },
-    { label: "WhatsApp & IG Agents", href: "/work" },
-    { label: "Voice AI Calling", href: "/work" },
-    { label: "n8n Workflow Automation", href: "/work" },
-    { label: "CRM & Internal Hubs", href: "/work" },
+    { label: "Business Websites", href: "/services/business-websites" },
+    { label: "Autonomous AI Agents", href: "/services/whatsapp-agent" },
+    { label: "Voice AI Calling", href: "/services/voice-calling-agent" },
+    { label: "n8n AI Automation", href: "/services/ai-automation" },
+    { label: "Custom CRM & Hubs", href: "/services/crm-development" },
+    { label: "View All 16 Services", href: "/services" },
   ],
   capabilities: [
-    { label: "Full-Stack Web Dev", href: "/work" },
-    { label: "WhatsApp & IG Agents", href: "/work" },
-    { label: "Voice AI Calling", href: "/work" },
-    { label: "n8n Workflow Automation", href: "/work" },
-    { label: "CRM & Internal Hubs", href: "/work" },
+    { label: "Landing Pages", href: "/services/landing-pages" },
+    { label: "Instagram Lead CRM", href: "/services/instagram-crm" },
+    { label: "Custom Dashboards", href: "/services/custom-dashboards" },
+    { label: "SEO & AEO Engineering", href: "/services/seo-optimization" },
+    { label: "Speed & Core Web Vitals", href: "/services/performance-optimization" },
   ],
   resources: [
     { label: "Knowledge Library", href: "/learn" },

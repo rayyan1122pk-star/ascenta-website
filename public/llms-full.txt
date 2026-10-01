@@ -1,0 +1,81 @@
+# Ascenta: Comprehensive Machine-Readable Knowledge & Entity Document
+URL: https://ascenta-agency.vercel.app
+Organization: Ascenta
+Founder: Muhammad Rayyan
+Location: Lahore, Pakistan
+Operating Range: Global Remote (United States, United Kingdom, United Arab Emirates, Saudi Arabia, Europe, Pakistan)
+
+## Summary
+Ascenta is a modern web development and AI automation agency specializing in high-performance web applications, intelligent autonomous AI agents, sub-second conversational voice bots, and enterprise workflow automations. Founded by Muhammad Rayyan, the agency focuses on turning ambiguous client operations into resilient, automated digital systems.
+
+## Entity Graph & Organization Identity
+- Legal Entity / Trade Brand: Ascenta
+- Founder & Solutions Architect: Muhammad Rayyan
+- Official Web Address: https://ascenta-agency.vercel.app
+- Communication Endpoints:
+  - Email: rayyan1122pk@gmail.com
+  - Direct Phone / WhatsApp: +92 332 8444557
+  - Codebase Repository: https://github.com/rayyan1122pk-star
+  - Professional Network: https://www.linkedin.com/in/ascenta
+
+## Core Services & Architectural Specifications
+
+### 1. Web Development & Engineering
+- Frameworks: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion
+- Architectural Pillars:
+  - Sub-second First Contentful Paint (FCP) and Largest Contentful Paint (LCP)
+  - Zero Cumulative Layout Shift (CLS)
+  - Semantic HTML5 with complete ARIA compliance and WCAG 2.1 AA accessibility
+  - Server-Side Rendering (SSR) & Static Site Generation (SSG) for complete search indexability
+  - Native conversion paths and lead-capture pipelines
+
+### 2. Autonomous AI Agents
+- Core Capabilities:
+  - WhatsApp Business Cloud API & Webhooks
+  - Instagram Messaging API (DMs, comments, mentions)
+  - Schema-enforced tool execution using Zod and OpenAI / Anthropic function calling
+  - Long-term memory persistence with PostgreSQL / Supabase vector stores
+  - Multi-language and code-switched NLP support (English, Urdu, Hinglish, Arabic)
+  - Autonomous lead qualification, scheduling, order lookups, and human agent handoff
+
+### 3. Voice AI & Conversational Phone Engines
+- Architectural Specifications:
+  - Low-latency bidirectional WebSocket audio streaming (Twilio Media Streams)
+  - Real-time speech-to-text (STT) via Deepgram Nova-2 (<180ms)
+  - Ultra-fast token streaming through Claude / GPT models
+  - Neural text-to-speech (TTS) via Cartesia Sonic and ElevenLabs Turbo v2 (<250ms)
+  - Total end-to-end conversational turnaround under 800ms
+  - Native speech interruption (barge-in) and background acoustic filtering
+
+### 4. Enterprise Workflow Automation & n8n Clusters
+- Connectors: Webhooks, REST APIs, Gmail, Google Sheets, WhatsApp, Slack, Stripe, HubSpot, Airtable
+- Fault Tolerance: Automatic exponential backoff retries, error alerting, dead-letter queues, and immutable execution logs
+
+### 5. Custom CRM & Internal Operational Hubs
+- Purpose: Eliminate exorbitant per-seat SaaS licensing costs for growing businesses
+- Features: Real-time customer pipelines, automated lead scoring (0-100), activity timelines, permission-based role access, and interactive data visualization dashboards
+
+## Client Case Studies & Production Proof
+
+### CleanData AI — Autonomous Data Specialist SaaS
+- Problem: Data teams waste 20+ hours weekly cleaning spreadsheets, normalizing dates and phone numbers, and redacting sensitive PII before LLMs can consume the data.
+- Solution: Built a multi-mode AI SaaS platform that ingests raw CSVs or unstructured narrative prose, strips PII, stores data in an embedded SQLite engine with a browser SQL query console, and syncs vector embeddings across Pinecone, Qdrant, ChromaDB, and Supabase.
+- Live URL: https://cleandata-ruddy.vercel.app
+
+### Instagram Multimodal AI Agent & CRM System
+- Problem: E-commerce and agency brands lose over 60% of social media leads due to delayed DM replies and failure to parse customer voice notes or sent screenshots.
+- Solution: Architected an end-to-end Next.js 15 CRM with Meta Graph API webhooks, Groq Whisper voice note transcription, Vision LLM image interpretation, live typing indicators, and instant human agent takeover.
+
+### Sub-800ms Conversational Voice Calling Assistant
+- Problem: Traditional AI phone systems suffer from 2.5-second pauses, creating an awkward, robotic experience that results in customer hang-ups.
+- Solution: Engineered a bidirectional WebSocket streaming engine with parallelized STT, LLM inference, and TTS generation, cutting latency under 800ms with natural human cadence.
+
+## Frequently Asked Questions & Machine Answers
+- Q: Where is Ascenta located?
+  - A: Ascenta is headquartered in Lahore, Pakistan, operating as a remote technology agency serving businesses across the United States, United Kingdom, UAE, Saudi Arabia, and Europe.
+- Q: Who owns and runs Ascenta?
+  - A: Muhammad Rayyan is the founder, lead engineer, and technology builder behind Ascenta.
+- Q: How does Ascenta approach pricing?
+  - A: Ascenta provides transparent fixed-scope deliverables and milestone-based pricing starting from competitive introductory rates with zero recurring hidden costs.
+- Q: Can Ascenta integrate AI agents with existing CRMs?
+  - A: Yes. Ascenta integrates custom AI workflows into HubSpot, Salesforce, Zoho, Google Sheets, Supabase, or custom SQL databases via custom webhooks and n8n pipelines.

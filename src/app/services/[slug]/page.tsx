@@ -9,6 +9,8 @@ import { FaqAccordion } from "@/components/shared/faq-accordion";
 import { FinalCta } from "@/components/shared/final-cta";
 import { Button } from "@/components/ui/button";
 import { services, getServiceBySlug } from "@/config/services";
+import { siteConfig } from "@/config/site";
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -22,9 +24,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) return {};
+  const canonicalUrl = `${siteConfig.url}/services/${slug}`;
   return {
-    title: service.title,
+    title: `${service.title} · Services`,
     description: service.overview,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${service.title} | Ascenta`,
+      description: service.overview,
+      url: canonicalUrl,
+      type: "website",
+    },
   };
 }
 
@@ -39,8 +51,34 @@ export default async function ServiceDetailPage({
 
   const Icon = service.icon;
 
+  const serviceSchema = generateServiceSchema({
+    title: service.title,
+    slug: service.slug,
+    overview: service.overview,
+    startingPrice: service.startingPrice,
+    benefits: service.benefits,
+    techStack: service.techStack,
+  });
+
+  const faqSchema = service.faqs?.length ? generateFAQSchema(service.faqs) : null;
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "Services", url: `${siteConfig.url}/services` },
+    { name: service.title, url: `${siteConfig.url}/services/${slug}` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            serviceSchema,
+            breadcrumbSchema,
+            ...(faqSchema ? [faqSchema] : []),
+          ]),
+        }}
+      />
       <Section className="pb-8 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
@@ -62,7 +100,7 @@ export default async function ServiceDetailPage({
             <div className="flex items-center gap-2.5">
               <DollarSign size={16} className="text-accent" />
               <div className="text-left">
-                <p className="text-[11px] text-muted-foreground">Starting From</p>
+                <p className="text-[11px] text-muted-foreground">{service.startingPrice.startsWith("$") ? "Starting From" : "Investment"}</p>
                 <p className="text-sm font-medium text-white">{service.startingPrice}</p>
               </div>
             </div>

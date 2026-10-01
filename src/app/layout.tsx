@@ -13,6 +13,7 @@ import { CustomCursor } from "@/components/shared/custom-cursor";
 import { ScrollProgress } from "@/components/shared/scroll-progress";
 import { Toaster } from "@/components/ui/sonner";
 import { ChatWidget } from "@/components/shared/chatbot/chat-widget";
+import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/schema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     creator: "@ascenta",
   },
+  alternates: {
+    canonical: siteConfig.url,
+  },
   robots: {
     index: true,
     follow: true,
@@ -61,15 +65,17 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = generateOrganizationSchema();
+const websiteJsonLd = generateWebSiteSchema();
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: siteConfig.name,
-  url: siteConfig.url,
+  name: siteConfig.founder,
+  url: `${siteConfig.url}/about`,
   jobTitle: siteConfig.title,
   description: siteConfig.description,
   email: siteConfig.email,
-  sameAs: Object.values(siteConfig.social),
+  sameAs: [siteConfig.social.github, siteConfig.social.linkedin],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -84,7 +90,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationJsonLd, websiteJsonLd, personJsonLd]),
+          }}
         />
       </head>
       <body className="min-h-full flex flex-col selection:bg-primary/30">

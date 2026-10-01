@@ -4,15 +4,33 @@ import { Section } from "@/components/shared/section";
 import { Container } from "@/components/shared/container";
 import { ContactForm } from "@/components/sections/contact/contact-form";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Contact & Project Inquiry",
+  title: "Contact & Project Inquiry · Ascenta",
   description: `Have a problem worth building or something you want to automate? Connect directly with Muhammad Rayyan (${siteConfig.name}) for web engineering, AI agents, or workflow systems.`,
+  alternates: {
+    canonical: `${siteConfig.url}/contact`,
+  },
+  openGraph: {
+    title: "Contact & Project Inquiry | Ascenta",
+    description: `Connect directly with Muhammad Rayyan (${siteConfig.name}) for web engineering, AI agents, or workflow systems.`,
+    url: `${siteConfig.url}/contact`,
+  },
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "Contact", url: `${siteConfig.url}/contact` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Section className="pb-6 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.06] px-4 py-1.5 font-mono text-xs font-medium text-primary">

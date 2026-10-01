@@ -5,15 +5,33 @@ import { Container } from "@/components/shared/container";
 import { siteConfig } from "@/config/site";
 import { SolutionsInteractive } from "@/components/sections/portfolio/solutions-interactive";
 import { ProblemCta } from "@/components/sections/portfolio/problem-cta";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Solutions & Technical Approaches",
+  title: "Solutions & Technical Approaches · Ascenta",
   description: `How ${siteConfig.name} (Muhammad Rayyan) solves technical bottlenecks: AI architecture, voice latency optimization, API orchestration, and custom operational hubs.`,
+  alternates: {
+    canonical: `${siteConfig.url}/solutions`,
+  },
+  openGraph: {
+    title: "Solutions & Technical Approaches | Ascenta",
+    description: `How ${siteConfig.name} solves technical bottlenecks: AI architecture, voice latency optimization, and custom operational hubs.`,
+    url: `${siteConfig.url}/solutions`,
+  },
 };
 
 export default function SolutionsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "Solutions", url: `${siteConfig.url}/solutions` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <Section className="pb-8 pt-6 sm:pt-10">
         <Container className="flex flex-col items-center text-center">

@@ -9,6 +9,8 @@ import { BlogCard } from "@/components/shared/blog-card";
 import { FinalCta } from "@/components/shared/final-cta";
 import { NewsletterInline } from "@/components/sections/blog/newsletter-inline";
 import { getAllBlogPosts, getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog";
+import { siteConfig } from "@/config/site";
+import { generateArticleSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
@@ -22,10 +24,29 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getBlogPostBySlug(slug);
   if (!post) return {};
+  const canonicalUrl = `${siteConfig.url}/blog/${slug}`;
   return {
-    title: post.title,
+    title: `${post.title} · Blog`,
     description: post.excerpt,
     authors: [{ name: post.author }],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${post.title} | Ascenta`,
+      description: post.excerpt,
+      url: canonicalUrl,
+      type: "article",
+      publishedTime: post.date,
+      images: [
+        {
+          url: post.coverImage.startsWith("http")
+            ? post.coverImage
+            : `${siteConfig.url}${post.coverImage}`,
+          alt: post.title,
+        },
+      ],
+    },
   };
 }
 
@@ -41,8 +62,29 @@ export default async function BlogPostPage({
   const allPosts = getAllBlogPosts();
   const related = allPosts.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 3);
 
+  const articleSchema = generateArticleSchema({
+    title: post.title,
+    slug: post.slug,
+    excerpt: post.excerpt,
+    date: post.date,
+    author: post.author,
+    coverImage: post.coverImage,
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "Blog", url: `${siteConfig.url}/blog` },
+    { name: post.title, url: `${siteConfig.url}/blog/${slug}` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([articleSchema, breadcrumbSchema]),
+        }}
+      />
       <Section className="pb-6 pt-6 sm:pt-10">
         <Container className="mx-auto max-w-3xl">
           <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-white">

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="glow_instagra" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid_instagra" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#17100F" />
+  <rect width="1200" height="800" fill="url(#grid_instagra)" />
+  <rect width="1200" height="800" fill="url(#glow_instagra)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
+  
+    <g transform="translate(600,380)">
+      <rect x="-120" y="-120" width="240" height="240" rx="44" fill="#221918" stroke="#E63946" stroke-width="3" />
+      <circle cx="0" cy="0" r="60" fill="none" stroke="#D4A24E" stroke-width="4" />
+      <circle cx="65" cy="-65" r="14" fill="#E63946" />
+      <g transform="translate(110,-110)">
+        <polygon points="0,-25 8,-8 25,0 8,8 0,25 -8,8 -25,0 -8,-8" fill="#D4A24E" />
+      </g>
+    </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#EDE3DD" opacity="0.6">INSTAGRAM AI</text>
+</svg>

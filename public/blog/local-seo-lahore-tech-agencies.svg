@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="glow_local_se" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid_local_se" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#17100F" />
+  <rect width="1200" height="800" fill="url(#grid_local_se)" />
+  <rect width="1200" height="800" fill="url(#glow_local_se)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
+  
+    <g transform="translate(600,380)">
+      <circle cx="0" cy="0" r="140" fill="none" stroke="rgba(237,227,221,0.15)" stroke-width="2" />
+      <circle cx="0" cy="0" r="80" fill="none" stroke="rgba(237,227,221,0.25)" stroke-width="2" />
+      <path d="M0,-110 C-45,-110 -60,-70 0,20 C60,-70 45,-110 0,-110 Z" fill="#E63946" />
+      <circle cx="0" cy="-65" r="18" fill="#17100F" />
+      <circle cx="0" cy="-65" r="8" fill="#D4A24E" />
+    </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#EDE3DD" opacity="0.6">LOCAL SEO</text>
+</svg>

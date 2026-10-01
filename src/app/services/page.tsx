@@ -4,15 +4,33 @@ import { ServiceCard } from "@/components/shared/service-card";
 import { FinalCta } from "@/components/shared/final-cta";
 import { services } from "@/config/services";
 import { siteConfig } from "@/config/site";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: `Explore the web development, design, and AI automation services offered by ${siteConfig.name} — from business websites to custom dashboards and AI chatbots.`,
+  title: "Engineering Services · Web Development & AI Automation",
+  description: `Explore the web development, custom dashboards, voice AI calling, and autonomous agent services engineered by ${siteConfig.name} (Muhammad Rayyan).`,
+  alternates: {
+    canonical: `${siteConfig.url}/services`,
+  },
+  openGraph: {
+    title: "Engineering Services | Ascenta",
+    description: `Explore the web development, custom dashboards, voice AI calling, and autonomous agent services engineered by ${siteConfig.name}.`,
+    url: `${siteConfig.url}/services`,
+  },
 };
 
 export default function ServicesPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: `${siteConfig.url}` },
+    { name: "Services", url: `${siteConfig.url}/services` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Section className="pb-8 pt-6 sm:pt-10">
         <SectionHeading
           badge="What We Do"

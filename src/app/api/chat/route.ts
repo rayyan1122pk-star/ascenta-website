@@ -84,7 +84,7 @@ export async function POST(req: Request) {
     };
 
     if (isOpenRouter || endpoint.includes("openrouter.ai")) {
-      headers["HTTP-Referer"] = "https://ascenta.dev";
+      headers["HTTP-Referer"] = "https://ascenta-agency.vercel.app";
       headers["X-Title"] = "Ascenta Portfolio";
     }
 

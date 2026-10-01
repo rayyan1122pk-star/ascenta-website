@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <radialGradient id="glow_ai_lead_" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid_ai_lead_" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(237,227,221,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#17100F" />
+  <rect width="1200" height="800" fill="url(#grid_ai_lead_)" />
+  <rect width="1200" height="800" fill="url(#glow_ai_lead_)" />
+  <rect x="0.5" y="0.5" width="1199" height="799" fill="none" stroke="rgba(237,227,221,0.14)" />
+  
+    <g transform="translate(600,380)">
+      <polygon points="-180,-140 180,-140 100,-20 -100,-20" fill="#221918" stroke="rgba(237,227,221,0.2)" stroke-width="2" />
+      <polygon points="-90,-10 90,-10 40,80 -40,80" fill="#7A2229" opacity="0.6" stroke="#E63946" stroke-width="2" />
+      <rect x="-30" y="95" width="60" height="80" rx="10" fill="#D4A24E" />
+      <circle cx="0" cy="135" r="12" fill="#17100F" />
+    </g>
+  <text x="64" y="732" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#EDE3DD" opacity="0.6">LEAD AUTOMATION</text>
+</svg>

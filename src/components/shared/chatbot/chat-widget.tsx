@@ -20,10 +20,10 @@ interface ChatMessage {
 
 const quickQuestions = [
   "What does Rayyan build?",
-  "Show me his projects",
-  "How can he help my business?",
-  "What technologies does he use?",
-  "Contact Rayyan",
+  "How do his WhatsApp agents work?",
+  "Show me his case studies",
+  "Can he build a custom CRM?",
+  "Contact Rayyan for a project",
 ];
 
 const initialGreeting: ChatMessage = {

@@ -1,0 +1,34 @@
+# Ascenta — Web Development & AI Automation Agency
+> Technology builder and AI solutions engineering agency founded by Muhammad Rayyan, operating out of Lahore, Pakistan and delivering mission-critical web applications, autonomous AI agents, voice AI engines, and enterprise workflow automations globally.
+
+## Core Identity & Brand
+- **Brand / Agency Name:** Ascenta
+- **Founder & Principal Engineer:** Muhammad Rayyan
+- **Primary Domain:** https://ascenta-agency.vercel.app
+- **Headquarters / Base:** Lahore, Pakistan
+- **Delivery Model:** Worldwide Remote (US, UK, UAE, Saudi Arabia, Europe, APAC)
+- **Contact:** rayyan1122pk@gmail.com | Phone/WhatsApp: +92 332 8444557
+- **GitHub:** https://github.com/rayyan1122pk-star
+- **LinkedIn:** https://www.linkedin.com/in/ascenta
+
+## Primary Services & Capabilities
+1. **Full-Stack Web Development:** Next.js 16, React 19, TypeScript, Tailwind CSS, high-converting landing pages, SaaS platforms, e-commerce storefronts, and performance engineering.
+2. **Autonomous AI Agents:** 24/7 WhatsApp AI agents, Instagram DM/comment automation engines, AI sales qualification reps, customer support agents with schema-validated tool execution and memory.
+3. **Conversational Voice AI Systems:** Sub-800ms low-latency inbound & outbound calling assistants powered by WebSockets, Deepgram Nova-2, and Cartesia/ElevenLabs neural synthesis.
+4. **Custom CRM & Internal Operations Hubs:** Bespoke sales pipelines, lead routing databases, and business management portals built on Next.js and Supabase/PostgreSQL.
+5. **n8n Workflow Automation:** Resilient enterprise workflow orchestration, connecting webhooks, Gmail, WhatsApp, Stripe, and internal databases with automatic retry and dead-letter queues.
+6. **Technical & Semantic SEO / Core Web Vitals:** 100/100 performance scores, schema-enforced entity graphs, AEO passage extraction, and modern search engine optimization.
+
+## Verified Production Case Studies & Systems
+- **CleanData AI (B2B SaaS):** Autonomous data cleaning specialist featuring 10 operating modes, PII masking, embedded SQLite query engine, and multi-vector RAG synchronization.
+- **Instagram Multimodal AI Agent & CRM:** Real-time Meta Graph API engine with voice note audio transcription via Groq Whisper, Vision LLM image understanding, live typing status, and dedicated Next.js CRM.
+- **Sub-800ms Voice Calling Assistant:** Custom WebSocket Twilio streaming architecture delivering real-time human conversational flow with instantaneous barge-in.
+
+## Key URLs & Resources
+- **Homepage:** https://ascenta.dev
+- **Services Directory:** https://ascenta.dev/services
+- **Client Case Studies & Proof:** https://ascenta.dev/work
+- **Technical Problem-Solution Blueprints:** https://ascenta.dev/solutions
+- **Engineering Knowledge Library:** https://ascenta.dev/learn
+- **Articles & Guides:** https://ascenta.dev/blog
+- **Consultation & Direct Booking:** https://ascenta.dev/contact

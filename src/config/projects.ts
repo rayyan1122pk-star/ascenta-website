@@ -141,6 +141,33 @@ export const projects: Project[] = [
     liveUrl: "https://www.misaalfoundation.online",
   },
   {
+    id: "discord-timestamp-generator",
+    title: "Discord Timestamp Generator & Markdown Toolset",
+    subtitle: "High-performance client-side utility suite for dynamic Discord timestamps, ANSI color formatting & developer embeds",
+    category: "Web Development",
+    categoryBadge: "Developer Web Utility",
+    context: "Developer Utilities & Community Management Tools",
+    problem:
+      "Discord community managers, bot developers, and global gaming guilds struggle with timezone confusion during international announcements, manual Unix epoch math, and broken message markdown formatting.",
+    solution:
+      "Architected an ultra-fast, zero-tracking web utility featuring 10 interactive tools: dynamic Discord timestamp generator with live chat simulation, 64-bit Snowflake ID decoder, ANSI colored text generator, invisible character copier, and an embed builder with instant JSON/discord.js export.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Vercel Edge", "Lucide Icons"],
+    value:
+      "100% client-side privacy; sub-100ms page delivery worldwide; zero server latency; eliminating timezone miscommunication across global Discord servers.",
+    highlights: [
+      "Dynamic Discord timestamp generator supporting all 7 Discord format flags (:t, :T, :d, :D, :f, :F, :R)",
+      "Interactive Discord embed maker with real-time chat preview and discord.js / discord.py export",
+      "ANSI color code builder for custom-styled announcement codeblocks",
+      "Hangul Filler (U+3164) invisible name generator and Zalgo glitch text maker",
+      "Comprehensive developer documentation and technical guides for Discord API integrations",
+    ],
+    architecture:
+      "Next.js App Router → Client-Side Intl Runtime → Tailwind CSS UI → Vercel Edge Prerendering",
+    featured: true,
+    image: "/projects/discord-timestamps-hero.png",
+    liveUrl: "https://www.disctimestamps.site",
+  },
+  {
     id: "ngo-crm-dashboard",
     title: "Misaal Foundation — Beneficiary & Operations CRM",
     subtitle: "Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard",

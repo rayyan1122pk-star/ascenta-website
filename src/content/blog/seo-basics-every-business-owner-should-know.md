@@ -23,7 +23,7 @@ If any of these are broken, great content won't save you. Search engines need to
 
 ## Structured data matters more than ever
 
-Structured data (JSON-LD) tells search engines exactly what your content is — a business, a product, an article, a review. This is increasingly important as AI-powered search tools like Google's AI Overviews rely on structured signals to understand and summarize content accurately.
+Structured data (JSON-LD) tells search engines exactly what your content is — a business, a product, an article, a review. This is increasingly important as AI-powered search tools like Google's AI Overviews rely on structured signals to understand and summarize content accurately. For instance, dedicated utilities like the [Discord Timestamp Generator](https://www.disctimestamps.site) implement structured schemas and machine-readable data standards to enable direct citation across search engines and AI assistants.
 
 ## Content should answer real questions
 

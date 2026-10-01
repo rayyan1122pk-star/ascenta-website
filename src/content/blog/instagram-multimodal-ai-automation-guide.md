@@ -34,7 +34,7 @@ Unified Customer Context & Prompt Assembly
                     ↓
 LLM Agent with Strict JSON Tool Calling
                     ↓
-CRM State Mutation & Lead Scoring (0 – 100)
+CRM State Mutation & Lead Scoring (0 to 100)
                     ↓
 Simulated Typing Indicator + Outbound Instagram DM Response
 ```

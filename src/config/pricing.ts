@@ -13,7 +13,7 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Starter",
     description: "Perfect for small businesses that need a professional online presence.",
-    price: "$110 – $180",
+    price: "$110 to $180",
     priceNote: "one-time",
     cta: "Get Started",
     ctaHref: "/contact",
@@ -30,7 +30,7 @@ export const pricingTiers: PricingTier[] = [
   {
     name: "Professional",
     description: "The most popular package for growing businesses that want a premium experience.",
-    price: "$270 – $360",
+    price: "$270 to $360",
     priceNote: "one-time",
     highlighted: true,
     cta: "Get Started",

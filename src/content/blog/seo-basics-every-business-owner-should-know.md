@@ -1,6 +1,6 @@
 ---
 title: "SEO Basics Every Business Owner Should Actually Understand (In the AI Search Era)"
-excerpt: "You do not need to become an algorithmic engineer — but understanding technical crawlability, structured JSON-LD data, and entity relevance will protect your business from costly agency mistakes."
+excerpt: "You do not need to become an algorithmic engineer, but understanding technical crawlability, structured JSON-LD data, and entity relevance will protect your business from costly agency mistakes."
 date: "2026-01-02"
 category: "SEO"
 author: "Muhammad Rayyan"

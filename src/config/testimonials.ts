@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     role: "Founder",
     company: "Nova Realty Group",
     quote:
-      "Ascenta rebuilt our entire web presence and the results speak for themselves — lead volume nearly tripled within two months of launch. They understood our business, not just our design brief.",
+      "Ascenta rebuilt our entire web presence and the results speak for themselves, lead volume nearly tripled within two months of launch. They understood our business, not just our design brief.",
     rating: 5,
     avatar: "/testimonials/sarah.svg",
   },

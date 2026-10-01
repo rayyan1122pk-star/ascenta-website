@@ -35,7 +35,7 @@ export default function ServicesPage() {
         <SectionHeading
           badge="What We Do"
           title="Services Built to Grow Your Business"
-          description="From marketing websites to fully custom systems — every service is built around one goal: measurable results for your business."
+          description="From marketing websites to fully custom systems, every service is built around one goal: measurable results for your business."
         />
       </Section>
 

@@ -19,43 +19,43 @@ export default function Home() {
       {/* 🚨 Hero section is locked and preserved exactly as original */}
       <Hero />
 
-      {/* 01 — Proof / Quick Stats */}
+      {/* 01, Proof / Quick Stats */}
       <ProofStats />
 
-      {/* 02 — What I Build */}
+      {/* 02, What I Build */}
       <WhatIBuild />
 
-      {/* 03 — Featured Work */}
+      {/* 03, Featured Work */}
       <FeaturedWork />
 
-      {/* 04 — The Founder & Builder */}
+      {/* 04, The Founder & Builder */}
       <FounderEditorial />
 
-      {/* 05 — AI & Automation Lab */}
+      {/* 05, AI & Automation Lab */}
       <AiAutomationLab />
 
-      {/* 05 — Solutions / Problems I've Solved */}
+      {/* 05, Solutions / Problems I've Solved */}
       <ProblemsSolved />
 
-      {/* 06 — Knowledge / What I've Learned */}
+      {/* 06, Knowledge / What I've Learned */}
       <KnowledgeLibrary />
 
-      {/* 07 — Technology Stack */}
+      {/* 07, Technology Stack */}
       <TechStackInteractive />
 
-      {/* 08 — Testimonials */}
+      {/* 08, Testimonials */}
       <TestimonialsRedesigned />
 
-      {/* 09 — Learning / Credentials */}
+      {/* 09, Learning / Credentials */}
       <LearningCredentials />
 
-      {/* 10 — My Journey */}
+      {/* 10, My Journey */}
       <JourneyTimeline />
 
-      {/* 11 — About Builder Profile */}
+      {/* 11, About Builder Profile */}
       <AboutBuilderPreview />
 
-      {/* 12 — Problem Solving CTA */}
+      {/* 12, Problem Solving CTA */}
       <ProblemCta />
     </>
   );

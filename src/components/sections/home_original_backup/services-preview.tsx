@@ -15,7 +15,7 @@ export function ServicesPreview() {
       <SectionHeading
         badge="What We Do"
         title="What We Build"
-        description="From marketing sites to full custom systems — everything is built with the same standard of quality."
+        description="From marketing sites to full custom systems, everything is built with the same standard of quality."
       />
 
       <motion.div

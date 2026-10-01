@@ -166,7 +166,7 @@ export const knowledgeTopics: KnowledgeTopic[] = [
     subtitle: "Creating distinctive, high-end interfaces using visual hierarchy, typography, and contrast",
     readTime: "5 min read",
     summary:
-      "Most modern websites suffer from template fatigue — repeating the same 3-column card grid. Premium digital design uses editorial typography, intentional whitespace, and sophisticated micro-interactions.",
+      "Most modern websites suffer from template fatigue, repeating the same 3-column card grid. Premium digital design uses editorial typography, intentional whitespace, and sophisticated micro-interactions.",
     keyTakeaways: [
       "Break repetitive grid monotony with asymmetrical compositions.",
       "Pair modern sans-serif body typography with expressive serif/display headlines.",
@@ -176,7 +176,7 @@ export const knowledgeTopics: KnowledgeTopic[] = [
     contentSections: [
       {
         heading: "1. Escaping the Card Grid Trap",
-        body: "When every section is three cards in a row, visitors develop banner blindness. Using varied compositions — split screens, sticky narratives, horizontal tickers, and interactive diagrams — keeps the eye engaged.",
+        body: "When every section is three cards in a row, visitors develop banner blindness. Using varied compositions, split screens, sticky narratives, horizontal tickers, and interactive diagrams, keeps the eye engaged.",
       },
       {
         heading: "2. The Science of Dark Mode Contrast",

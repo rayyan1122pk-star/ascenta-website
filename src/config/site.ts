@@ -7,9 +7,9 @@ export const siteConfig = {
   url: "https://ascenta-agency.vercel.app",
   ogImage: "/og-image.png",
   description:
-    "Personal technology portfolio of Muhammad Rayyan (Ascenta) — building high-performance web applications, intelligent AI agents, n8n automations, low-latency voice AI systems, and custom operational hubs.",
+    "Personal technology portfolio of Muhammad Rayyan (Ascenta), building high performance web applications, vibe coding full stack AI powered websites, intelligent AI agents, n8n automations, low latency voice AI systems, and custom operational hubs.",
   mission:
-    "I don't just provide services. I build technology, engineer reliable systems, and solve real business problems.",
+    "I do not just provide services. I build technology, engineer reliable systems, and solve real business problems.",
   email: "rayyan1122pk@gmail.com",
   phone: "+92 332 8444557",
   location: "Lahore, Pakistan (Working Worldwide, Remote)",
@@ -18,6 +18,8 @@ export const siteConfig = {
     "Muhammad Rayyan",
     "Ascenta",
     "Technology Builder",
+    "Vibe Coding",
+    "Full Stack AI Powered Website",
     "AI Automation Engineer",
     "AI Agent Development",
     "WhatsApp AI CRM",
@@ -25,7 +27,7 @@ export const siteConfig = {
     "n8n Automation",
     "Next.js Developer",
     "Custom Internal Dashboards",
-    "Full-Stack Web Engineering",
+    "Full Stack Web Engineering",
   ],
   social: {
     github: "https://github.com/rayyan1122pk-star",
@@ -55,7 +57,7 @@ export const footerLinks = {
     { label: "Contact / Inquiry", href: "/contact" },
   ],
   services: [
-    { label: "Business Websites", href: "/services/business-websites" },
+    { label: "AI Powered Web Development", href: "/services/business-websites" },
     { label: "Autonomous AI Agents", href: "/services/whatsapp-agent" },
     { label: "Voice AI Calling", href: "/services/voice-calling-agent" },
     { label: "n8n AI Automation", href: "/services/ai-automation" },

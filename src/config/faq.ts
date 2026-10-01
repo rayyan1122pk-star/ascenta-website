@@ -21,13 +21,13 @@ export const faqs: FaqItem[] = [
     category: "Services",
     question: "Do you redesign existing websites?",
     answer:
-      "Yes. We regularly rebuild outdated websites into modern, fast, conversion-focused experiences — while carefully preserving your existing SEO rankings through proper redirects and migration.",
+      "Yes. We regularly rebuild outdated websites into modern, fast, conversion-focused experiences, while carefully preserving your existing SEO rankings through proper redirects and migration.",
   },
   {
     category: "Services",
     question: "Do you provide hosting?",
     answer:
-      "We deploy every project on Vercel, which offers world-class performance and reliability. We handle the initial setup and can manage hosting on your behalf, or hand over full ownership to your team — your choice.",
+      "We deploy every project on Vercel, which offers world-class performance and reliability. We handle the initial setup and can manage hosting on your behalf, or hand over full ownership to your team, your choice.",
   },
   {
     category: "Services",
@@ -39,7 +39,7 @@ export const faqs: FaqItem[] = [
     category: "Services",
     question: "Can you build custom systems like dashboards or CRMs?",
     answer:
-      "Yes, this is one of our core specialties. We build custom dashboards, CRMs, booking systems, and AI-powered tools tailored to your exact workflow — not generic off-the-shelf software.",
+      "Yes, this is one of our core specialties. We build custom dashboards, CRMs, booking systems, and AI-powered tools tailored to your exact workflow, not generic off-the-shelf software.",
   },
   {
     category: "Pricing",
@@ -57,12 +57,12 @@ export const faqs: FaqItem[] = [
     category: "Technical",
     question: "What technology do you build with?",
     answer:
-      "We build primarily with Next.js, React, and TypeScript on the frontend, and Supabase/PostgreSQL on the backend — a modern, fast, and scalable stack used by top technology companies.",
+      "We build primarily with Next.js, React, and TypeScript on the frontend, and Supabase/PostgreSQL on the backend, a modern, fast, and scalable stack used by top technology companies.",
   },
   {
     category: "Technical",
     question: "Will my website be SEO optimized?",
     answer:
-      "Yes, every website includes technical SEO fundamentals by default — clean metadata, structured data, sitemaps, and performance optimization for strong Core Web Vitals.",
+      "Yes, every website includes technical SEO fundamentals by default, clean metadata, structured data, sitemaps, and performance optimization for strong Core Web Vitals.",
   },
 ];

@@ -40,7 +40,7 @@ export function AboutBuilderPreview() {
               <p>
                 Instead of treating web design and automation as separate silos, I unified them. When I
                 build a website, I don&apos;t just design a pretty surface; I engineer the entire engine
-                behind it — from high-converting Next.js architecture to automated WhatsApp qualification
+                behind it, from high-converting Next.js architecture to automated WhatsApp qualification
                 agents, Google Sheets operational synchronization, and voice AI assistants.
               </p>
               <p>

@@ -37,21 +37,21 @@ export const processSteps: ProcessStep[] = [
     title: "Strategy",
     icon: Target,
     description:
-      "We map out sitemap, content structure, and conversion strategy — the blueprint that guides every design decision.",
+      "We map out sitemap, content structure, and conversion strategy, the blueprint that guides every design decision.",
   },
   {
     step: 4,
     title: "UI Design",
     icon: PenTool,
     description:
-      "A custom visual design tailored to your brand, built for clarity, trust, and conversion — no generic templates.",
+      "A custom visual design tailored to your brand, built for clarity, trust, and conversion, no generic templates.",
   },
   {
     step: 5,
     title: "Development",
     icon: Code2,
     description:
-      "Clean, production-ready code built with modern best practices — fast, accessible, and built to scale.",
+      "Clean, production-ready code built with modern best practices, fast, accessible, and built to scale.",
   },
   {
     step: 6,

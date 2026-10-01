@@ -30,7 +30,7 @@ export function WhyModernWebsites() {
           should work <span className="font-serif italic text-primary">harder.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-balance text-base text-muted-foreground sm:text-lg">
-          An outdated website isn&apos;t just a design issue — it&apos;s a business problem with a measurable cost.
+          An outdated website isn&apos;t just a design issue, it&apos;s a business problem with a measurable cost.
         </p>
       </motion.div>
 

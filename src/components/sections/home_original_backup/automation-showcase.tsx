@@ -40,7 +40,7 @@ export function AutomationShowcase() {
             <span className="font-serif italic text-primary">We build the system behind it.</span>
           </>
         }
-        description="Beyond websites, we build AI agents and automation that handle leads, bookings, and busywork — so nothing falls through the cracks."
+        description="Beyond websites, we build AI agents and automation that handle leads, bookings, and busywork, so nothing falls through the cracks."
       />
 
       <motion.div

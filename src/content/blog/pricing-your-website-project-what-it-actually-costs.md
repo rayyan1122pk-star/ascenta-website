@@ -17,17 +17,17 @@ Here is a transparent breakdown of what actually drives the cost of a modern web
 
 ## The Four Tiers of Web Development
 
-### 1. The Commodity Template Tier ($100 – $500)
+### 1. The Commodity Template Tier ($100 to $500)
 Usually built by offshore freelancers adapting pre-made WordPress or Wix themes. 
 * **The Reality:** You receive a visual layout that looks acceptable on desktop, but takes five seconds to load, has broken mobile padding, and features zero technical SEO or custom conversion logic.
 * **The Hidden Tax:** You spend months trying to fix layout bugs and eventually pay another team to rebuild it properly.
 
-### 2. High-Performance Bespoke Business Sites ($1,200 – $3,500)
+### 2. High-Performance Bespoke Business Sites ($1,200 to $3,500)
 Custom engineered using modern frameworks like Next.js 16, TypeScript, and Tailwind CSS.
 * **The Reality:** Handcrafted UI/UX tailored around your brand. Sub-second load times, 100/100 Core Web Vitals, semantic schema markup, and seamless lead capture connecting to WhatsApp or your CRM.
 * **Who It Is For:** Service businesses, medical clinics, boutique agencies, and consultancies where winning one or two new clients pays for the entire site.
 
-### 3. Custom Web Applications & Internal Portals ($3,500 – $10,000+)
+### 3. Custom Web Applications & Internal Portals ($3,500 to $10,000+)
 Full-stack software platforms featuring user authentication, relational databases (PostgreSQL/Supabase), interactive data dashboards, and role-based permissions.
 * **The Reality:** Replaces messy spreadsheets or expensive per-seat SaaS tools. Integrates directly with Stripe, n8n automations, and custom AI workflows.
 

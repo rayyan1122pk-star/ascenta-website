@@ -21,7 +21,7 @@ Here is why we deploy self-hosted or dedicated n8n automation clusters for our c
 
 | Parameter | Zapier | Self-Hosted n8n (Docker / VPS) |
 |---|---|---|
-| **Cost Model** | Pay-per-task / step execution | Fixed server cost (~$15 – $40/mo VPS) |
+| **Cost Model** | Pay-per-task / step execution | Fixed server cost (~$15 to $40/mo VPS) |
 | **Execution Volume** | Strict caps with steep overage costs | Unlimited workflow runs |
 | **Data Privacy & Storage** | Transits proprietary US cloud servers | Stays completely within your private database |
 | **Code Execution** | Limited Python / JS runtimes with strict timeouts | Full Node.js / Python libraries, custom npm modules |
@@ -34,7 +34,7 @@ Here is why we deploy self-hosted or dedicated n8n automation clusters for our c
 
 Consider a lead generation agency handling 100,000 operations per month (webhook triggers, CRM updates, notification dispatches, and WhatsApp messages).
 
-* **Zapier:** ~\$600 – \$900 per month on high-volume plans.
+* **Zapier:** ~\$600 to \$900 per month on high-volume plans.
 * **Self-Hosted n8n:** Runs comfortably on a 4GB RAM / 2 vCPU server (Hetzner, DigitalOcean, or AWS EC2) for **under \$30 per month**.
 
 That is an immediate **95%+ cost reduction** in recurring software expenses.

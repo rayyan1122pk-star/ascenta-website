@@ -50,7 +50,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   // Unmounting is driven by a plain timer, not by waiting on an animation
-  // library's exit transition to report completion — so a stalled/paused
+  // library's exit transition to report completion, so a stalled/paused
   // animation (throttled background tab, reduced motion, etc.) can never
   // leave this full-screen overlay stuck in the DOM.
   useEffect(() => {

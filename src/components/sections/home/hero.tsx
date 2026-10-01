@@ -35,7 +35,7 @@ export function Hero() {
     function tryPlay() {
       if (video && video.paused) {
         video.play().catch(() => {
-          // Still blocked (e.g. data-saver mode) — the first frame /
+          // Still blocked (e.g. data-saver mode), the first frame /
           // poster remains a reasonable static fallback.
         });
       }
@@ -73,7 +73,7 @@ export function Hero() {
       ref={heroRef}
       className="relative isolate flex min-h-[calc(100svh-6rem)] flex-col overflow-hidden pb-10 pt-10"
     >
-      {/* Full-bleed background video — the robot IS the background */}
+      {/* Full-bleed background video, the robot IS the background */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -99,12 +99,12 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {/* Contrast overlay — darker on the left for text, letting the robot read clearly on the right */}
+      {/* Contrast overlay, darker on the left for text, letting the robot read clearly on the right */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background/70 via-background/25 to-transparent" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background/70 via-transparent to-background/25" />
 
       <Container className="relative flex flex-1 flex-col">
-        {/* Top block — badge + headline + subtext */}
+        {/* Top block, badge + headline + subtext */}
         <div className="max-w-xl pt-6">
           <motion.span
             initial={{ opacity: 0, y: -10 }}
@@ -138,7 +138,7 @@ export function Hero() {
           </motion.p>
         </div>
 
-        {/* Bottom block — CTAs/avatars left, glass stat cards right */}
+        {/* Bottom block, CTAs/avatars left, glass stat cards right */}
         <div className="mt-auto flex flex-col gap-8 pb-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex flex-col items-start gap-6">
             <motion.div

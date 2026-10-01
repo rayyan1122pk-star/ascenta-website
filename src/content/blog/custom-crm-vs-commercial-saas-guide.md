@@ -11,7 +11,7 @@ Almost every business begins its sales journey on spreadsheets or a standard com
 
 Initially, this is the right move: you get immediate pipeline tracking without spending weeks on development.
 
-However, as a company scales past 5–10 team members, standard SaaS tools often hit a severe friction curve:
+However, as a company scales past 5 to 10 team members, standard SaaS tools often hit a severe friction curve:
 1. **Per-Seat Pricing Penalties:** Adding team members or virtual assistants suddenly costs thousands of dollars monthly.
 2. **Feature Bloat:** Teams use barely 15% of the platform's features, while navigation becomes slow and cluttered.
 3. **Fragmented Workflows:** Sales reps end up bouncing between the CRM, WhatsApp, Gmail, spreadsheets, and banking portals because the generic SaaS doesn't reflect their specific business logic.
@@ -26,10 +26,10 @@ Let's examine a typical 12-person agency or service business over a 24-month hor
 
 | Dimension | Commercial SaaS (e.g. HubSpot Pro) | Custom Next.js & Supabase Hub |
 |---|---|---|
-| **Monthly Subscription** | \$100 – \$150 / user / month (\$1,200 – \$1,800/mo) | \$25 – \$50 / month (Vercel + Supabase compute) |
-| **2-Year Software Cost** | **\$28,800 – \$43,200** | **~\$900** |
-| **One-Time Build Cost** | \$0 (plus setup consultancy) | \$2,500 – \$6,000 (one-time engineering) |
-| **Total 24-Month Spend** | **\$30,000+ (recurring forever)** | **~\$5,000 – \$7,000 (owned asset)** |
+| **Monthly Subscription** | \$100 to \$150 / user / month (\$1,200 to \$1,800/mo) | \$25 to \$50 / month (Vercel + Supabase compute) |
+| **2-Year Software Cost** | **\$28,800 to \$43,200** | **~\$900** |
+| **One-Time Build Cost** | \$0 (plus setup consultancy) | \$2,500 to \$6,000 (one-time engineering) |
+| **Total 24-Month Spend** | **\$30,000+ (recurring forever)** | **~\$5,000 to \$7,000 (owned asset)** |
 | **Workflow Adaptability** | Constrained by vendor roadmap | 100% customized to your exact pipeline |
 
 A custom operational hub pays for itself within 4 to 8 months solely on eliminated per-seat software licensing fees.

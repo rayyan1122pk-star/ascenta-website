@@ -110,7 +110,7 @@ export function SolutionsInteractive() {
                 Recommended Solution Architecture:
               </span>
               <span className="font-mono text-[11px] text-emerald-400 flex items-center gap-1.5">
-                <CheckCircle2 size={13} /> Feasible in 1–3 Weeks
+                <CheckCircle2 size={13} /> Feasible in 1 to 3 Weeks
               </span>
             </div>
 

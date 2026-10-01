@@ -87,7 +87,7 @@ export function FounderEditorial() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] bg-[#120B0A]">
               <Image
                 src="/founder/muhammad-rayyan.jpg"
-                alt="Muhammad Rayyan — Founder & Builder at Ascenta"
+                alt="Muhammad Rayyan, Founder & Builder at Ascenta"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 500px"

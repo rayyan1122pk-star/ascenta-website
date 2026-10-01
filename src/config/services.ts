@@ -36,27 +36,28 @@ export const services: Service[] = [
   {
     slug: "business-websites",
     icon: Globe,
-    title: "Business Websites",
-    shortDescription: "Modern, responsive websites for businesses.",
+    title: "AI Powered Full Stack Web Development",
+    shortDescription: "Modern vibe coding and full stack AI powered web applications.",
     overview:
-      "A professional, conversion-focused website built to represent your business the way it deserves — fast, credible, and built to turn visitors into customers. We design and develop every page around your brand and your goals, not a recycled template.",
+      "A conversion focused, high performance web application engineered with modern full stack architecture and rapid AI powered vibe coding workflows. We build fast, credible platforms tailored to your brand, moving past fragile templates to deliver reliable, production grade software.",
     benefits: [
-      "Establish instant credibility with a modern, professional design",
-      "Turn more visitors into leads with clear calls-to-action",
-      "Rank higher on Google with built-in technical SEO",
+      "Establish instant credibility with a modern, high impact design",
+      "Turn more visitors into leads with clear calls to action",
+      "Rank higher on Google with built in technical SEO",
       "Load in under two seconds on any device",
       "Update content easily without touching code",
     ],
     features: [
-      "Custom UI/UX design tailored to your brand",
+      "Vibe coding rapid prototyping with production grade engineering",
+      "Full stack AI integrations, vector embeddings, and autonomous agent workflows",
       "Fully responsive across desktop, tablet, and mobile",
       "On-page SEO and metadata for every page",
-      "Contact and lead-capture forms",
-      "CMS-ready content structure",
+      "Contact and lead capture forms",
+      "CMS ready content structure",
       "Analytics and performance tracking",
     ],
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase"],
-    timeline: "2 – 4 weeks",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Supabase", "OpenAI / Claude API"],
+    timeline: "2 to 4 weeks",
     startingPrice: "$145",
     faqs: [
       {
@@ -77,7 +78,7 @@ export const services: Service[] = [
     title: "Landing Pages",
     shortDescription: "High-converting pages for ads and marketing campaigns.",
     overview:
-      "A single-purpose, conversion-obsessed landing page built to make the most of every visitor you send to it — whether that traffic comes from Google Ads, Meta Ads, or an email campaign.",
+      "A single-purpose, conversion-obsessed landing page built to make the most of every visitor you send to it, whether that traffic comes from Google Ads, Meta Ads, or an email campaign.",
     benefits: [
       "Higher conversion rates from paid traffic",
       "Lower cost-per-acquisition on ad campaigns",
@@ -93,7 +94,7 @@ export const services: Service[] = [
       "Pixel and analytics integration",
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    timeline: "3 – 7 days",
+    timeline: "3 to 7 days",
     startingPrice: "$65",
     faqs: [
       {
@@ -109,7 +110,7 @@ export const services: Service[] = [
     title: "Portfolio Websites",
     shortDescription: "Professional portfolios for individuals.",
     overview:
-      "A personal portfolio that positions you as the obvious choice — for freelancers, consultants, coaches, and creatives who need to be taken seriously online.",
+      "A personal portfolio that positions you as the obvious choice, for freelancers, consultants, coaches, and creatives who need to be taken seriously online.",
     benefits: [
       "Stand out from generic template portfolios",
       "Build instant trust with potential clients",
@@ -123,7 +124,7 @@ export const services: Service[] = [
       "Contact and booking integration",
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    timeline: "1 – 2 weeks",
+    timeline: "1 to 2 weeks",
     startingPrice: "$85",
     faqs: [
       {
@@ -138,7 +139,7 @@ export const services: Service[] = [
     title: "E-Commerce Websites",
     shortDescription: "Online stores with payment integration.",
     overview:
-      "A fast, secure online store built to sell — with a smooth checkout experience, secure payments, and an inventory system your team can actually manage.",
+      "A fast, secure online store built to sell, with a smooth checkout experience, secure payments, and an inventory system your team can actually manage.",
     benefits: [
       "Secure, PCI-compliant payment processing",
       "Fast product pages that reduce cart abandonment",
@@ -153,7 +154,7 @@ export const services: Service[] = [
       "Discount codes and inventory tracking",
     ],
     techStack: ["Next.js", "TypeScript", "Supabase", "Stripe", "Tailwind CSS"],
-    timeline: "4 – 8 weeks",
+    timeline: "4 to 8 weeks",
     startingPrice: "$360",
     faqs: [
       {
@@ -168,7 +169,7 @@ export const services: Service[] = [
     title: "Website Redesign",
     shortDescription: "Transform outdated websites into modern experiences.",
     overview:
-      "If your current website is slow, outdated, or simply not converting, we rebuild it from the ground up — keeping what works for your brand and modernizing everything else.",
+      "If your current website is slow, outdated, or simply not converting, we rebuild it from the ground up, keeping what works for your brand and modernizing everything else.",
     benefits: [
       "Modern design that matches today's expectations",
       "Improved page speed and Core Web Vitals",
@@ -182,7 +183,7 @@ export const services: Service[] = [
       "Performance and SEO improvements",
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    timeline: "2 – 5 weeks",
+    timeline: "2 to 5 weeks",
     startingPrice: "$180",
     faqs: [
       {
@@ -198,7 +199,7 @@ export const services: Service[] = [
     title: "SEO Optimization",
     shortDescription: "Improve visibility on search engines.",
     overview:
-      "Technical and on-page SEO to help your website actually get found — clean metadata, structured data, sitemaps, and content structure built for search engines and AI answer engines alike.",
+      "Technical and on-page SEO to help your website actually get found, clean metadata, structured data, sitemaps, and content structure built for search engines and AI answer engines alike.",
     benefits: [
       "Higher rankings for the keywords that matter",
       "More organic, non-paid traffic over time",
@@ -212,7 +213,7 @@ export const services: Service[] = [
       "Core Web Vitals improvements",
     ],
     techStack: ["Next.js Metadata API", "JSON-LD", "Google Search Console"],
-    timeline: "1 – 3 weeks",
+    timeline: "1 to 3 weeks",
     startingPrice: "$75",
     faqs: [
       {
@@ -227,7 +228,7 @@ export const services: Service[] = [
     title: "Performance Optimization",
     shortDescription: "Speed improvements for your existing website.",
     overview:
-      "A focused performance pass on your existing site — image optimization, code splitting, caching, and render-path fixes to get you into the green on Core Web Vitals.",
+      "A focused performance pass on your existing site, image optimization, code splitting, caching, and render-path fixes to get you into the green on Core Web Vitals.",
     benefits: [
       "Faster load times, lower bounce rate",
       "Improved Google ranking signals",
@@ -240,7 +241,7 @@ export const services: Service[] = [
       "Caching strategy improvements",
     ],
     techStack: ["Next.js", "Vercel", "Lighthouse"],
-    timeline: "1 – 2 weeks",
+    timeline: "1 to 2 weeks",
     startingPrice: "$65",
     faqs: [
       {
@@ -268,7 +269,7 @@ export const services: Service[] = [
       "Third-party integrations",
     ],
     techStack: ["Next.js", "Supabase", "PostgreSQL", "TypeScript"],
-    timeline: "4 – 10 weeks",
+    timeline: "4 to 10 weeks",
     startingPrice: "$450",
     faqs: [
       {
@@ -283,7 +284,7 @@ export const services: Service[] = [
     title: "CRM Development",
     shortDescription: "Customer management platforms.",
     overview:
-      "A custom CRM built around your actual sales process — track leads, manage pipelines, and automate follow-ups without paying for features you don't use.",
+      "A custom CRM built around your actual sales process, track leads, manage pipelines, and automate follow-ups without paying for features you don't use.",
     benefits: [
       "A pipeline that matches how you actually sell",
       "No monthly per-seat license fees",
@@ -296,7 +297,7 @@ export const services: Service[] = [
       "Reporting dashboard",
     ],
     techStack: ["Next.js", "Supabase", "PostgreSQL", "Resend"],
-    timeline: "5 – 10 weeks",
+    timeline: "5 to 10 weeks",
     startingPrice: "$540",
     faqs: [
       {
@@ -311,7 +312,7 @@ export const services: Service[] = [
     title: "AI Chatbots",
     shortDescription: "Intelligent assistants for your website or product.",
     overview:
-      "A custom AI chatbot trained on your business — answering customer questions, qualifying leads, and booking calls automatically, 24 hours a day.",
+      "A custom AI chatbot trained on your business, answering customer questions, qualifying leads, and booking calls automatically, 24 hours a day.",
     benefits: [
       "Answer customer questions instantly, any time of day",
       "Qualify and capture leads without manual effort",
@@ -324,7 +325,7 @@ export const services: Service[] = [
       "Human handoff for complex conversations",
     ],
     techStack: ["Next.js", "OpenAI / Claude API", "Supabase"],
-    timeline: "2 – 4 weeks",
+    timeline: "2 to 4 weeks",
     startingPrice: "Custom Scope",
     faqs: [
       {
@@ -339,7 +340,7 @@ export const services: Service[] = [
     title: "WhatsApp Agent",
     shortDescription: "AI agent that handles WhatsApp leads and bookings automatically.",
     overview:
-      "A custom AI agent that lives inside your business WhatsApp — replying to customer messages instantly, qualifying leads, and booking calls, so no inquiry sits unanswered.",
+      "A custom AI agent that lives inside your business WhatsApp, replying to customer messages instantly, qualifying leads, and booking calls, so no inquiry sits unanswered.",
     benefits: [
       "Never miss a lead because no one saw the message in time",
       "Instant replies, any time of day, in your business's tone",
@@ -354,7 +355,7 @@ export const services: Service[] = [
       "Full conversation logging and lead history",
     ],
     techStack: ["n8n", "WhatsApp Business API", "OpenAI / Claude API", "Supabase"],
-    timeline: "1 – 3 weeks",
+    timeline: "1 to 3 weeks",
     startingPrice: "Custom Scope",
     faqs: [
       {
@@ -363,7 +364,7 @@ export const services: Service[] = [
       },
       {
         question: "Can it actually book appointments, not just chat?",
-        answer: "Yes — the agent can check availability and book calls or appointments directly into your calendar.",
+        answer: "Yes, the agent can check availability and book calls or appointments directly into your calendar.",
       },
     ],
   },
@@ -373,7 +374,7 @@ export const services: Service[] = [
     title: "Instagram CRM & Lead Automation",
     shortDescription: "Auto-handle Instagram DMs, comments, and lead follow-ups.",
     overview:
-      "An automation system that turns your Instagram DMs and comments into a real lead pipeline — auto-replying to inquiries, capturing leads into a CRM, and following up automatically so nothing falls through the cracks.",
+      "An automation system that turns your Instagram DMs and comments into a real lead pipeline, auto-replying to inquiries, capturing leads into a CRM, and following up automatically so nothing falls through the cracks.",
     benefits: [
       "Respond to every DM and comment instantly, even at scale",
       "Turn Instagram engagement into a tracked, organized lead list",
@@ -388,7 +389,7 @@ export const services: Service[] = [
       "Lead tagging and pipeline tracking",
     ],
     techStack: ["n8n", "Instagram Graph API", "Supabase", "OpenAI / Claude API"],
-    timeline: "2 – 4 weeks",
+    timeline: "2 to 4 weeks",
     startingPrice: "Custom Scope",
     faqs: [
       {
@@ -403,7 +404,7 @@ export const services: Service[] = [
     title: "Voice Calling Agent",
     shortDescription: "AI voice agent for inbound and outbound calls.",
     overview:
-      "An AI voice agent that answers inbound calls or makes outbound calls on your behalf — qualifying leads, answering common questions, and booking appointments, in a natural-sounding conversation.",
+      "An AI voice agent that answers inbound calls or makes outbound calls on your behalf, qualifying leads, answering common questions, and booking appointments, in a natural-sounding conversation.",
     benefits: [
       "Never miss an inbound call, even outside business hours",
       "Qualify and book leads automatically over the phone",
@@ -418,12 +419,12 @@ export const services: Service[] = [
       "Call transcripts and recordings for every conversation",
     ],
     techStack: ["n8n", "Voice AI API", "Twilio", "OpenAI / Claude API"],
-    timeline: "2 – 4 weeks",
+    timeline: "2 to 4 weeks",
     startingPrice: "Custom Scope",
     faqs: [
       {
         question: "Does it sound robotic?",
-        answer: "No — we use modern voice AI models built for natural, conversational phone calls.",
+        answer: "No, we use modern voice AI models built for natural, conversational phone calls.",
       },
     ],
   },
@@ -433,7 +434,7 @@ export const services: Service[] = [
     title: "Custom Form Automation",
     shortDescription: "Automate form submissions, routing, and follow-ups.",
     overview:
-      "Custom automation for any form on your website or business — auto-filling systems, routing submissions to the right person, and triggering instant follow-ups the moment someone submits.",
+      "Custom automation for any form on your website or business, auto-filling systems, routing submissions to the right person, and triggering instant follow-ups the moment someone submits.",
     benefits: [
       "Eliminate manual data entry between forms and your systems",
       "Instant lead routing to the right team member",
@@ -447,7 +448,7 @@ export const services: Service[] = [
       "Integration with CRMs, spreadsheets, and internal tools",
     ],
     techStack: ["n8n", "Webhooks", "Supabase", "Zapier-compatible integrations"],
-    timeline: "1 – 2 weeks",
+    timeline: "1 to 2 weeks",
     startingPrice: "Custom Scope",
     faqs: [
       {
@@ -462,7 +463,7 @@ export const services: Service[] = [
     title: "AI Automation",
     shortDescription: "Custom workflow automation for your business.",
     overview:
-      "Custom automation that connects your tools and removes repetitive manual work — from lead routing to report generation to internal notifications.",
+      "Custom automation that connects your tools and removes repetitive manual work, from lead routing to report generation to internal notifications.",
     benefits: [
       "Save hours of manual work every week",
       "Reduce human error in repetitive processes",
@@ -475,12 +476,12 @@ export const services: Service[] = [
       "Monitoring and error alerts",
     ],
     techStack: ["n8n", "Next.js", "Supabase", "OpenAI / Claude API", "Webhooks"],
-    timeline: "2 – 6 weeks",
+    timeline: "2 to 6 weeks",
     startingPrice: "Custom Scope",
     faqs: [
       {
         question: "What tools can you automate between?",
-        answer: "Most tools with an API or webhook support — including email, CRMs, spreadsheets, and Slack.",
+        answer: "Most tools with an API or webhook support, including email, CRMs, spreadsheets, and Slack.",
       },
     ],
   },
@@ -490,7 +491,7 @@ export const services: Service[] = [
     title: "Maintenance",
     shortDescription: "Ongoing monthly support and improvements.",
     overview:
-      "Ongoing care for your website or automation systems — updates, monitoring, backups, and small improvements, so you never have to think about the technical side again.",
+      "Ongoing care for your website or automation systems, updates, monitoring, backups, and small improvements, so you never have to think about the technical side again.",
     benefits: [
       "Peace of mind with proactive monitoring",
       "Faster turnaround on small changes and fixes",

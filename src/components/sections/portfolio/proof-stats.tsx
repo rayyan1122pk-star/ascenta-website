@@ -71,7 +71,7 @@ export function ProofStats() {
           </h2>
           <p className="mt-3 text-balance text-sm text-muted-foreground sm:text-base">
             Every system below represents real production code, live API integrations, and measurable
-            business operations — not mockups or hypothetical concepts.
+            business operations, not mockups or hypothetical concepts.
           </p>
         </motion.div>
 

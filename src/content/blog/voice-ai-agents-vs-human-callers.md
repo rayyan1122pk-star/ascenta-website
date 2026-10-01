@@ -17,12 +17,12 @@ The emergence of low-latency voice AI systems allows businesses to answer inboun
 
 | Dimension | Human Call Center Rep (US/UK) | Offshore Human Agent | Low-Latency Voice AI Agent |
 |---|---|---|---|
-| **Monthly Cost** | \$3,000 – \$4,500 / month | \$800 – \$1,400 / month | \$0.08 – \$0.14 / minute (~$150/mo typical usage) |
+| **Monthly Cost** | \$3,000 to \$4,500 / month | \$800 to \$1,400 / month | \$0.08 to \$0.14 / minute (~$150/mo typical usage) |
 | **Availability** | 8 hours / day (shifts required) | Shift-based (limited 24/7) | 24/7/365 instant pick-up |
 | **Concurrent Call Capacity** | 1 caller per rep | 1 caller per rep | Unlimited parallel calls |
-| **Ramp & Training Time** | 2 – 4 weeks | 3 – 6 weeks | 1 – 2 days (prompt & knowledge base tuning) |
+| **Ramp & Training Time** | 2 to 4 weeks | 3 to 6 weeks | 1 to 2 days (prompt & knowledge base tuning) |
 
-For a clinic or service business receiving 400 calls per month, a voice AI assistant costs approximately \$120–\$200/month in compute and telephony—a 90%+ cost reduction compared to human staffing.
+For a clinic or service business receiving 400 calls per month, a voice AI assistant costs approximately \$120 to \$200/month in compute and telephony—a 90%+ cost reduction compared to human staffing.
 
 ---
 

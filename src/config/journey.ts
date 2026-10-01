@@ -43,7 +43,7 @@ export const journeyMilestones: JourneyMilestone[] = [
     badge: "Efficiency Engineering",
     title: "n8n, Webhooks & Operational Pipelines",
     description:
-      "Recognized that great websites are only half the battle — businesses were suffering from manual data entry behind the scenes. Started engineering automated workflows connecting forms, spreadsheets, and messaging platforms.",
+      "Recognized that great websites are only half the battle, businesses were suffering from manual data entry behind the scenes. Started engineering automated workflows connecting forms, spreadsheets, and messaging platforms.",
     highlights: [
       "Built multi-step event-driven n8n workflows with automatic error recovery",
       "Automated lead routing, Google Forms/Sheets synchronization, and email notifications",

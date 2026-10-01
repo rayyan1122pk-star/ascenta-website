@@ -17,7 +17,7 @@ However, modern advances in edge computing, in-browser WASM, and local SQLite ar
 
 | Metric | Embedded SQLite (Node / WASM) | Managed PostgreSQL (Supabase / AWS RDS) |
 |---|---|---|
-| **Query Latency** | **< 0.1ms** (In-process memory) | **15ms – 50ms** (TCP network roundtrip) |
+| **Query Latency** | **< 0.1ms** (In-process memory) | **15ms to 50ms** (TCP network roundtrip) |
 | **Operational Overhead** | Zero (Single file database) | Requires connection pooling, VPCs, backups |
 | **Concurrency Model** | Single-writer / Multi-reader | High-concurrency row-level locking |
 | **Best Used For** | Data preparation tools, RAG agents, local state | Multi-tenant CRMs, billing, user authentication |

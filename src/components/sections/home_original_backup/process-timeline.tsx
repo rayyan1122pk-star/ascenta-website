@@ -28,7 +28,7 @@ export function ProcessTimeline() {
       <SectionHeading
         badge="How We Work"
         title="From Idea to Launch"
-        description="A clear, structured process from first call to launch — and beyond."
+        description="A clear, structured process from first call to launch, and beyond."
       />
 
       {/* Desktop: sticky narrative */}

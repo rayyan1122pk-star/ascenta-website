@@ -43,7 +43,7 @@ const capabilities: Capability[] = [
     icon: Code2,
     detailTitle: "Production Next.js & React Web Applications",
     detailDescription:
-      "I engineer bespoke web platforms from scratch — no slow page builders or fragile plugins. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4 for sub-second page transitions, 100 Core Web Vitals, and conversion-engineered user funnels.",
+      "I engineer bespoke web platforms from scratch, no slow page builders or fragile plugins. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v4 for sub-second page transitions, 100 Core Web Vitals, and conversion-engineered user funnels.",
     deliverables: [
       "Custom responsive web applications with App Router",
       "Dynamic data fetching & Server Components architecture",

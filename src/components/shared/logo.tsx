@@ -5,7 +5,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
-      aria-label="Ascenta — Home"
+      aria-label="Ascenta, Home"
       className={cn(
         "group relative inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] transition-transform duration-300 hover:scale-105",
         className

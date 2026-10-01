@@ -28,9 +28,9 @@ export const budgetOptions: { value: ContactFormValues["budget"]; label: string 
 ];
 
 export const timelineOptions: { value: ContactFormValues["timeline"]; label: string }[] = [
-  { value: "asap", label: "Urgent — As soon as possible" },
+  { value: "asap", label: "Urgent, As soon as possible" },
   { value: "1-month", label: "Within 1 month" },
-  { value: "1-3-months", label: "1 – 3 months" },
+  { value: "1-3-months", label: "1 to 3 months" },
   { value: "flexible", label: "Flexible / Planning Phase" },
 ];
 

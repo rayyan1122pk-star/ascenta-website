@@ -11,13 +11,13 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Muhammad Rayyan · Builder & AI Solutions Engineer",
-  description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta) — building full-stack web platforms, AI agents, and resilient automations.`,
+  description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta), building full-stack web platforms, AI agents, and resilient automations.`,
   alternates: {
     canonical: `${siteConfig.url}/about`,
   },
   openGraph: {
     title: "About Muhammad Rayyan | Ascenta",
-    description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta) — building full-stack web platforms, AI agents, and resilient automations.`,
+    description: `The story, engineering journey, credentials, and technical philosophy of Muhammad Rayyan (Ascenta), building full-stack web platforms, AI agents, and resilient automations.`,
     url: `${siteConfig.url}/about`,
   },
 };
@@ -82,7 +82,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/15 bg-[#17100F] shadow-2xl">
               <Image
                 src="/founder/muhammad-rayyan.jpg"
-                alt="Muhammad Rayyan — Founder & Builder at Ascenta"
+                alt="Muhammad Rayyan, Founder & Builder at Ascenta"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 480px"
@@ -117,7 +117,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-4 text-sm leading-relaxed text-[#F5EFE6]/90 sm:text-base">
               <p>
                 When I started web development, I quickly noticed that most clients didn&apos;t just
-                have a &ldquo;website problem&rdquo; — they had an operational problem. Their leads were
+                have a &ldquo;website problem&rdquo;, they had an operational problem. Their leads were
                 waiting hours for a reply, their customer data was trapped in personal WhatsApp chats,
                 and their team was wasting 20+ hours a week manually copy-pasting spreadsheet records.
               </p>

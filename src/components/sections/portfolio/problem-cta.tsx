@@ -34,7 +34,7 @@ export function ProblemCta() {
 
           <p className="mx-auto mt-5 max-w-xl text-balance text-sm leading-relaxed text-[#F5EFE6]/80 sm:text-base">
             Whether you need a high-performance web platform, an autonomous WhatsApp/IG AI agent,
-            an n8n workflow pipeline, or a low-latency voice system — tell me what you&apos;re solving.
+            an n8n workflow pipeline, or a low-latency voice system, tell me what you&apos;re solving.
           </p>
 
           {/* Action buttons */}

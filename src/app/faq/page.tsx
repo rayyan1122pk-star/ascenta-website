@@ -8,13 +8,13 @@ import { generateFAQSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions · Web & AI Systems",
-  description: `Clear, direct answers about working with ${siteConfig.name} (Muhammad Rayyan) — engineering timelines, tech stack, AI agent architecture, pricing, and process.`,
+  description: `Clear, direct answers about working with ${siteConfig.name} (Muhammad Rayyan), engineering timelines, tech stack, AI agent architecture, pricing, and process.`,
   alternates: {
     canonical: `${siteConfig.url}/faq`,
   },
   openGraph: {
     title: "Frequently Asked Questions | Ascenta",
-    description: `Clear, direct answers about working with ${siteConfig.name} — engineering timelines, tech stack, AI agent architecture, pricing, and process.`,
+    description: `Clear, direct answers about working with ${siteConfig.name}, engineering timelines, tech stack, AI agent architecture, pricing, and process.`,
     url: `${siteConfig.url}/faq`,
   },
 };

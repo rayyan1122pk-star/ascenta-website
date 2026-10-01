@@ -57,7 +57,7 @@ Ascenta is a modern web development and AI automation agency specializing in hig
 
 ## Client Case Studies & Production Proof
 
-### CleanData AI — Autonomous Data Specialist SaaS
+### CleanData AI, Autonomous Data Specialist SaaS
 - Problem: Data teams waste 20+ hours weekly cleaning spreadsheets, normalizing dates and phone numbers, and redacting sensitive PII before LLMs can consume the data.
 - Solution: Built a multi-mode AI SaaS platform that ingests raw CSVs or unstructured narrative prose, strips PII, stores data in an embedded SQLite engine with a browser SQL query console, and syncs vector embeddings across Pinecone, Qdrant, ChromaDB, and Supabase.
 - Live URL: https://cleandata-ruddy.vercel.app

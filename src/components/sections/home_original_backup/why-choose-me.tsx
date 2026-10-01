@@ -44,7 +44,7 @@ export function WhyChooseMe() {
       <SectionHeading
         badge="Why Work With Us"
         title="Built to Perform"
-        description="Every project is built with the same standard — the one we'd want if we were the client."
+        description="Every project is built with the same standard, the one we'd want if we were the client."
       />
 
       <motion.div

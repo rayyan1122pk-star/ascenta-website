@@ -17,7 +17,7 @@ const fragments = [
 
 export function FinalCta({
   title = "Let's Build What's Next.",
-  description = "Tell us about your project and we'll get back to you within 24 hours with next steps — no pressure, no obligation.",
+  description = "Tell us about your project and we'll get back to you within 24 hours with next steps, no pressure, no obligation.",
 }: {
   title?: string;
   description?: string;

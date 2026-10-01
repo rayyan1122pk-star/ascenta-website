@@ -9,7 +9,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Work & Case Studies · Web & AI Systems",
-  description: `Deep-dive case studies and technical architectures engineered by ${siteConfig.name} (Muhammad Rayyan) — from WhatsApp AI CRMs to low-latency voice engines and custom operational dashboards.`,
+  description: `Deep-dive case studies and technical architectures engineered by ${siteConfig.name} (Muhammad Rayyan), from WhatsApp AI CRMs to low-latency voice engines and custom operational dashboards.`,
   alternates: {
     canonical: `${siteConfig.url}/work`,
   },

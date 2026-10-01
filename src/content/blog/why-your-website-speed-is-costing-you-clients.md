@@ -1,6 +1,6 @@
 ---
 title: "Why Your Website's Speed Is Quietly Costing You Clients (And What Real Audits Reveal)"
-excerpt: "A slow website isn't just an inconvenience — it's actively draining paid ad budgets and killing conversion rates. Here is the engineering math behind Core Web Vitals and TTFB."
+excerpt: "A slow website isn't just an inconvenience, it's actively draining paid ad budgets and killing conversion rates. Here is the engineering math behind Core Web Vitals and TTFB."
 date: "2026-01-14"
 category: "Performance"
 author: "Muhammad Rayyan"
@@ -21,9 +21,9 @@ The relationship between page load latency and visitor drop-off has been measure
 
 | Page Load Duration | Probability of Bounce | Impact on Ad Spend / ROAS |
 | :--- | :--- | :--- |
-| **0.8s – 1.4s** | Baseline (< 9%) | Optimal Quality Score, lowest CPC |
-| **1.5s – 2.5s** | +32% increase | Acceptable, minor conversion bleed |
-| **2.6s – 4.0s** | +90% increase | Significant waste of paid traffic |
+| **0.8s to 1.4s** | Baseline (< 9%) | Optimal Quality Score, lowest CPC |
+| **1.5s to 2.5s** | +32% increase | Acceptable, minor conversion bleed |
+| **2.6s to 4.0s** | +90% increase | Significant waste of paid traffic |
 | **5.0s+** | +123% increase | Majority of clicks bounce prior to FCP |
 
 Consider the practical unit economics: If you spend \$3,000 per month running Google Search Ads or Meta campaigns at \$4.00 per click, you receive approximately 750 visitors. If your mobile page requires 4.2 seconds to become interactive, over 50% of those visitors abandon before your hero value proposition or primary CTA ever renders. You are effectively burning \$1,500 every single month just waiting for bloated client-side JavaScript bundles to hydrate.

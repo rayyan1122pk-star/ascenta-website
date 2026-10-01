@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <span>Response Guarantee</span>
               </div>
               <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                I personally respond to all inquiries within 24 hours — usually much faster. No sales
+                I personally respond to all inquiries within 24 hours, usually much faster. No sales
                 pressure, just honest technical feasibility and architecture options.
               </p>
             </div>

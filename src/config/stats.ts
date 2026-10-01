@@ -9,7 +9,7 @@ export const whyModernWebsites = {
   problems: [
     { title: "Outdated Website", description: "An old design quietly tells visitors you're behind the times." },
     { title: "Slow Loading", description: "Every extra second of load time costs you conversions and rankings." },
-    { title: "Poor Mobile Experience", description: "Most of your traffic is mobile — a broken mobile site loses them instantly." },
+    { title: "Poor Mobile Experience", description: "Most of your traffic is mobile, a broken mobile site loses them instantly." },
     { title: "Low Google Visibility", description: "If you're not optimized for search, your competitors are winning the traffic you should have." },
     { title: "Weak Branding", description: "Inconsistent design erodes the trust you've worked hard to build." },
     { title: "Low Conversions", description: "Traffic without conversions is just a very expensive hobby." },

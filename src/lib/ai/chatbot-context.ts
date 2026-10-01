@@ -2,9 +2,9 @@ export const CHATBOT_SYSTEM_PROMPT = `You are Rayyan's AI Assistant on the Ascen
 Your role is to help visitors, clients, and collaborators learn about Muhammad Rayyan's work, engineering philosophy, projects, capabilities, and how to work with him.
 
 ### Core Persona & Rules:
-1. **Identity**: You are "Rayyan's AI Assistant" — do NOT pretend to be Muhammad Rayyan himself. Say "Rayyan builds...", "His approach is...", or "I can connect you with him".
+1. **Identity**: You are "Rayyan's AI Assistant", do NOT pretend to be Muhammad Rayyan himself. Say "Rayyan builds...", "His approach is...", or "I can connect you with him".
 2. **Tone**: Professional, confident, friendly, helpful, and natural. Avoid robotic corporate jargon. Use light emojis only when appropriate (e.g. 🚀, ⚡, 🤝).
-3. **Conciseness**: Keep simple questions to 2–4 sentences. For detailed questions, use clean bullet points.
+3. **Conciseness**: Keep simple questions to 2 to 4 sentences. For detailed questions, use clean bullet points.
 4. **Accuracy & Grounding**: Only mention facts, projects, and technologies that actually exist on this website. Do NOT invent achievements, revenue, client counts, awards, years of experience, or personal details.
 5. **No Age**: NEVER mention or guess Rayyan's age under any circumstances.
 6. **Links**: Use relative markdown links where relevant, such as [Explore Projects](/work), [Solutions](/solutions), [Knowledge Library](/learn), [About](/about), and [Contact](/contact), or direct [WhatsApp](https://wa.me/923328444557).
@@ -23,11 +23,11 @@ Your role is to help visitors, clients, and collaborators learn about Muhammad R
 5. **Custom CRM & Operational Hubs**: Centralized dashboards unifying Google Forms, Sheets, databases, and APIs to replace expensive recurring SaaS subscriptions.
 
 ### Real Featured Projects:
-1. **CleanData AI — Autonomous Data Specialist SaaS** (https://cleandata-ruddy.vercel.app): Full-stack AI data preparation and agent knowledge infrastructure platform. Ingests messy spreadsheets and unstructured prose, standardizes E.164 phones & ISO dates, masks PII, builds entity relationship graphs, stores in embedded SQLite with an in-browser SQL query explorer, and syncs semantic vectors to Pinecone, ChromaDB, Qdrant, and Supabase pgvector with an authenticated agent context delivery API.
+1. **CleanData AI, Autonomous Data Specialist SaaS** (https://cleandata-ruddy.vercel.app): Full-stack AI data preparation and agent knowledge infrastructure platform. Ingests messy spreadsheets and unstructured prose, standardizes E.164 phones & ISO dates, masks PII, builds entity relationship graphs, stores in embedded SQLite with an in-browser SQL query explorer, and syncs semantic vectors to Pinecone, ChromaDB, Qdrant, and Supabase pgvector with an authenticated agent context delivery API.
 2. **Instagram Multimodal AI Agent & CRM System**: CRM-centric Instagram AI automation platform integrating Meta Graph API, n8n orchestration, Groq Whisper (voice memo transcription), Vision LLM (image understanding), and a dedicated Next.js 15 / Prisma CRM. Features automated seen status, live typing indicators, comment-to-DM triggers, 0-100 lead scoring, real-time message syncing, and one-click human takeover.
-3. **LeadPulse CRM — B2B Lead Engine & Automated Outreach Platform**: Autonomous B2B lead generation engine and operational dashboard built with Next.js 15, React 19, Supabase PostgreSQL, and Railway-hosted n8n workflows. Features Serper Places API multi-location discovery, 4-tier deduplication, automated email/contact enrichment, website SSL audit, 0–100+ lead scoring, OpenRouter/GPT-4o-mini personalized pitch generator, and a 1-click WhatsApp & Gmail outreach hub with zero Google Sheets dependency.
-4. **Misaal Foundation — Non-Profit Web Platform** (https://www.misaalfoundation.online): High-performance digital portal for generational poverty alleviation and welfare drives across Pakistan. Engineered with Next.js 16, React 19, Tailwind CSS v4, and Supabase with cinematic video storytelling, live community drive showcases, and volunteer onboarding.
-5. **Misaal Foundation — Beneficiary & Operations CRM**: Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard; sub-second record searching across 3,000+ beneficiaries; eliminated paper record loss.
+3. **LeadPulse CRM, B2B Lead Engine & Automated Outreach Platform**: Autonomous B2B lead generation engine and operational dashboard built with Next.js 15, React 19, Supabase PostgreSQL, and Railway-hosted n8n workflows. Features Serper Places API multi-location discovery, 4-tier deduplication, automated email/contact enrichment, website SSL audit, 0 to 100+ lead scoring, OpenRouter/GPT-4o-mini personalized pitch generator, and a 1-click WhatsApp & Gmail outreach hub with zero Google Sheets dependency.
+4. **Misaal Foundation, Non-Profit Web Platform** (https://www.misaalfoundation.online): High-performance digital portal for generational poverty alleviation and welfare drives across Pakistan. Engineered with Next.js 16, React 19, Tailwind CSS v4, and Supabase with cinematic video storytelling, live community drive showcases, and volunteer onboarding.
+5. **Misaal Foundation, Beneficiary & Operations CRM**: Unified Google Forms & Sheets ingestion with real-time operational Next.js dashboard; sub-second record searching across 3,000+ beneficiaries; eliminated paper record loss.
 6. **WhatsApp AI Conversational CRM**: 24/7 Meta Cloud API agent with multi-turn qualification, intent scoring, automated CRM pipeline progression, and instant human takeover.
 7. **Real Estate AI Matchmaker**: Omnichannel Instagram & WhatsApp agent supporting colloquial Hinglish/English/Hindi queries, querying Google Sheets inventory in real time, and routing high-intent buyers to designated brokers.
 8. **Low-Latency AI Voice Calling Engine**: Sub-800ms conversational phone agent using bidirectional WebSockets, Deepgram Nova-2, and Cartesia streaming audio.
@@ -135,7 +135,7 @@ Check out the full technical architecture on the [Work & Case Studies](/work) pa
 * **Multimodal Perception**: Transcribes incoming voice notes via Groq Whisper and analyzes image attachments with Vision LLMs.
 * **Human-Like Chat UX**: Automatically marks incoming messages as seen and fires real-time typing indicators while the AI reasons.
 * **Growth & Comment Funnels**: Auto-replies to Instagram comments and triggers personalized DM sequences.
-* **Dedicated Next.js 15 & Prisma CRM**: Centralized dashboard logging contact history, 0–100 lead scores, and pipeline stages with instant 1-click human takeover.
+* **Dedicated Next.js 15 & Prisma CRM**: Centralized dashboard logging contact history, 0 to 100 lead scores, and pipeline stages with instant 1-click human takeover.
 * **Official Meta Cloud API**: Direct, verified integration with no fragile browser scrapers or unapproved wrappers.
 
 See the live workflow in the [AI Automation Lab](/#automation-lab) or [discuss building an agent](/contact)!`;
@@ -177,7 +177,7 @@ You can inspect the live node canvas in the [AI Automation Lab](/#lab) or [explo
 
 * **Modern Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, and Framer Motion.
 * **Performance**: Sub-second page loads engineered for 100/100 Core Web Vitals to maximize SEO and conversion trust.
-* **Zero Bloat**: No slow WordPress themes or fragile plugins — only clean, maintainable architecture.
+* **Zero Bloat**: No slow WordPress themes or fragile plugins, only clean, maintainable architecture.
 * **Conversion-Driven UX**: Editorial typography and ergonomic funnels designed to turn visitors into booked clients.
 
 Take a look at his projects in the [Work](/work) section or [discuss building your platform](/contact)!`;
@@ -194,7 +194,7 @@ Take a look at his projects in the [Work](/work) section or [discuss building yo
     q.includes("serper") ||
     q.includes("leadpulse")
   ) {
-    return `Rayyan engineered **LeadPulse CRM** — an autonomous B2B lead generation engine & outreach platform:
+    return `Rayyan engineered **LeadPulse CRM**, an autonomous B2B lead generation engine & outreach platform:
 
 * **Serper Places Discovery**: Queries Google Maps business graph across targeted keywords and multi-location batches with zero browser scraping.
 * **4-Tier Deduplication**: Eliminates duplicate entities across Place ID, E.164 phone, root domain, and name+city combinations.
@@ -299,7 +299,7 @@ You can select your scope on the [Contact](/contact) page or [chat directly on W
     return `Rayyan helps businesses scale operations by solving three concrete problems:
 
 1. **Eliminating Inbound Lead Drop-Off**: 24/7 WhatsApp & Instagram agents qualify leads in under 5 seconds, capturing prospects off-hours.
-2. **Reclaiming Wasted Team Hours**: n8n automations eliminate 15–20 hours a week of manual spreadsheet copy-pasting and data entry.
+2. **Reclaiming Wasted Team Hours**: n8n automations eliminate 15 to 20 hours a week of manual spreadsheet copy-pasting and data entry.
 3. **Maximizing Conversion Trust**: High-speed Next.js platforms with 100 Core Web Vitals that position your business with immediate authority.
 
 You can run a quick diagnostic on the [Solutions](/solutions) page or [message Rayyan directly](https://wa.me/923328444557)!`;

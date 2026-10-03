@@ -15,6 +15,7 @@ export const contactFormSchema = z.object({
   timeline: z.enum(["asap", "1-month", "1-3-months", "flexible"]),
   message: z.string().trim().min(20, "Please share a bit more detail (at least 20 characters).").max(3000),
   preferredContact: z.enum(["email", "phone", "whatsapp"]),
+  honeypot: z.string().max(0, "Bot detected").optional().or(z.literal("")),
 });
 
 export type ContactFormValues = z.infer<typeof contactFormSchema>;

@@ -1,18 +1,99 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { CHATBOT_SYSTEM_PROMPT, getFallbackResponse } from "@/lib/ai/chatbot-context";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
+// Maximum 12 messages, max 1000 chars per message to prevent payload bloat
 const messageSchema = z.object({
   role: z.enum(["user", "assistant", "system"]),
-  content: z.string().min(1).max(1000),
+  content: z.string().trim().min(1).max(1000),
 });
 
 const chatRequestSchema = z.object({
   messages: z.array(messageSchema).min(1).max(12),
 });
 
+const MAX_PAYLOAD_BYTES = 32 * 1024; // 32KB
+
+function isAllowedOrigin(req: Request): boolean {
+  const origin = req.headers.get("origin");
+  const referer = req.headers.get("referer");
+  const targetHeader = origin || referer;
+
+  if (!targetHeader) {
+    return true;
+  }
+
+  try {
+    const url = new URL(targetHeader);
+    const hostname = url.hostname.toLowerCase();
+    const allowed = [
+      "localhost",
+      "127.0.0.1",
+      "ascenta-agency.vercel.app",
+      "ascenta.dev",
+      "www.ascenta.dev",
+    ];
+    return allowed.includes(hostname) || hostname.endsWith(".vercel.app");
+  } catch {
+    return false;
+  }
+}
+
+// Strip special control tokens often used in jailbreak and prompt injection attempts
+function sanitizePromptText(text: string): string {
+  return text
+    .replace(/<\|im_start\|>/gi, "")
+    .replace(/<\|im_end\|>/gi, "")
+    .replace(/<\|endoftext\|>/gi, "")
+    .replace(/\[\s*SYSTEM\s*\]/gi, "")
+    .replace(/\[\s*\/SYSTEM\s*\]/gi, "")
+    .replace(/\[\s*INST\s*\]/gi, "")
+    .replace(/\[\s*\/INST\s*\]/gi, "");
+}
+
 export async function POST(req: Request) {
   try {
+    // 1. Origin / Referer validation (Anti-CSRF / Anti-Cross-Origin abuse)
+    if (!isAllowedOrigin(req)) {
+      return NextResponse.json(
+        { error: "Forbidden. Cross-origin request not allowed." },
+        { status: 403 }
+      );
+    }
+
+    // 2. Content-Length check to reject oversized payloads early
+    const contentLength = req.headers.get("content-length");
+    if (contentLength && parseInt(contentLength, 10) > MAX_PAYLOAD_BYTES) {
+      return NextResponse.json(
+        { error: "Payload too large. Maximum request size is 32KB." },
+        { status: 413 }
+      );
+    }
+
+    // 3. Sliding-window rate limiting (15 requests per 60 seconds per IP)
+    const clientIp = getClientIp(req);
+    const rateCheck = checkRateLimit(`chat:${clientIp}`, {
+      limit: 15,
+      windowMs: 60 * 1000,
+    });
+
+    if (!rateCheck.success) {
+      return NextResponse.json(
+        {
+          reply:
+            "You have sent several messages quickly. Please wait a moment before sending another message, or connect with Muhammad Rayyan directly on WhatsApp.",
+          source: "rate-limited",
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": Math.ceil(rateCheck.resetMs / 1000).toString(),
+          },
+        }
+      );
+    }
+
     const json = await req.json();
     const parsed = chatRequestSchema.safeParse(json);
 
@@ -37,7 +118,6 @@ export async function POST(req: Request) {
       process.env.OPENROUTER_API_KEY ||
       process.env.OMNIROUTE_API_KEY;
 
-    // Detect if this is OpenRouter (either key format sk-or-* or provider config)
     const isOpenRouter =
       !!process.env.OPENROUTER_API_KEY ||
       Boolean(apiKey && apiKey.startsWith("sk-or-"));
@@ -50,7 +130,7 @@ export async function POST(req: Request) {
       ? (process.env.OPENROUTER_MODEL || "openai/gpt-4o-mini")
       : (process.env.OMNIROUTE_MODEL || "gpt-4o-mini");
 
-    // If no API key is configured, provide seamless grounded local fallback
+    // Seamless grounded local fallback when external keys are not configured
     if (!apiKey) {
       const fallbackReply = getFallbackResponse(lastUserMessage.content);
       return NextResponse.json({
@@ -60,13 +140,15 @@ export async function POST(req: Request) {
       });
     }
 
-    // Normalize endpoint URL to /chat/completions
     const endpoint = rawApiUrl.endsWith("/chat/completions")
       ? rawApiUrl
       : `${rawApiUrl.replace(/\/+$/, "")}/chat/completions`;
 
-    // Keep only the most recent 6 messages to minimize token usage and latency
-    const recentMessages = messages.slice(-6);
+    // Sanitize and keep only the most recent 6 messages to avoid context bleed & token exhaustion
+    const recentMessages = messages.slice(-6).map((m) => ({
+      role: m.role,
+      content: sanitizePromptText(m.content),
+    }));
 
     const payload = {
       model,
@@ -102,10 +184,9 @@ export async function POST(req: Request) {
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        const errorText = await response.text().catch(() => "");
-        console.error("AI Gateway responded with error status:", response.status, errorText);
+        // Log status securely without exposing keys or full external bodies
+        console.error("AI Gateway responded with non-200 status:", response.status);
 
-        // Graceful fallback on API key error (e.g. 401, quota exceeded, etc.)
         const fallbackReply = getFallbackResponse(lastUserMessage.content);
         return NextResponse.json({
           reply: fallbackReply,
@@ -118,7 +199,6 @@ export async function POST(req: Request) {
       const reply = data?.choices?.[0]?.message?.content;
 
       if (!reply || typeof reply !== "string") {
-        console.error("Malformed AI response payload:", data);
         const fallbackReply = getFallbackResponse(lastUserMessage.content);
         return NextResponse.json({
           reply: fallbackReply,
@@ -136,7 +216,6 @@ export async function POST(req: Request) {
       clearTimeout(timeoutId);
       console.error("Error communicating with AI Gateway:", fetchErr);
 
-      // Graceful fallback on network timeout/failure
       const fallbackReply = getFallbackResponse(lastUserMessage.content);
       return NextResponse.json({
         reply: fallbackReply,

@@ -56,6 +56,7 @@ export function ContactForm() {
       timeline: "flexible",
       message: "",
       preferredContact: "whatsapp",
+      honeypot: "",
     },
   });
 
@@ -100,7 +101,19 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5 rounded-2xl border border-white/10 bg-[#1D1413] p-6 sm:p-8 shadow-xl">
+    <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-5 rounded-2xl border border-white/10 bg-[#1D1413] p-6 sm:p-8 shadow-xl">
+      {/* Bot Trap Honeypot field (hidden from human users, tempting to automated spammers) */}
+      <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website_hp">Leave this field blank</label>
+        <input
+          id="website_hp"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("honeypot")}
+        />
+      </div>
+
       {/* Quick Category Chips */}
       <div>
         <Label className="text-xs font-mono uppercase tracking-wider text-muted-foreground">

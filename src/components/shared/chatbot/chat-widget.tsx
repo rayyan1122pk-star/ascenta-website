@@ -33,23 +33,57 @@ const initialGreeting: ChatMessage = {
     "Hi! I'm Rayyan's AI Assistant. I can answer questions about his web development, autonomous AI agents, voice calling engines, and n8n workflows. How can I help you today?",
 };
 
-function parseInlineMarkdown(text: string): string {
-  // Sanitize HTML
-  const escaped = text
+function sanitizeUrl(rawUrl: string): string | null {
+  const trimmed = rawUrl.trim();
+  if (trimmed.startsWith("/") && !trimmed.startsWith("//")) {
+    return trimmed;
+  }
+  try {
+    const parsed = new URL(trimmed);
+    if (["https:", "http:", "mailto:", "tel:"].includes(parsed.protocol)) {
+      return parsed.toString();
+    }
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function escapeHtml(str: string): string {
+  return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function parseInlineMarkdown(text: string): string {
+  // Sanitize HTML entities
+  const escaped = escapeHtml(text);
 
   // Format bold **text**
   const withBold = escaped.replace(
-    /\*\*(.*?)\*\*/g,
+    /\*\*(.+?)\*\*/g,
     '<strong class="text-white font-semibold">$1</strong>'
   );
 
-  // Format markdown links [text](url)
+  // Format markdown links [text](url) with protocol allowlist and attribute breakout prevention
   const withLinks = withBold.replace(
-    /\[(.*?)\]\((.*?)\)/g,
-    '<a href="$2" class="text-primary underline underline-offset-2 hover:text-white transition-colors font-medium">$1</a>'
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    (_match, label, rawUrl) => {
+      const decodedUrl = rawUrl
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&amp;/g, "&");
+      const safeUrl = sanitizeUrl(decodedUrl);
+      if (!safeUrl) {
+        return label;
+      }
+      const isExternal = safeUrl.startsWith("http://") || safeUrl.startsWith("https://");
+      const extraAttrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : "";
+      return `<a href="${escapeHtml(safeUrl)}" class="text-primary underline underline-offset-2 hover:text-white transition-colors font-medium"${extraAttrs}>${label}</a>`;
+    }
   );
 
   return withLinks;

@@ -52,10 +52,19 @@ export function getAllBlogPosts(): BlogPostMeta[] {
 }
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
-  const fullPath = path.join(BLOG_DIR, `${slug}.md`);
-  if (!fs.existsSync(fullPath)) return null;
+  // Prevent path traversal attacks (e.g. "../", absolute paths, encoded characters)
+  if (!slug || typeof slug !== "string" || !/^[a-z0-9-]+$/.test(slug)) {
+    return null;
+  }
 
-  const raw = fs.readFileSync(fullPath, "utf8");
+  const resolvedPath = path.resolve(BLOG_DIR, `${slug}.md`);
+  if (!resolvedPath.startsWith(path.resolve(BLOG_DIR))) {
+    return null;
+  }
+
+  if (!fs.existsSync(resolvedPath)) return null;
+
+  const raw = fs.readFileSync(resolvedPath, "utf8");
   const { data, content } = matter(raw);
   const processed = await remark().use(remarkHtml).process(content);
 
